@@ -1,0 +1,36 @@
+  Question 1 (042): 'Copy-paste the previous query. After the star `*`, add a comma and the given formula. Execute the co'
+  Question 2 (279731784972193): 'How can you see a list of all inhabitants?'
+  Question 3 (128589543210724): 'Copy-paste the previous query, add the given formula, and execute it.'
+  Question 4 (280206676651511): "Okay, let's see who is friendly on this island..."
+  Question 5 (49081739277115): 'Now try to find a friendly weaponsmith to forge you one.\n\n_Tip._ You can combine predicates in the `'
+  Question 6 (111903790755050): "Maybe other friendly smiths can help you out, e.g. a blacksmith.\n\n_Tip._ Try out: job `LIKE` '%smith"
+  Question 7 (71115866585707): 'First, execute the `INSERT` query. Then, look for your personid.\n\n_Tip._ In former queries, the * st'
+    Hint (29293607320320): 'Oops, it seems you have executed the `INSERT` query twice or more. Execute the following queries to '
+    Hint (28697173935421): 'Oops, it seems you have executed the `INSERT` query twice or more. Execute the following queries to '
+    Hint (28094084689710): 'Oops, it seems you have executed the `INSERT` query twice or more. Execute the following queries to '
+    Hint (27493202200923): 'Oops, it seems you have executed the `INSERT` query twice or more. Execute the following queries to '
+  Question 8 (29896704364823): 'How much gold do you have?'
+  Question 9 (7708171354493): "Make a list of all items that don't belong to anyone.\n\n_Tip._ You can recognize ownerless items by: "
+  Question 10 (253789061748229): 'Execute the `UPDATE` query, and check the `item` table afterwards.'
+  Question 11 (107025105236366): 'Do you know a trick how to collect all the ownerless items? Afterwards, list all of the items you ow'
+  Question 12 (139744599079637): 'Find a friendly inhabitant who is either a dealer or a merchant. Maybe they want to buy some of your'
+  Question 13 (166788243175236): 'Afterwards, check the items that she owns.'
+  Question 14 (261661938333343): "Substract 120 from Helen's gold, add 120 to yours, and then check the new amounts of your two rows."
+    Hint (24919761524173): 'Restrict the result to the row of Helen (15) and yours (20).'
+  Question 15 (34807888636366): "Update your name to 'Leslie Qualls' and show the updated row."
+    Hint (28691699637667): 'Restrict the result to your row (20).'
+  Question 16 (18314467662514): 'Since baking is one of your hobbies, why not find a baker who you can work for?\n\n_Tip._ List all bak'
+  Question 17 (34285849059910): 'Update your gold by adding your salary (100) and substracting the price of the sword (150).'
+  Question 18 (157095709958947): 'Is there a pilot on this island by any chance? He could fly you home.'
+  Question 19 (229615318980909): 'Copy-paste the previous query, add the given formula, and execute it.'
+  Question 20 (256975312978711): "Use the join to find out the chief's name of the village Onionville.\n\n_Tip._ In the column `chief` i"
+  Question 21 (240365303417698): 'Copy-paste the previous query, add the given formula, and execute it.'
+  Question 22 (237781870732904): 'Shall I tell you how many women there are in Onionville? Nah, you can figure it out by yourself!\n\n_T'
+  Question 23 (41535988500868): "What's her name?"
+  Question 24 (124493698100759): 'Copy-paste the previous query, add the given formula, and execute it.'
+  Question 25 (152867079389134): 'Sum the gold of all these people.'
+  Question 26 (203716599638991): 'Copy-paste the previous query, add the given formula, and execute it.'
+  Question 27 (222167811363863): 'Execute the previous query. Which item is now ownerless?'
+  Question 28 (193619246200652): 'Delete Dirty Diane, and show the table `inhabitant`.'
+  Question 29 (67594779315675): "Change the pilot's status to 'friendly', your own status to 'emigrated', and show the table `inhabit"
+  Question 30 (226162284926311): ''
