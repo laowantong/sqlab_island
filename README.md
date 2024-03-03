@@ -24,6 +24,6 @@ An SQLab adventure contains the data, the questions, their solutions and hints, 
 
 42 is called a “token”. Each query will return a table with an added column containing the token needed to access the next episode (or a hint for the incorrect queries anticipated by the game creator).
 
-## Disclaimer
+## Disclaimer and potential issues
 
-The present adaptation of SQL Island includes a few changes in the game's content to be compatible with SQLab. Any bug or problem is the sole responsibility of the adapter, and should be reported in the issues of [SQLab's repository](https://github.com/laowantong/sqlab).
+The present adaptation of SQL Island includes a few changes in the game's content to be compatible with SQLab. Any bug or problem is the sole responsibility of the adapter, and should be reported in the [issues of SQLab](https://github.com/laowantong/sqlab/issues) itself.
