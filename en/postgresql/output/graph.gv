@@ -11,7 +11,7 @@ digraph G {
         fillcolor="#FEE548"
         color="#34262B"
         fontcolor="#34262B"
-        fontsize=19
+        fontsize=18
         penwidth=1
         style=filled
         label=""
