@@ -8,7 +8,6 @@
     "formula": "salt_042(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "SELECT *\nFROM village",
         "result_head": "<table>\n    <tr>\n        <th>villageid</th>\n        <th>name</th>\n        <th>chief</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>Monkeycity</td>\n        <td>1</td>\n        <td>761729108008</td>\n        <td>279644058721993</td>\n    </tr>\n    <tr>\n        <td>2</td>\n        <td>Cucumbertown</td>\n        <td>6</td>\n        <td>690325653982</td>\n        <td>279644058721993</td>\n    </tr>\n</table>\nTotal: 3 rows affected.",
         "token": "279644058721993"
@@ -24,7 +23,6 @@
     "formula": "salt_002(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "SELECT *\nFROM inhabitant",
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>Paul Bakerman</td>\n        <td>1</td>\n        <td>m</td>\n        <td>baker</td>\n        <td>850</td>\n        <td>friendly</td>\n        <td>894147374131</td>\n        <td>130877018053621</td>\n    </tr>\n    <tr>\n        <td>2</td>\n        <td>Ernest Perry</td>\n        <td>3</td>\n        <td>m</td>\n        <td>weaponsmith</td>\n        <td>280</td>\n        <td>friendly</td>\n        <td>447643847988</td>\n        <td>130877018053621</td>\n    </tr>\n</table>\nTotal: 19 rows affected.",
         "token": "130877018053621"
@@ -40,7 +38,6 @@
     "formula": "salt_048(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "SELECT *\nFROM inhabitant A\nWHERE job = 'butcher'",
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>6</td>\n        <td>Gerry Slaughterer</td>\n        <td>2</td>\n        <td>m</td>\n        <td>butcher</td>\n        <td>4850</td>\n        <td>evil</td>\n        <td>200228709826</td>\n        <td>279073832771282</td>\n    </tr>\n    <tr>\n        <td>7</td>\n        <td>Peter Slaughterer</td>\n        <td>3</td>\n        <td>m</td>\n        <td>butcher</td>\n        <td>3250</td>\n        <td>evil</td>\n        <td>149631755589</td>\n        <td>279073832771282</td>\n    </tr>\n</table>\nTotal: 4 rows affected.",
         "token": "279073832771282"
@@ -56,7 +53,6 @@
     "formula": "salt_023(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "SELECT *\nFROM inhabitant\nWHERE state = 'friendly'",
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>Paul Bakerman</td>\n        <td>1</td>\n        <td>m</td>\n        <td>baker</td>\n        <td>850</td>\n        <td>friendly</td>\n        <td>894147374131</td>\n        <td>50980998180879</td>\n    </tr>\n    <tr>\n        <td>2</td>\n        <td>Ernest Perry</td>\n        <td>3</td>\n        <td>m</td>\n        <td>weaponsmith</td>\n        <td>280</td>\n        <td>friendly</td>\n        <td>447643847988</td>\n        <td>50980998180879</td>\n    </tr>\n</table>\nTotal: 11 rows affected.",
         "token": "50980998180879"
@@ -72,7 +68,6 @@
     "formula": "salt_060(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "SELECT *\nFROM inhabitant\nWHERE state = 'friendly'\n    AND job = 'weaponsmith'",
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>2</td>\n        <td>Ernest Perry</td>\n        <td>3</td>\n        <td>m</td>\n        <td>weaponsmith</td>\n        <td>280</td>\n        <td>friendly</td>\n        <td>447643847988</td>\n        <td>111873735423475</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "111873735423475"
@@ -88,7 +83,6 @@
     "formula": "salt_069(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "SELECT *\nFROM inhabitant\nWHERE state = 'friendly'\n    AND job LIKE '%smith'",
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>2</td>\n        <td>Ernest Perry</td>\n        <td>3</td>\n        <td>m</td>\n        <td>weaponsmith</td>\n        <td>280</td>\n        <td>friendly</td>\n        <td>447643847988</td>\n        <td>71849070099607</td>\n    </tr>\n    <tr>\n        <td>10</td>\n        <td>Peter Drummer</td>\n        <td>1</td>\n        <td>m</td>\n        <td>smith</td>\n        <td>600</td>\n        <td>friendly</td>\n        <td>243111385149</td>\n        <td>71849070099607</td>\n    </tr>\n</table>\nTotal: 3 rows affected.",
         "token": "71849070099607"
@@ -104,37 +98,31 @@
     "formula": "salt_090(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\n\nSELECT personid\nFROM inhabitant\nWHERE name = 'Stranger';",
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>20</td>\n        <td>30525141563126</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "30525141563126"
       },
       {
-        "text": "",
         "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?')",
         "result_head": "<table>\n    <tr>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "30525141563126"
       },
       {
-        "text": "",
         "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?')",
         "result_head": "<table>\n    <tr>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "30525141563126"
       },
       {
-        "text": "",
         "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?')",
         "result_head": "<table>\n    <tr>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "30525141563126"
       },
       {
-        "text": "",
         "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?')",
         "result_head": "<table>\n    <tr>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "30525141563126"
       },
       {
-        "text": "",
         "query": "DELETE\nFROM inhabitant\nWHERE name = 'Stranger';\n\n\nSELECT setval('inhabitant_personid_seq', coalesce(\n                                                      (SELECT max(personid) + 1\n                                                       FROM inhabitant), 1), FALSE);\n\n\nINSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');",
         "result_head": "<table>\n    <tr>\n    </tr>\n</table>\nTotal: 5 rows affected.",
         "token": "30525141563126"
@@ -174,7 +162,6 @@
     "formula": "salt_099(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "SELECT gold\nFROM inhabitant\nWHERE personid = 20",
         "result_head": "<table>\n    <tr>\n        <th>gold</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>0</td>\n        <td>8733222069916</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "8733222069916"
@@ -190,7 +177,6 @@
     "formula": "salt_073(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "SELECT *\nFROM item\nWHERE OWNER IS NULL",
         "result_head": "<table>\n    <tr>\n        <th>item</th>\n        <th>owner</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>bucket</td>\n        <td>None</td>\n        <td>184436083777</td>\n        <td>253789061748229</td>\n    </tr>\n    <tr>\n        <td>carton</td>\n        <td>None</td>\n        <td>456410402076</td>\n        <td>253789061748229</td>\n    </tr>\n</table>\nTotal: 6 rows affected.",
         "token": "253789061748229"
@@ -206,7 +192,6 @@
     "formula": "salt_093(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "UPDATE item\nSET OWNER = 20\nWHERE item = 'coffee cup';\n\n\nSELECT *\nFROM item",
         "result_head": "<table>\n    <tr>\n        <th>item</th>\n        <th>owner</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>bucket</td>\n        <td>None</td>\n        <td>184436083777</td>\n        <td>107025105236366</td>\n    </tr>\n    <tr>\n        <td>carton</td>\n        <td>None</td>\n        <td>456410402076</td>\n        <td>107025105236366</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "107025105236366"
@@ -222,7 +207,6 @@
     "formula": "salt_033(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "UPDATE item\nSET OWNER = 20\nWHERE OWNER IS NULL;\n\n\nSELECT item\nFROM item\nWHERE OWNER = 20",
         "result_head": "<table>\n    <tr>\n        <th>item</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>coffee cup</td>\n        <td>139744599079637</td>\n    </tr>\n    <tr>\n        <td>bucket</td>\n        <td>139744599079637</td>\n    </tr>\n</table>\nTotal: 5 rows affected.",
         "token": "139744599079637"
@@ -238,7 +222,6 @@
     "formula": "salt_024(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "SELECT *\nFROM inhabitant\nWHERE state = 'friendly'\n    AND (job = 'dealer'\n         OR job = 'merchant')",
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>4</td>\n        <td>Carl Ox</td>\n        <td>1</td>\n        <td>m</td>\n        <td>merchant</td>\n        <td>250</td>\n        <td>friendly</td>\n        <td>435957500169</td>\n        <td>166940006711685</td>\n    </tr>\n    <tr>\n        <td>12</td>\n        <td>Otto Alexander</td>\n        <td>2</td>\n        <td>m</td>\n        <td>dealer</td>\n        <td>680</td>\n        <td>friendly</td>\n        <td>461779699008</td>\n        <td>166940006711685</td>\n    </tr>\n</table>\nTotal: 3 rows affected.",
         "token": "166940006711685"
@@ -254,7 +237,6 @@
     "formula": "salt_034(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "UPDATE item\nSET OWNER = 15\nWHERE item = 'ring'\n    OR item = 'teapot';\n\n\nSELECT *\nFROM item\nWHERE OWNER = 15",
         "result_head": "<table>\n    <tr>\n        <th>item</th>\n        <th>owner</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>ring</td>\n        <td>15</td>\n        <td>972837695337</td>\n        <td>261661938333343</td>\n    </tr>\n    <tr>\n        <td>teapot</td>\n        <td>15</td>\n        <td>503611185415</td>\n        <td>261661938333343</td>\n    </tr>\n</table>\nTotal: 2 rows affected.",
         "token": "261661938333343"
@@ -270,7 +252,6 @@
     "formula": "salt_091(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "UPDATE inhabitant\nSET gold = gold - 120\nWHERE personid = 15;\n\n\nUPDATE inhabitant\nSET gold = gold + 120\nWHERE personid = 20;\n\n\nSELECT name, gold\nFROM inhabitant\nWHERE personid IN (15, 20)",
         "result_head": "<table>\n    <tr>\n        <th>name</th>\n        <th>gold</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>Helen Grasshead</td>\n        <td>560</td>\n        <td>33454360073749</td>\n    </tr>\n    <tr>\n        <td>Stranger</td>\n        <td>120</td>\n        <td>33454360073749</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "33454360073749"
@@ -292,7 +273,6 @@
     "formula": "salt_080(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "UPDATE inhabitant\nSET name = 'Leslie Qualls'\nWHERE personid = 20;\n\n\nSELECT *\nFROM inhabitant\nWHERE personid = 20",
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>20</td>\n        <td>Leslie Qualls</td>\n        <td>1</td>\n        <td>?</td>\n        <td>?</td>\n        <td>120</td>\n        <td>?</td>\n        <td>10539358206</td>\n        <td>17693452815576</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "17693452815576"
@@ -315,7 +295,6 @@
     "tweak": "gold on the first row",
     "solutions": [
       {
-        "text": "",
         "query": "SELECT *\nFROM inhabitant\nWHERE job = 'baker'\nORDER BY gold DESC",
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>Paul Bakerman</td>\n        <td>1</td>\n        <td>m</td>\n        <td>baker</td>\n        <td>850</td>\n        <td>friendly</td>\n        <td>894147374131</td>\n        <td>30928237956025</td>\n    </tr>\n    <tr>\n        <td>9</td>\n        <td>Tiffany Drummer</td>\n        <td>1</td>\n        <td>f</td>\n        <td>baker</td>\n        <td>550</td>\n        <td>evil</td>\n        <td>777224738827</td>\n        <td>30928237956025</td>\n    </tr>\n</table>\nTotal: 3 rows affected.",
         "token": "30928237956025"
@@ -331,7 +310,6 @@
     "formula": "salt_010(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "UPDATE inhabitant\nSET gold = gold + 100 - 150\nWHERE personid = 20;\n\n\nSELECT name, gold\nFROM inhabitant\nWHERE personid = 20",
         "result_head": "<table>\n    <tr>\n        <th>name</th>\n        <th>gold</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>Leslie Qualls</td>\n        <td>70</td>\n        <td>156168294120120</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "156168294120120"
@@ -347,7 +325,6 @@
     "formula": "salt_086(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "SELECT *\nFROM inhabitant\nWHERE job = 'pilot'",
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>8</td>\n        <td>Arthur Tailor</td>\n        <td>2</td>\n        <td>m</td>\n        <td>pilot</td>\n        <td>490</td>\n        <td>kidnapped</td>\n        <td>526020225000</td>\n        <td>228770217179253</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "228770217179253"
@@ -362,8 +339,8 @@
     "salt": "029",
     "formula": "salt_029(sum(A.hash + B.hash) OVER ()) AS token",
     "solutions": [
+      "The expression presented here is called a join. It combines the information of the `inhabitant` table with information of the `village` table by matching `villageid` values.",
       {
-        "text": "The expression presented here is called a join. It combines the information of the `inhabitant` table with information of the `village` table by matching `villageid` values.",
         "query": "SELECT A.name\nFROM village A, inhabitant B\nWHERE A.villageid = B.villageid\n    AND B.name = 'Dirty Dieter'",
         "result_head": "<table>\n    <tr>\n        <th>name</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>Onionville</td>\n        <td>256500123076880</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "256500123076880"
@@ -379,7 +356,6 @@
     "formula": "salt_045(sum(A.hash + B.hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "SELECT B.name\nFROM village A, inhabitant B\nWHERE A.chief = B.personid\n    AND A.name = 'Onionville'",
         "result_head": "<table>\n    <tr>\n        <th>name</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>Fred Dix</td>\n        <td>241491762019151</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "241491762019151"
@@ -396,7 +372,6 @@
     "tweak": "this number",
     "solutions": [
       {
-        "text": "",
         "query": "SELECT count(*) AS population\nFROM inhabitant A, village B\nWHERE A.villageid = B.villageid\n    AND B.name = 'Onionville'",
         "result_head": "<table>\n    <tr>\n        <th>population</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>8</td>\n        <td>237857954360377</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "237857954360377"
@@ -413,7 +388,6 @@
     "tweak": "this number",
     "solutions": [
       {
-        "text": "",
         "query": "SELECT count(*) AS women\nFROM inhabitant A, village B\nWHERE A.villageid = B.villageid\n    AND B.name = 'Onionville'\n    AND gender = 'f'",
         "result_head": "<table>\n    <tr>\n        <th>women</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>41770464086333</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "41770464086333"
@@ -429,7 +403,6 @@
     "formula": "salt_036(sum(A.hash + B.hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "SELECT A.name\nFROM inhabitant A, village B\nWHERE A.villageid = B.villageid\n    AND B.name = 'Onionville'\n    AND gender = 'f'",
         "result_head": "<table>\n    <tr>\n        <th>name</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>Dirty Diane</td>\n        <td>124254928334508</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "124254928334508"
@@ -446,7 +419,6 @@
     "tweak": "this sum",
     "solutions": [
       {
-        "text": "",
         "query": "SELECT sum(A.gold) AS total\nFROM inhabitant A, village B\nWHERE A.villageid = B.villageid\n    AND B.name = 'Cucumbertown'",
         "result_head": "<table>\n    <tr>\n        <th>total</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>8860</td>\n        <td>153383718990467</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "153383718990467"
@@ -463,7 +435,6 @@
     "tweak": "this sum",
     "solutions": [
       {
-        "text": "",
         "query": "SELECT sum(inhabitant.gold) AS total\nFROM inhabitant\nWHERE job IN ('baker', 'dealer', 'merchant')",
         "result_head": "<table>\n    <tr>\n        <th>total</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>4010</td>\n        <td>204304435155808</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "204304435155808"
@@ -480,7 +451,6 @@
     "tweak": "the average on the last row",
     "solutions": [
       {
-        "text": "",
         "query": "SELECT job, avg(gold) AS average\nFROM inhabitant\nGROUP BY job\nORDER BY average",
         "result_head": "<table>\n    <tr>\n        <th>job</th>\n        <th>average</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>farmer</td>\n        <td>10.0000000000000000</td>\n        <td>221986332421628</td>\n    </tr>\n    <tr>\n        <td>?</td>\n        <td>70.0000000000000000</td>\n        <td>221986332421628</td>\n    </tr>\n</table>\nTotal: 11 rows affected.",
         "token": "221986332421628"
@@ -496,7 +466,6 @@
     "formula": "salt_018(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "DELETE\nFROM inhabitant\nWHERE name = 'Dirty Dieter';\n\n\nSELECT item\nFROM item\nWHERE OWNER IS NULL",
         "result_head": "<table>\n    <tr>\n        <th>item</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>cane</td>\n        <td>193891994785434</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "193891994785434"
@@ -512,7 +481,6 @@
     "formula": "salt_004(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "DELETE\nFROM inhabitant\nWHERE name = 'Dirty Diane';\n\n\nSELECT *\nFROM inhabitant",
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>Paul Bakerman</td>\n        <td>1</td>\n        <td>m</td>\n        <td>baker</td>\n        <td>850</td>\n        <td>friendly</td>\n        <td>894147374131</td>\n        <td>66597888917702</td>\n    </tr>\n    <tr>\n        <td>2</td>\n        <td>Ernest Perry</td>\n        <td>3</td>\n        <td>m</td>\n        <td>weaponsmith</td>\n        <td>280</td>\n        <td>friendly</td>\n        <td>447643847988</td>\n        <td>66597888917702</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "66597888917702"
@@ -528,7 +496,6 @@
     "formula": "salt_051(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "text": "",
         "query": "UPDATE inhabitant\nSET state = 'emigrated'\nWHERE personid = 20;\n\n\nUPDATE inhabitant\nSET state = 'friendly'\nWHERE job = 'pilot';\n\n\nSELECT *\nFROM inhabitant;",
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>Paul Bakerman</td>\n        <td>1</td>\n        <td>m</td>\n        <td>baker</td>\n        <td>850</td>\n        <td>friendly</td>\n        <td>894147374131</td>\n        <td>226385040970423</td>\n    </tr>\n    <tr>\n        <td>2</td>\n        <td>Ernest Perry</td>\n        <td>3</td>\n        <td>m</td>\n        <td>weaponsmith</td>\n        <td>280</td>\n        <td>friendly</td>\n        <td>447643847988</td>\n        <td>226385040970423</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "226385040970423"

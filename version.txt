@@ -1,1 +1,1 @@
-1.0.0 -- independent of the version number of SQLab
+1.1.0 -- independent of the version number of SQLab
