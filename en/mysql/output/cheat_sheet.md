@@ -224,8 +224,7 @@ _Tip._ When you use both `AND` and `OR`, don't forget to put brackets correctly!
 SELECT *
 FROM inhabitant
 WHERE state = 'friendly'
-    AND (job = 'dealer'
-         OR job = 'merchant')
+    AND (job = 'dealer' OR job = 'merchant')
 ```
 
 ### Episode 13
@@ -267,7 +266,8 @@ SET gold = gold + 120
 WHERE personid = 20;
 
 
-SELECT name, gold
+SELECT name
+     , gold
 FROM inhabitant
 WHERE personid IN (15, 20)
 ```
@@ -322,7 +322,8 @@ SET gold = gold + 100 - 150
 WHERE personid = 20;
 
 
-SELECT name, gold
+SELECT name
+     , gold
 FROM inhabitant
 WHERE personid = 20
 ```
@@ -434,7 +435,8 @@ Copy-paste the previous query, add the given formula, and execute it.
 
 ```sql
 SELECT sum(A.gold) AS total
-FROM inhabitant A, village B
+FROM inhabitant A
+   , village B
 WHERE A.villageid = B.villageid
     AND B.name = 'Cucumbertown'
 ```
@@ -462,7 +464,8 @@ Copy-paste the previous query, add the given formula, and execute it.
 **Formula** (replace the emoji 👀 with the average on the last row). `salt_071(👀 + sum(bit_xor(hash)) OVER ()) AS token`
 
 ```sql
-SELECT job, avg(gold) AS average
+SELECT job
+     , avg(gold) AS average
 FROM inhabitant
 GROUP BY job
 ORDER BY average

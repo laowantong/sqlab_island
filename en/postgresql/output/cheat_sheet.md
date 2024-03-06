@@ -136,9 +136,7 @@ FROM inhabitant
 WHERE name = 'Stranger';
 
 
-SELECT setval('inhabitant_personid_seq', coalesce(
-                                                      (SELECT max(personid) + 1
-                                                       FROM inhabitant), 1), FALSE);
+SELECT setval('inhabitant_personid_seq', coalesce((SELECT max(personid) + 1 FROM inhabitant), 1), FALSE);
 
 
 INSERT INTO inhabitant (name, villageid, gender, job, gold, state)
@@ -269,7 +267,8 @@ SET gold = gold + 120
 WHERE personid = 20;
 
 
-SELECT name, gold
+SELECT name
+     , gold
 FROM inhabitant
 WHERE personid IN (15, 20)
 ```
@@ -324,7 +323,8 @@ SET gold = gold + 100 - 150
 WHERE personid = 20;
 
 
-SELECT name, gold
+SELECT name
+     , gold
 FROM inhabitant
 WHERE personid = 20
 ```
@@ -464,7 +464,8 @@ Copy-paste the previous query, add the given formula, and execute it.
 **Formula** (replace the emoji 👀 with the average on the last row). `salt_071(👀 + sum(bit_xor(hash)) OVER ()) AS token`
 
 ```sql
-SELECT job, avg(gold) AS average
+SELECT job
+     , avg(gold) AS average
 FROM inhabitant
 GROUP BY job
 ORDER BY average

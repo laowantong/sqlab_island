@@ -1,4 +1,9 @@
 {
+  "info": {
+    "adventure_count": 1,
+    "episode_count": 30,
+    "exercise_count": 0
+  },
   "042": {
     "kind": "episode",
     "counter": 1,
@@ -12,7 +17,8 @@
         "result_head": "<table>\n    <tr>\n        <th>villageid</th>\n        <th>name</th>\n        <th>chief</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>Monkeycity</td>\n        <td>1</td>\n        <td>537616450612</td>\n        <td>279731784972193</td>\n    </tr>\n    <tr>\n        <td>2</td>\n        <td>Cucumbertown</td>\n        <td>6</td>\n        <td>506002862681</td>\n        <td>279731784972193</td>\n    </tr>\n</table>\nTotal: 3 rows affected.",
         "token": "279731784972193"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "279731784972193": {
     "kind": "episode",
@@ -27,7 +33,8 @@
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>Paul Bakerman</td>\n        <td>1</td>\n        <td>m</td>\n        <td>baker</td>\n        <td>850</td>\n        <td>friendly</td>\n        <td>667574576304</td>\n        <td>128589543210724</td>\n    </tr>\n    <tr>\n        <td>2</td>\n        <td>Ernest Perry</td>\n        <td>3</td>\n        <td>m</td>\n        <td>weaponsmith</td>\n        <td>280</td>\n        <td>friendly</td>\n        <td>73993229357</td>\n        <td>128589543210724</td>\n    </tr>\n</table>\nTotal: 19 rows affected.",
         "token": "128589543210724"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "128589543210724": {
     "kind": "episode",
@@ -42,7 +49,8 @@
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>6</td>\n        <td>Gerry Slaughterer</td>\n        <td>2</td>\n        <td>m</td>\n        <td>butcher</td>\n        <td>4850</td>\n        <td>evil</td>\n        <td>872618219253</td>\n        <td>280206676651511</td>\n    </tr>\n    <tr>\n        <td>7</td>\n        <td>Peter Slaughterer</td>\n        <td>3</td>\n        <td>m</td>\n        <td>butcher</td>\n        <td>3250</td>\n        <td>evil</td>\n        <td>648197551204</td>\n        <td>280206676651511</td>\n    </tr>\n</table>\nTotal: 4 rows affected.",
         "token": "280206676651511"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "280206676651511": {
     "kind": "episode",
@@ -57,7 +65,8 @@
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>Paul Bakerman</td>\n        <td>1</td>\n        <td>m</td>\n        <td>baker</td>\n        <td>850</td>\n        <td>friendly</td>\n        <td>667574576304</td>\n        <td>49081739277115</td>\n    </tr>\n    <tr>\n        <td>2</td>\n        <td>Ernest Perry</td>\n        <td>3</td>\n        <td>m</td>\n        <td>weaponsmith</td>\n        <td>280</td>\n        <td>friendly</td>\n        <td>73993229357</td>\n        <td>49081739277115</td>\n    </tr>\n</table>\nTotal: 11 rows affected.",
         "token": "49081739277115"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "49081739277115": {
     "kind": "episode",
@@ -72,7 +81,8 @@
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>2</td>\n        <td>Ernest Perry</td>\n        <td>3</td>\n        <td>m</td>\n        <td>weaponsmith</td>\n        <td>280</td>\n        <td>friendly</td>\n        <td>73993229357</td>\n        <td>111903790755050</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "111903790755050"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "111903790755050": {
     "kind": "episode",
@@ -87,7 +97,8 @@
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>2</td>\n        <td>Ernest Perry</td>\n        <td>3</td>\n        <td>m</td>\n        <td>weaponsmith</td>\n        <td>280</td>\n        <td>friendly</td>\n        <td>73993229357</td>\n        <td>71115866585707</td>\n    </tr>\n    <tr>\n        <td>10</td>\n        <td>Peter Drummer</td>\n        <td>1</td>\n        <td>m</td>\n        <td>smith</td>\n        <td>600</td>\n        <td>friendly</td>\n        <td>713565808545</td>\n        <td>71115866585707</td>\n    </tr>\n</table>\nTotal: 3 rows affected.",
         "token": "71115866585707"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "71115866585707": {
     "kind": "episode",
@@ -127,31 +138,32 @@
         "result_head": "<table>\n    <tr>\n    </tr>\n</table>\nTotal: 5 rows affected.",
         "token": "29896704364823"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "29293607320320": {
     "kind": "hint",
     "counter": 7,
     "text": "Oops, it seems you have executed the `INSERT` query twice or more. Execute the following queries to cancel all these insertions: DELETE from inhabitant WHERE name = 'Stranger'; ALTER TABLE inhabitant AUTO_INCREMENT=1",
-    "query": "SELECT personid,\n    salt_090(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';"
+    "query": "SELECT personid\n     , salt_090(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';"
   },
   "28697173935421": {
     "kind": "hint",
     "counter": 7,
     "text": "Oops, it seems you have executed the `INSERT` query twice or more. Execute the following queries to cancel all these insertions: DELETE from inhabitant WHERE name = 'Stranger'; ALTER TABLE inhabitant AUTO_INCREMENT=1",
-    "query": "SELECT personid,\n    salt_090(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';"
+    "query": "SELECT personid\n     , salt_090(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';"
   },
   "28094084689710": {
     "kind": "hint",
     "counter": 7,
     "text": "Oops, it seems you have executed the `INSERT` query twice or more. Execute the following queries to cancel all these insertions: DELETE from inhabitant WHERE name = 'Stranger'; ALTER TABLE inhabitant AUTO_INCREMENT=1",
-    "query": "SELECT personid,\n    salt_090(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';"
+    "query": "SELECT personid\n     , salt_090(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';"
   },
   "27493202200923": {
     "kind": "hint",
     "counter": 7,
     "text": "Oops, it seems you have executed the `INSERT` query twice or more. Execute the following queries to cancel all these insertions: DELETE from inhabitant WHERE name = 'Stranger'; ALTER TABLE inhabitant AUTO_INCREMENT=1",
-    "query": "SELECT personid,\n    salt_090(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';"
+    "query": "SELECT personid\n     , salt_090(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';"
   },
   "29896704364823": {
     "kind": "episode",
@@ -166,7 +178,8 @@
         "result_head": "<table>\n    <tr>\n        <th>gold</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>0</td>\n        <td>7708171354493</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "7708171354493"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "7708171354493": {
     "kind": "episode",
@@ -181,7 +194,8 @@
         "result_head": "<table>\n    <tr>\n        <th>item</th>\n        <th>owner</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>bucket</td>\n        <td>None</td>\n        <td>184436083777</td>\n        <td>253789061748229</td>\n    </tr>\n    <tr>\n        <td>carton</td>\n        <td>None</td>\n        <td>456410402076</td>\n        <td>253789061748229</td>\n    </tr>\n</table>\nTotal: 6 rows affected.",
         "token": "253789061748229"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "253789061748229": {
     "kind": "episode",
@@ -196,7 +210,8 @@
         "result_head": "<table>\n    <tr>\n        <th>item</th>\n        <th>owner</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>bucket</td>\n        <td>None</td>\n        <td>184436083777</td>\n        <td>107025105236366</td>\n    </tr>\n    <tr>\n        <td>cane</td>\n        <td>5</td>\n        <td>11384476511</td>\n        <td>107025105236366</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "107025105236366"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "107025105236366": {
     "kind": "episode",
@@ -211,7 +226,8 @@
         "result_head": "<table>\n    <tr>\n        <th>item</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>bucket</td>\n        <td>139744599079637</td>\n    </tr>\n    <tr>\n        <td>carton</td>\n        <td>139744599079637</td>\n    </tr>\n</table>\nTotal: 5 rows affected.",
         "token": "139744599079637"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "139744599079637": {
     "kind": "episode",
@@ -222,11 +238,12 @@
     "formula": "salt_024(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "query": "SELECT *\nFROM inhabitant\nWHERE state = 'friendly'\n    AND (job = 'dealer'\n         OR job = 'merchant')",
+        "query": "SELECT *\nFROM inhabitant\nWHERE state = 'friendly'\n    AND (job = 'dealer' OR job = 'merchant')",
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>4</td>\n        <td>Carl Ox</td>\n        <td>1</td>\n        <td>m</td>\n        <td>merchant</td>\n        <td>250</td>\n        <td>friendly</td>\n        <td>843473717421</td>\n        <td>166788243175236</td>\n    </tr>\n    <tr>\n        <td>12</td>\n        <td>Otto Alexander</td>\n        <td>2</td>\n        <td>m</td>\n        <td>dealer</td>\n        <td>680</td>\n        <td>friendly</td>\n        <td>371232179800</td>\n        <td>166788243175236</td>\n    </tr>\n</table>\nTotal: 3 rows affected.",
         "token": "166788243175236"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "166788243175236": {
     "kind": "episode",
@@ -241,7 +258,8 @@
         "result_head": "<table>\n    <tr>\n        <th>item</th>\n        <th>owner</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>ring</td>\n        <td>15</td>\n        <td>972837695337</td>\n        <td>261661938333343</td>\n    </tr>\n    <tr>\n        <td>teapot</td>\n        <td>15</td>\n        <td>503611185415</td>\n        <td>261661938333343</td>\n    </tr>\n</table>\nTotal: 2 rows affected.",
         "token": "261661938333343"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "261661938333343": {
     "kind": "episode",
@@ -252,17 +270,18 @@
     "formula": "salt_091(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "query": "UPDATE inhabitant\nSET gold = gold - 120\nWHERE personid = 15;\n\n\nUPDATE inhabitant\nSET gold = gold + 120\nWHERE personid = 20;\n\n\nSELECT name, gold\nFROM inhabitant\nWHERE personid IN (15, 20)",
+        "query": "UPDATE inhabitant\nSET gold = gold - 120\nWHERE personid = 15;\n\n\nUPDATE inhabitant\nSET gold = gold + 120\nWHERE personid = 20;\n\n\nSELECT name\n     , gold\nFROM inhabitant\nWHERE personid IN (15, 20)",
         "result_head": "<table>\n    <tr>\n        <th>name</th>\n        <th>gold</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>Helen Grasshead</td>\n        <td>560</td>\n        <td>34807888636366</td>\n    </tr>\n    <tr>\n        <td>Stranger</td>\n        <td>120</td>\n        <td>34807888636366</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "34807888636366"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "24919761524173": {
     "kind": "hint",
     "counter": 14,
     "text": "Restrict the result to the row of Helen (15) and yours (20).",
-    "query": "SELECT name, gold,\n    salt_091(sum(hash) OVER ()) AS token\nFROM inhabitant"
+    "query": "SELECT name\n     , gold\n     , salt_091(sum(hash) OVER ()) AS token\nFROM inhabitant"
   },
   "34807888636366": {
     "kind": "episode",
@@ -277,13 +296,14 @@
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>20</td>\n        <td>Leslie Qualls</td>\n        <td>1</td>\n        <td>?</td>\n        <td>?</td>\n        <td>120</td>\n        <td>?</td>\n        <td>815181808020</td>\n        <td>18314467662514</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "18314467662514"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "28691699637667": {
     "kind": "hint",
     "counter": 15,
     "text": "Restrict the result to your row (20).",
-    "query": "SELECT *,\n    salt_080(sum(hash) OVER ()) AS token\nFROM inhabitant"
+    "query": "SELECT *\n     , salt_080(sum(hash) OVER ()) AS token\nFROM inhabitant"
   },
   "18314467662514": {
     "kind": "episode",
@@ -299,7 +319,8 @@
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>Paul Bakerman</td>\n        <td>1</td>\n        <td>m</td>\n        <td>baker</td>\n        <td>850</td>\n        <td>friendly</td>\n        <td>667574576304</td>\n        <td>34285849059910</td>\n    </tr>\n    <tr>\n        <td>9</td>\n        <td>Tiffany Drummer</td>\n        <td>1</td>\n        <td>f</td>\n        <td>baker</td>\n        <td>550</td>\n        <td>evil</td>\n        <td>434738589188</td>\n        <td>34285849059910</td>\n    </tr>\n</table>\nTotal: 3 rows affected.",
         "token": "34285849059910"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "34285849059910": {
     "kind": "episode",
@@ -310,11 +331,12 @@
     "formula": "salt_010(sum(hash) OVER ()) AS token",
     "solutions": [
       {
-        "query": "UPDATE inhabitant\nSET gold = gold + 100 - 150\nWHERE personid = 20;\n\n\nSELECT name, gold\nFROM inhabitant\nWHERE personid = 20",
+        "query": "UPDATE inhabitant\nSET gold = gold + 100 - 150\nWHERE personid = 20;\n\n\nSELECT name\n     , gold\nFROM inhabitant\nWHERE personid = 20",
         "result_head": "<table>\n    <tr>\n        <th>name</th>\n        <th>gold</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>Leslie Qualls</td>\n        <td>70</td>\n        <td>157095709958947</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "157095709958947"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "157095709958947": {
     "kind": "episode",
@@ -329,7 +351,8 @@
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>8</td>\n        <td>Arthur Tailor</td>\n        <td>2</td>\n        <td>m</td>\n        <td>pilot</td>\n        <td>490</td>\n        <td>kidnapped</td>\n        <td>823379478192</td>\n        <td>229615318980909</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "229615318980909"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "229615318980909": {
     "kind": "episode",
@@ -345,7 +368,8 @@
         "result_head": "<table>\n    <tr>\n        <th>name</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>Onionville</td>\n        <td>256975312978711</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "256975312978711"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "256975312978711": {
     "kind": "episode",
@@ -360,7 +384,8 @@
         "result_head": "<table>\n    <tr>\n        <th>name</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>Fred Dix</td>\n        <td>240365303417698</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "240365303417698"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "240365303417698": {
     "kind": "episode",
@@ -376,7 +401,8 @@
         "result_head": "<table>\n    <tr>\n        <th>population</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>8</td>\n        <td>237781870732904</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "237781870732904"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "237781870732904": {
     "kind": "episode",
@@ -392,7 +418,8 @@
         "result_head": "<table>\n    <tr>\n        <th>women</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>41535988500868</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "41535988500868"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "41535988500868": {
     "kind": "episode",
@@ -407,7 +434,8 @@
         "result_head": "<table>\n    <tr>\n        <th>name</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>Dirty Diane</td>\n        <td>124493698100759</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "124493698100759"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "124493698100759": {
     "kind": "episode",
@@ -419,11 +447,12 @@
     "tweak": "this sum",
     "solutions": [
       {
-        "query": "SELECT sum(A.gold) AS total\nFROM inhabitant A, village B\nWHERE A.villageid = B.villageid\n    AND B.name = 'Cucumbertown'",
+        "query": "SELECT sum(A.gold) AS total\nFROM inhabitant A\n   , village B\nWHERE A.villageid = B.villageid\n    AND B.name = 'Cucumbertown'",
         "result_head": "<table>\n    <tr>\n        <th>total</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>8860</td>\n        <td>152867079389134</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "152867079389134"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "152867079389134": {
     "kind": "episode",
@@ -439,7 +468,8 @@
         "result_head": "<table>\n    <tr>\n        <th>total</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>4010</td>\n        <td>203716599638991</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "203716599638991"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "203716599638991": {
     "kind": "episode",
@@ -451,11 +481,12 @@
     "tweak": "the average on the last row",
     "solutions": [
       {
-        "query": "SELECT job, avg(gold) AS average\nFROM inhabitant\nGROUP BY job\nORDER BY average",
+        "query": "SELECT job\n     , avg(gold) AS average\nFROM inhabitant\nGROUP BY job\nORDER BY average",
         "result_head": "<table>\n    <tr>\n        <th>job</th>\n        <th>average</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>farmer</td>\n        <td>10.0000</td>\n        <td>222167811363863</td>\n    </tr>\n    <tr>\n        <td>?</td>\n        <td>70.0000</td>\n        <td>222167811363863</td>\n    </tr>\n</table>\nTotal: 11 rows affected.",
         "token": "222167811363863"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "222167811363863": {
     "kind": "episode",
@@ -470,7 +501,8 @@
         "result_head": "<table>\n    <tr>\n        <th>item</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>cane</td>\n        <td>193619246200652</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "193619246200652"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "193619246200652": {
     "kind": "episode",
@@ -485,7 +517,8 @@
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>Paul Bakerman</td>\n        <td>1</td>\n        <td>m</td>\n        <td>baker</td>\n        <td>850</td>\n        <td>friendly</td>\n        <td>667574576304</td>\n        <td>67594779315675</td>\n    </tr>\n    <tr>\n        <td>2</td>\n        <td>Ernest Perry</td>\n        <td>3</td>\n        <td>m</td>\n        <td>weaponsmith</td>\n        <td>280</td>\n        <td>friendly</td>\n        <td>73993229357</td>\n        <td>67594779315675</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "67594779315675"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "67594779315675": {
     "kind": "episode",
@@ -500,7 +533,8 @@
         "result_head": "<table>\n    <tr>\n        <th>personid</th>\n        <th>name</th>\n        <th>villageid</th>\n        <th>gender</th>\n        <th>job</th>\n        <th>gold</th>\n        <th>state</th>\n        <th>hash</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>1</td>\n        <td>Paul Bakerman</td>\n        <td>1</td>\n        <td>m</td>\n        <td>baker</td>\n        <td>850</td>\n        <td>friendly</td>\n        <td>667574576304</td>\n        <td>226162284926311</td>\n    </tr>\n    <tr>\n        <td>2</td>\n        <td>Ernest Perry</td>\n        <td>3</td>\n        <td>m</td>\n        <td>weaponsmith</td>\n        <td>280</td>\n        <td>friendly</td>\n        <td>73993229357</td>\n        <td>226162284926311</td>\n    </tr>\n</table>\nTotal: 1 rows affected.",
         "token": "226162284926311"
       }
-    ]
+    ],
+    "adventure": 1
   },
   "226162284926311": {
     "kind": "episode",
@@ -508,6 +542,7 @@
     "context": "You have completed SQL Island. What a big adventure!",
     "statement": "",
     "salt": "049",
-    "solutions": []
+    "solutions": [],
+    "adventure": 1
   }
 }
