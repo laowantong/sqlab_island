@@ -4,11 +4,11 @@
 
 This is an adaptation of [SQL Island](https://sql-island.informatik.uni-kl.de), a simple game designed to teach SQL, distributed under the [MIT License](https://opensource.org/licenses/MIT) on [GitHub](https://github.com/jschildgen/sql-island) by its main author, [Johannes Schildgen](https://www.johannesschildgen.de) (Regensburg University of Applied Sciences, Germany). 
 
-The original game was adapted by Aristide Grange (University of Lorraine, France) to demonstrate the use of SQL Adventure Builder, or SQLab, a system enabling teachers to create standalone educational games for learning SQL. This system lives in a [separate repository](https://github.com/laowantong/sqlab).
+The original game was adapted by Aristide Grange (University of Lorraine, France) to demonstrate the use of SQL Adventure Builder, or SQLab, a system enabling teachers to create standalone educational games for learning SQL. This system lives in a [separate repository](https://github.com/laowantong/sqlab) with the explanation of its principles.
 
 ## Versions
 
-Currently, two versions of SQLab Island are available, both in English.
+To play SQLab Island, you just need to download a dump of the self-contained database and import it into your favorite SQL database management system (DBMS). There are currently two versions, both in English:
 
 ### MySQL
 
