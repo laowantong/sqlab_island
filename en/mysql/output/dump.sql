@@ -351,7 +351,7 @@ INSERT INTO sqlab_info (name, value) VALUES
   ('dbms_vendor', 'MySQL'),
   ('dbms_version', '8.3.0'),
   ('sqlab_version', '0.3.0'),
-  ('created_at', '2024-03-06T18:35:41.702588')
+  ('created_at', '2024-03-08T12:50:55.389345')
 ;
 
 
