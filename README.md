@@ -6,23 +6,35 @@ This is an adaptation of [SQL Island](https://sql-island.informatik.uni-kl.de), 
 
 The original game was adapted by Aristide Grange (University of Lorraine, France) to demonstrate the use of SQL Adventure Builder, or SQLab, a system enabling teachers to create standalone educational games for learning SQL. This system lives in a [separate repository](https://github.com/laowantong/sqlab).
 
-## Usage
+## Versions
 
-An SQLab adventure contains the data, the questions, their solutions and hints, and all the accompanying texts. It is entirely self-contained in a single database. As a result, it can be played on any computer with a working installation of a database management system. Currently, two versions of SQL Island are available: one for MySQL and one for PostgreSQL, both in English.
+Currently, two versions of SQLab Island are available, both in English.
 
-- For MySQL, download the file `en/mysql/output/sql_island.sql` and import it under MySQL. Then, access to the first episode of the adventure by executing the following SQL query:
+### MySQL
 
-  ```sql
-  call decrypt(042)
-  ```
+1. [Download dump.sql](https://raw.githubusercontent.com/laowantong/sqlab_island/main/en/mysql/output/dump.sql).
+2. On the command line, create a new database called `sql_island`, populate it and connect to it:
+   ```bash
+   mysql -u username -p < dump.sql
+   mysql -u username -p sql_island
+   ```
+3. On the MySQL prompt, access the first episode of the adventure:
+   ```sql
+   call decrypt(42)
+   ```
 
-- For PostgreSQL, the file is `en/postgresql/output/sql_island.sql` and the query is:
+### PostgreSQL
 
-  ```sql
-  select decrypt(42)
-  ```
-
-42 is called a “token”. Each query will return a table with an added column containing the token needed to access the next episode (or a hint for the incorrect queries anticipated by the game creator).
+1. [Download dump.sql](https://raw.githubusercontent.com/laowantong/sqlab_island/main/en/postgresql/output/dump.sql).
+2. On the command line, create a new database called `sql_island`, populate it and connect to it:
+   ```bash
+   psql -U username -f dump.sql
+   psql -U username sql_island
+   ```
+3. On the PostgreSQL prompt, access the first episode of the adventure:
+   ```sql
+   select decrypt(42)
+   ```
 
 ## Disclaimer and potential issues
 
