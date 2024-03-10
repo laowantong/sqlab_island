@@ -110,39 +110,6 @@ FROM inhabitant
 WHERE name = 'Stranger';
 ```
 
-```sql
-INSERT INTO inhabitant (name, villageid, gender, job, gold, state)
-VALUES ('Stranger', 1, '?', '?', 0, '?')
-```
-
-```sql
-INSERT INTO inhabitant (name, villageid, gender, job, gold, state)
-VALUES ('Stranger', 1, '?', '?', 0, '?')
-```
-
-```sql
-INSERT INTO inhabitant (name, villageid, gender, job, gold, state)
-VALUES ('Stranger', 1, '?', '?', 0, '?')
-```
-
-```sql
-INSERT INTO inhabitant (name, villageid, gender, job, gold, state)
-VALUES ('Stranger', 1, '?', '?', 0, '?')
-```
-
-```sql
-DELETE
-FROM inhabitant
-WHERE name = 'Stranger';
-
-
-ALTER TABLE inhabitant AUTO_INCREMENT = 1;
-
-
-INSERT INTO inhabitant (name, villageid, gender, job, gold, state)
-VALUES ('Stranger', 1, '?', '?', 0, '?');
-```
-
 ### Episode 8
 
 **Token.** `call decrypt(29896704364823)`
@@ -170,7 +137,7 @@ _Tip._ You can recognize ownerless items by: WHERE owner IS NULL
 ```sql
 SELECT *
 FROM item
-WHERE OWNER IS NULL
+WHERE owner IS NULL
 ```
 
 ### Episode 10
@@ -183,7 +150,7 @@ Execute the `UPDATE` query, and check the `item` table afterwards.
 
 ```sql
 UPDATE item
-SET OWNER = 20
+SET owner = 20
 WHERE item = 'coffee cup';
 
 
@@ -201,22 +168,55 @@ Do you know a trick how to collect all the ownerless items? Afterwards, list all
 
 ```sql
 UPDATE item
-SET OWNER = 20
-WHERE OWNER IS NULL;
+SET owner = 20
+WHERE owner IS NULL;
 
 
 SELECT item
 FROM item
-WHERE OWNER = 20
+WHERE owner = 20
+```
+
+```sql
+UPDATE item
+SET owner = 20;
+
+
+SELECT item
+FROM item
 ```
 
 ### Episode 12
 
-**Token.** `call decrypt(139744599079637)`
+**Token.** `call decrypt(140217850902324)`
 
-Find a friendly inhabitant who is either a dealer or a merchant. Maybe they want to buy some of your items.
+Let's give them back to their rightful owners: the cane to 5, the hammer to 2 and the rope to 17. Afterwards, list all of the items you own.
 
-_Tip._ When you use both `AND` and `OR`, don't forget to put brackets correctly!
+**Formula**. `salt_025(sum(hash) OVER ()) AS token`
+
+```sql
+UPDATE item
+SET owner = 5
+WHERE item = 'cane';
+
+UPDATE item
+SET owner = 2
+WHERE item = 'hammer';
+
+UPDATE item
+SET owner = 17
+WHERE item = 'rope';
+
+SELECT item
+FROM item
+WHERE owner = 20
+```
+
+### Episode 13
+
+**Token.** `call decrypt(206054094742976)`
+
+Find a friendly inhabitant who is either a merchant or a dealer. Maybe they want to buy some of your items.
 
 **Formula**. `salt_024(sum(hash) OVER ()) AS token`
 
@@ -224,10 +224,39 @@ _Tip._ When you use both `AND` and `OR`, don't forget to put brackets correctly!
 SELECT *
 FROM inhabitant
 WHERE state = 'friendly'
-    AND (job = 'dealer' OR job = 'merchant')
+    AND (job = 'merchant' OR job = 'dealer')
+```
+
+```sql
+SELECT *
+FROM inhabitant
+WHERE state = 'friendly'
+    AND job in ('merchant', 'dealer')
 ```
 
 ### Episode 13
+
+**Token.** `call decrypt(139744599079637)`
+
+Find a friendly inhabitant who is either a merchant or a dealer. Maybe they want to buy some of your items.
+
+**Formula**. `salt_024(sum(hash) OVER ()) AS token`
+
+```sql
+SELECT *
+FROM inhabitant
+WHERE state = 'friendly'
+    AND (job = 'merchant' OR job = 'dealer')
+```
+
+```sql
+SELECT *
+FROM inhabitant
+WHERE state = 'friendly'
+    AND job in ('merchant', 'dealer')
+```
+
+### Episode 14
 
 **Token.** `call decrypt(166788243175236)`
 
@@ -237,21 +266,22 @@ Afterwards, check the items that she owns.
 
 ```sql
 UPDATE item
-SET OWNER = 15
-WHERE item = 'ring'
-    OR item = 'teapot';
+SET owner = 15
+WHERE item IN ('ring', 'teapot');
 
 
 SELECT *
 FROM item
-WHERE OWNER = 15
+WHERE owner = 15
 ```
 
-### Episode 14
+### Episode 15
 
 **Token.** `call decrypt(261661938333343)`
 
-Substract 120 from Helen's gold, add 120 to yours, and then check the new amounts of your two rows.
+Transfer 120 from Helen's gold to yours, and then check the new amounts of your two rows.
+
+_Tip._ SQL has no “transfer” operation. Use two `UPDATE` statements.
 
 **Formula**. `salt_091(sum(hash) OVER ()) AS token`
 
@@ -272,7 +302,109 @@ FROM inhabitant
 WHERE personid IN (15, 20)
 ```
 
-### Episode 15
+```sql
+UPDATE inhabitant
+SET gold = gold - 120
+WHERE personid = 15;
+
+
+SELECT name
+     , gold
+FROM inhabitant
+WHERE personid IN (15, 20)
+```
+
+```sql
+UPDATE inhabitant
+SET gold = gold + 120
+WHERE personid = 20;
+
+
+SELECT name
+     , gold
+FROM inhabitant
+WHERE personid IN (15, 20)
+```
+
+### Episode 16
+
+**Token.** `call decrypt(34989396526869)`
+
+You have correctly updated Helen's gold. Now update yours.
+
+**Formula**. `salt_075(sum(hash) OVER ()) AS token`
+
+```sql
+UPDATE inhabitant
+SET gold = gold + 120
+WHERE personid = 20;
+
+
+SELECT name
+     , gold
+FROM inhabitant
+WHERE personid IN (15, 20)
+```
+
+### Episode 17
+
+**Token.** `call decrypt(35091420089868)`
+
+You have correctly updated your gold. Now update Helen's.
+
+**Formula**. `salt_076(sum(hash) OVER ()) AS token`
+
+```sql
+UPDATE inhabitant
+SET gold = gold - 120
+WHERE personid = 15;
+
+
+SELECT name
+     , gold
+FROM inhabitant
+WHERE personid IN (15, 20)
+```
+
+### Episode 18
+
+**Token.** `call decrypt(36876251558115)`
+
+Update your name to 'Leslie Qualls' and show the updated row.
+
+**Formula**. `salt_080(sum(hash) OVER ()) AS token`
+
+```sql
+UPDATE inhabitant
+SET name = 'Leslie Qualls'
+WHERE personid = 20;
+
+
+SELECT *
+FROM inhabitant
+WHERE personid = 20
+```
+
+### Episode 18
+
+**Token.** `call decrypt(11246510018033)`
+
+Update your name to 'Leslie Qualls' and show the updated row.
+
+**Formula**. `salt_080(sum(hash) OVER ()) AS token`
+
+```sql
+UPDATE inhabitant
+SET name = 'Leslie Qualls'
+WHERE personid = 20;
+
+
+SELECT *
+FROM inhabitant
+WHERE personid = 20
+```
+
+### Episode 18
 
 **Token.** `call decrypt(34807888636366)`
 
@@ -291,15 +423,15 @@ FROM inhabitant
 WHERE personid = 20
 ```
 
-### Episode 16
+### Episode 19
 
-**Token.** `call decrypt(18314467662514)`
+**Token.** `call decrypt(17809976537863)`
 
 Since baking is one of your hobbies, why not find a baker who you can work for?
 
 _Tip._ List all bakers and use `ORDER BY` gold to sort the results. `ORDER BY` gold `DESC` is even better because then the richest baker is on top.
 
-**Formula** (replace the emoji 👀 with gold on the first row). `salt_078(👀 + sum(hash) OVER ()) AS token`
+**Formula** (replace the emoji 👀 with gold on the last row). `salt_078(👀 + sum(hash) OVER ()) AS token`
 
 ```sql
 SELECT *
@@ -308,29 +440,33 @@ WHERE job = 'baker'
 ORDER BY gold DESC
 ```
 
-### Episode 17
+### Episode 20
 
-**Token.** `call decrypt(34285849059910)`
+**Token.** `call decrypt(34285849060426)`
 
-Update your gold by adding your salary (100) and substracting the price of the sword (150).
+Transfer your salary (100) from Paul's gold to yours, and substract the price of the sword (150). Then, display your gold balance.
 
 **Formula**. `salt_010(sum(hash) OVER ()) AS token`
 
 ```sql
 UPDATE inhabitant
+SET gold = gold - 100
+WHERE personid = 1;
+
+
+UPDATE inhabitant
 SET gold = gold + 100 - 150
 WHERE personid = 20;
 
 
-SELECT name
-     , gold
+SELECT gold
 FROM inhabitant
 WHERE personid = 20
 ```
 
-### Episode 18
+### Episode 21
 
-**Token.** `call decrypt(157095709958947)`
+**Token.** `call decrypt(156346887286586)`
 
 Is there a pilot on this island by any chance? He could fly you home.
 
@@ -342,7 +478,7 @@ FROM inhabitant
 WHERE job = 'pilot'
 ```
 
-### Episode 19
+### Episode 22
 
 **Token.** `call decrypt(229615318980909)`
 
@@ -350,16 +486,24 @@ Copy-paste the previous query, add the given formula, and execute it.
 
 **Formula**. `salt_029(sum(A.hash + B.hash) OVER ()) AS token`
 
-The expression presented here is called a join. It combines the information of the `inhabitant` table with information of the `village` table by matching `villageid` values.
+The expression presented here is called a join. It combines the information of the `inhabitant`
+table with information of the `village` table by matching `villageid` values.
+
+```sql
+SELECT A.name
+FROM village A
+JOIN inhabitant B ON A.villageid = B.villageid
+WHERE B.name = 'Dirty Dieter'
+```
 
 ```sql
 SELECT A.name
 FROM village A, inhabitant B
 WHERE A.villageid = B.villageid
-    AND B.name = 'Dirty Dieter'
+  AND B.name = 'Dirty Dieter'
 ```
 
-### Episode 20
+### Episode 23
 
 **Token.** `call decrypt(256975312978711)`
 
@@ -371,29 +515,29 @@ _Tip._ In the column `chief` in the village table, the `personid` of the chief i
 
 ```sql
 SELECT B.name
-FROM village A, inhabitant B
-WHERE A.chief = B.personid
-    AND A.name = 'Onionville'
+FROM village A
+JOIN inhabitant B ON A.chief = B.personid
+WHERE A.name = 'Onionville'
 ```
 
-### Episode 21
+### Episode 24
 
 **Token.** `call decrypt(240365303417698)`
 
 Copy-paste the previous query, add the given formula, and execute it.
 
-**Formula** (replace the emoji 👀 with this number). `salt_012(👀 + sum(bit_xor(A.hash + B.hash)) OVER ()) AS token`
+**Formula**. `salt_012(sum(bit_xor(A.hash + B.hash)) OVER ()) AS token`
 
 ```sql
 SELECT count(*) AS population
-FROM inhabitant A, village B
-WHERE A.villageid = B.villageid
-    AND B.name = 'Onionville'
+FROM inhabitant A
+JOIN village B ON A.villageid = B.villageid
+WHERE B.name = 'Onionville'
 ```
 
-### Episode 22
+### Episode 25
 
-**Token.** `call decrypt(237781870732904)`
+**Token.** `call decrypt(237781870732912)`
 
 Shall I tell you how many women there are in Onionville? Nah, you can figure it out by yourself!
 
@@ -403,13 +547,13 @@ _Tip._ Women show up as gender = 'f'.
 
 ```sql
 SELECT count(*) AS women
-FROM inhabitant A, village B
-WHERE A.villageid = B.villageid
+FROM inhabitant A
+JOIN village B ON A.villageid = B.villageid
     AND B.name = 'Onionville'
     AND gender = 'f'
 ```
 
-### Episode 23
+### Episode 26
 
 **Token.** `call decrypt(41535988500868)`
 
@@ -419,31 +563,30 @@ What's her name?
 
 ```sql
 SELECT A.name
-FROM inhabitant A, village B
-WHERE A.villageid = B.villageid
-    AND B.name = 'Onionville'
+FROM inhabitant A
+JOIN village B ON A.villageid = B.villageid
+WHERE B.name = 'Onionville'
     AND gender = 'f'
 ```
 
-### Episode 24
+### Episode 27
 
 **Token.** `call decrypt(124493698100759)`
 
 Copy-paste the previous query, add the given formula, and execute it.
 
-**Formula** (replace the emoji 👀 with this sum). `salt_035(👀 + sum(bit_xor(A.hash + B.hash)) OVER ()) AS token`
+**Formula**. `salt_035(sum(bit_xor(A.hash + B.hash)) OVER ()) AS token`
 
 ```sql
 SELECT sum(A.gold) AS total
 FROM inhabitant A
-   , village B
-WHERE A.villageid = B.villageid
-    AND B.name = 'Cucumbertown'
+JOIN village B ON A.villageid = B.villageid
+WHERE B.name = 'Cucumbertown'
 ```
 
-### Episode 25
+### Episode 28
 
-**Token.** `call decrypt(152867079389134)`
+**Token.** `call decrypt(152867079397994)`
 
 Sum the gold of all these people.
 
@@ -455,13 +598,13 @@ FROM inhabitant
 WHERE job IN ('baker', 'dealer', 'merchant')
 ```
 
-### Episode 26
+### Episode 29
 
-**Token.** `call decrypt(203716599638991)`
+**Token.** `call decrypt(204439262662667)`
 
 Copy-paste the previous query, add the given formula, and execute it.
 
-**Formula** (replace the emoji 👀 with the average on the last row). `salt_071(👀 + sum(bit_xor(hash)) OVER ()) AS token`
+**Formula**. `salt_071(sum(bit_xor(hash)) OVER ()) AS token`
 
 ```sql
 SELECT job
@@ -471,9 +614,9 @@ GROUP BY job
 ORDER BY average
 ```
 
-### Episode 27
+### Episode 30
 
-**Token.** `call decrypt(222167811363863)`
+**Token.** `call decrypt(221233433966939)`
 
 Execute the previous query. Which item is now ownerless?
 
@@ -487,14 +630,14 @@ WHERE name = 'Dirty Dieter';
 
 SELECT item
 FROM item
-WHERE OWNER IS NULL
+WHERE owner IS NULL
 ```
 
-### Episode 28
+### Episode 31
 
 **Token.** `call decrypt(193619246200652)`
 
-Delete Dirty Diane, and show the table `inhabitant`.
+Delete Dirty Diane, and show the remaining inhabitants of Onionville (villageid 3).
 
 **Formula**. `salt_004(sum(hash) OVER ()) AS token`
 
@@ -506,15 +649,34 @@ WHERE name = 'Dirty Diane';
 
 SELECT *
 FROM inhabitant
+WHERE villageid = 3
 ```
 
-### Episode 29
+### Episode 32
 
-**Token.** `call decrypt(67594779315675)`
+**Token.** `call decrypt(60167643205863)`
 
 Change the pilot's status to 'friendly', your own status to 'emigrated', and show the table `inhabitant`.
 
 **Formula**. `salt_051(sum(hash) OVER ()) AS token`
+
+```sql
+UPDATE inhabitant
+SET state = 'friendly'
+WHERE job = 'pilot';
+
+SELECT *
+FROM inhabitant;
+```
+
+```sql
+UPDATE inhabitant
+SET state = 'emigrated'
+WHERE personid = 20;
+
+SELECT *
+FROM inhabitant;
+```
 
 ```sql
 UPDATE inhabitant
@@ -531,6 +693,52 @@ SELECT *
 FROM inhabitant;
 ```
 
-### Episode 30
+### Episode 33
+
+**Token.** `call decrypt(214187513069315)`
+
+You have correctly updated the pilot's status. Now update yours to 'emigrated', and show the table `inhabitant`.
+
+**Formula**. `salt_052(sum(hash) OVER ()) AS token`
+
+```sql
+UPDATE inhabitant
+SET state = 'emigrated'
+WHERE personid = 20;
+
+SELECT *
+FROM inhabitant;
+```
+
+### Episode 34
+
+**Token.** `call decrypt(225550015813321)`
+
+You have correctly updated your status. Now update the pilot's state to 'friendly', and show the table `inhabitant`.
+
+**Formula**. `salt_053(sum(hash) OVER ()) AS token`
+
+```sql
+UPDATE inhabitant
+SET state = 'friendly'
+WHERE job = 'pilot';
+
+SELECT *
+FROM inhabitant;
+```
+
+### Episode 35
+
+**Token.** `call decrypt(255276062128450)`
+
+
+### Episode 35
+
+**Token.** `call decrypt(148646393118578)`
+
+
+### Episode 35
+
+**Token.** `call decrypt(213893536427211)`
 
 

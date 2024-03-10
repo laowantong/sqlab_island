@@ -135,8 +135,9 @@ Total: 4 rows affected.
 
 
 
-- There you are! Enjoy your meal! But take care of yourself. As long as you are unarmed, stay away from villains. Not everyone on this island is friendly.
-- Thank you, Edward!
+
+– There you are! Enjoy your meal! But take care of yourself. As long as you are unarmed, stay away from villains. Not everyone on this island is friendly.  
+– Thank you, Edward!
 
 <details><summary>Statement</summary>Okay, let's see who is friendly on this island...<br><br>
 
@@ -295,8 +296,8 @@ Total: 1 rows affected.
 
 
 
-- Hi Ernest! How much is a sword?
-- I can offer to make you a sword for 150 gold. That's the cheapest you will find!
+– Hi Ernest! How much is a sword?  
+– I can offer to make you a sword for 150 gold. That's the cheapest you will find!
 
 <details><summary>Statement</summary>How much gold do you have?<br><br>
 
@@ -407,11 +408,32 @@ Total: 5 rows affected.
 </details><br>
 
 
+So greedy! You've snapped up all items, even those that already had an owner.
+
+<details><summary>Statement</summary>Let's give them back to their rightful owners: the cane to 5, the hammer to 2 and the rope to 17. Afterwards, list all of the items you own.<br><br>
+
+<table>
+    <tr>
+        <th>item</th>
+        <th>token</th>
+    </tr>
+    <tr>
+        <td>bucket</td>
+        <td>206054094742976</td>
+    </tr>
+    <tr>
+        <td>carton</td>
+        <td>206054094742976</td>
+    </tr>
+</table>
+Total: 1 rows affected.
+
+</details><br>
 
 
-<details><summary>Statement</summary>Find a friendly inhabitant who is either a dealer or a merchant. Maybe they want to buy some of your items.
 
-_Tip._ When you use both `AND` and `OR`, don't forget to put brackets correctly!<br><br>
+
+<details><summary>Statement</summary>Find a friendly inhabitant who is either a merchant or a dealer. Maybe they want to buy some of your items.<br><br>
 
 <table>
     <tr>
@@ -453,7 +475,53 @@ Total: 3 rows affected.
 </details><br>
 
 
-I'd like to get the ring and the teapot. The rest is nothing but scrap. Please give me the two items. My `personid` is 15.
+
+
+<details><summary>Statement</summary>Find a friendly inhabitant who is either a merchant or a dealer. Maybe they want to buy some of your items.<br><br>
+
+<table>
+    <tr>
+        <th>personid</th>
+        <th>name</th>
+        <th>villageid</th>
+        <th>gender</th>
+        <th>job</th>
+        <th>gold</th>
+        <th>state</th>
+        <th>hash</th>
+        <th>token</th>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Carl Ox</td>
+        <td>1</td>
+        <td>m</td>
+        <td>merchant</td>
+        <td>250</td>
+        <td>friendly</td>
+        <td>843473717421</td>
+        <td>166788243175236</td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>Otto Alexander</td>
+        <td>2</td>
+        <td>m</td>
+        <td>dealer</td>
+        <td>680</td>
+        <td>friendly</td>
+        <td>371232179800</td>
+        <td>166788243175236</td>
+    </tr>
+</table>
+Total: 3 rows affected.
+
+</details><br>
+
+
+
+
+– I'd like to get the ring and the teapot. The rest is nothing but scrap. Please give me the two items. My `personid` is 15.
 
 <details><summary>Statement</summary>Afterwards, check the items that she owns.<br><br>
 
@@ -486,7 +554,9 @@ Total: 2 rows affected.
 
 — Thank you! Here, some gold!
 
-<details><summary>Statement</summary>Substract 120 from Helen's gold, add 120 to yours, and then check the new amounts of your two rows.<br><br>
+<details><summary>Statement</summary>Transfer 120 from Helen's gold to yours, and then check the new amounts of your two rows.
+
+_Tip._ SQL has no “transfer” operation. Use two `UPDATE` statements.<br><br>
 
 <table>
     <tr>
@@ -503,6 +573,58 @@ Total: 2 rows affected.
         <td>Stranger</td>
         <td>120</td>
         <td>34807888636366</td>
+    </tr>
+</table>
+Total: 1 rows affected.
+
+</details><br>
+
+
+
+
+<details><summary>Statement</summary>You have correctly updated Helen's gold. Now update yours.<br><br>
+
+<table>
+    <tr>
+        <th>name</th>
+        <th>gold</th>
+        <th>token</th>
+    </tr>
+    <tr>
+        <td>Helen Grasshead</td>
+        <td>680</td>
+        <td>36876251558115</td>
+    </tr>
+    <tr>
+        <td>Stranger</td>
+        <td>240</td>
+        <td>36876251558115</td>
+    </tr>
+</table>
+Total: 1 rows affected.
+
+</details><br>
+
+
+
+
+<details><summary>Statement</summary>You have correctly updated your gold. Now update Helen's.<br><br>
+
+<table>
+    <tr>
+        <th>name</th>
+        <th>gold</th>
+        <th>token</th>
+    </tr>
+    <tr>
+        <td>Helen Grasshead</td>
+        <td>560</td>
+        <td>11246510018033</td>
+    </tr>
+    <tr>
+        <td>Stranger</td>
+        <td>240</td>
+        <td>11246510018033</td>
     </tr>
 </table>
 Total: 1 rows affected.
@@ -532,10 +654,76 @@ Unfortunately, that's not enough gold to buy a sword. Seems like I do have to wo
         <td>1</td>
         <td>?</td>
         <td>?</td>
-        <td>120</td>
+        <td>240</td>
         <td>?</td>
-        <td>815181808020</td>
-        <td>18314467662514</td>
+        <td>168889591841</td>
+        <td>17809976537863</td>
+    </tr>
+</table>
+Total: 1 rows affected.
+
+</details><br>
+
+
+Unfortunately, that's not enough gold to buy a sword. Seems like I do have to work after all. Maybe it's not a bad idea to change my name from Stranger to my real name before I will apply for a job.
+
+<details><summary>Statement</summary>Update your name to 'Leslie Qualls' and show the updated row.<br><br>
+
+<table>
+    <tr>
+        <th>personid</th>
+        <th>name</th>
+        <th>villageid</th>
+        <th>gender</th>
+        <th>job</th>
+        <th>gold</th>
+        <th>state</th>
+        <th>hash</th>
+        <th>token</th>
+    </tr>
+    <tr>
+        <td>20</td>
+        <td>Leslie Qualls</td>
+        <td>1</td>
+        <td>?</td>
+        <td>?</td>
+        <td>240</td>
+        <td>?</td>
+        <td>168889591841</td>
+        <td>17809976537863</td>
+    </tr>
+</table>
+Total: 1 rows affected.
+
+</details><br>
+
+
+Unfortunately, that's not enough gold to buy a sword. Seems like I do have to work after all. Maybe it's not a bad idea to change my name from Stranger to my real name before I will apply for a job.
+
+<details><summary>Statement</summary>Update your name to 'Leslie Qualls' and show the updated row.<br><br>
+
+<table>
+    <tr>
+        <th>personid</th>
+        <th>name</th>
+        <th>villageid</th>
+        <th>gender</th>
+        <th>job</th>
+        <th>gold</th>
+        <th>state</th>
+        <th>hash</th>
+        <th>token</th>
+    </tr>
+    <tr>
+        <td>20</td>
+        <td>Leslie Qualls</td>
+        <td>1</td>
+        <td>?</td>
+        <td>?</td>
+        <td>240</td>
+        <td>?</td>
+        <td>168889591841</td>
+        <td>17809976537863</td>
     </tr>
 </table>
 Total: 1 rows affected.
@@ -570,7 +758,7 @@ _Tip._ List all bakers and use `ORDER BY` gold to sort the results. `ORDER BY` g
         <td>850</td>
         <td>friendly</td>
         <td>667574576304</td>
-        <td>34285849059910</td>
+        <td>34285849060426</td>
     </tr>
     <tr>
         <td>9</td>
@@ -581,7 +769,7 @@ _Tip._ List all bakers and use `ORDER BY` gold to sort the results. `ORDER BY` g
         <td>550</td>
         <td>evil</td>
         <td>434738589188</td>
-        <td>34285849059910</td>
+        <td>34285849060426</td>
     </tr>
 </table>
 Total: 3 rows affected.
@@ -599,18 +787,16 @@ Aha, Paul! I know him!
 
 Here's your new sword, Losloo Qoolls! Now you can go everywhere.
 
-<details><summary>Statement</summary>Update your gold by adding your salary (100) and substracting the price of the sword (150).<br><br>
+<details><summary>Statement</summary>Transfer your salary (100) from Paul's gold to yours, and substract the price of the sword (150). Then, display your gold balance.<br><br>
 
 <table>
     <tr>
-        <th>name</th>
         <th>gold</th>
         <th>token</th>
     </tr>
     <tr>
-        <td>Leslie Qualls</td>
-        <td>70</td>
-        <td>157095709958947</td>
+        <td>190</td>
+        <td>156346887286586</td>
     </tr>
 </table>
 Total: 1 rows affected.
@@ -659,8 +845,9 @@ Horrible, the pilot is held captive by Dirty Dieter! I will show you a trick how
 
 ```sql
 SELECT A.name
-FROM village A, inhabitant B
-WHERE A.villageid = B.villageid AND B.name = 'Dirty Dieter'
+FROM village A
+JOIN inhabitant B ON A.villageid = B.villageid
+WHERE B.name = 'Dirty Dieter'
 ```
 
 <details><summary>Statement</summary>Copy-paste the previous query, add the given formula, and execute it.<br><br>
@@ -709,9 +896,9 @@ Um, how many inhabitants does Onionville have?
 
 ```sql
 SELECT COUNT(*) as population
-FROM inhabitant A, village B
-WHERE A.villageid = B.villageid
-AND B.name = 'Onionville'
+FROM inhabitant A
+JOIN village B ON A.villageid = B.villageid
+WHERE B.name = 'Onionville'
 ```
 
 <details><summary>Statement</summary>Copy-paste the previous query, add the given formula, and execute it.<br><br>
@@ -723,7 +910,7 @@ AND B.name = 'Onionville'
     </tr>
     <tr>
         <td>8</td>
-        <td>237781870732904</td>
+        <td>237781870732912</td>
     </tr>
 </table>
 Total: 1 rows affected.
@@ -779,9 +966,9 @@ Let's go!
 
 ```sql
 SELECT SUM(A.gold) as total
-FROM inhabitant A, village B
-WHERE A.villageid = B.villageid
-AND B.name = 'Cucumbertown'
+FROM inhabitant A
+JOIN village B ON A.villageid = B.villageid
+WHERE B.name = 'Cucumbertown'
 ```
 
 <details><summary>Statement</summary>Copy-paste the previous query, add the given formula, and execute it.<br><br>
@@ -793,7 +980,7 @@ AND B.name = 'Cucumbertown'
     </tr>
     <tr>
         <td>8860</td>
-        <td>152867079389134</td>
+        <td>152867079397994</td>
     </tr>
 </table>
 Total: 1 rows affected.
@@ -811,8 +998,8 @@ Oh no, baking bread alone can't solve my problems. If I continue working and sel
         <th>token</th>
     </tr>
     <tr>
-        <td>4010</td>
-        <td>203716599638991</td>
+        <td>3910</td>
+        <td>204439262662667</td>
     </tr>
 </table>
 Total: 1 rows affected.
@@ -842,12 +1029,12 @@ ORDER BY avg(gold)
     <tr>
         <td>farmer</td>
         <td>10.0000</td>
-        <td>222167811363863</td>
+        <td>221233433966939</td>
     </tr>
     <tr>
         <td>?</td>
-        <td>70.0000</td>
-        <td>222167811363863</td>
+        <td>190.0000</td>
+        <td>221233433966939</td>
     </tr>
 </table>
 Total: 11 rows affected.
@@ -858,7 +1045,8 @@ Total: 11 rows affected.
 Ok, so the only way is to mug the villains. Or I might as well go ahead and just kill Dirty Dieter with my sword!
 
 ```sql
-DELETE FROM inhabitant
+DELETE
+FROM inhabitant
 WHERE name = 'Dirty Dieter'
 ```
 
@@ -883,7 +1071,7 @@ Dirty Diane: Heeeey! Now I'm very angry!
 
 What will you do next, Leslie Qualls?
 
-<details><summary>Statement</summary>Delete Dirty Diane, and show the table `inhabitant`.<br><br>
+<details><summary>Statement</summary>Delete Dirty Diane, and show the remaining inhabitants of Onionville (villageid 3).<br><br>
 
 <table>
     <tr>
@@ -898,17 +1086,6 @@ What will you do next, Leslie Qualls?
         <th>token</th>
     </tr>
     <tr>
-        <td>1</td>
-        <td>Paul Bakerman</td>
-        <td>1</td>
-        <td>m</td>
-        <td>baker</td>
-        <td>850</td>
-        <td>friendly</td>
-        <td>667574576304</td>
-        <td>67594779315675</td>
-    </tr>
-    <tr>
         <td>2</td>
         <td>Ernest Perry</td>
         <td>3</td>
@@ -917,7 +1094,18 @@ What will you do next, Leslie Qualls?
         <td>280</td>
         <td>friendly</td>
         <td>73993229357</td>
-        <td>67594779315675</td>
+        <td>60167643205863</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>Peter Slaughterer</td>
+        <td>3</td>
+        <td>m</td>
+        <td>butcher</td>
+        <td>3250</td>
+        <td>evil</td>
+        <td>648197551204</td>
+        <td>60167643205863</td>
     </tr>
 </table>
 Total: 1 rows affected.
@@ -951,10 +1139,10 @@ Total: 1 rows affected.
         <td>1</td>
         <td>m</td>
         <td>baker</td>
-        <td>850</td>
+        <td>750</td>
         <td>friendly</td>
-        <td>667574576304</td>
-        <td>226162284926311</td>
+        <td>221738647112</td>
+        <td>214187513069315</td>
     </tr>
     <tr>
         <td>2</td>
@@ -965,12 +1153,106 @@ Total: 1 rows affected.
         <td>280</td>
         <td>friendly</td>
         <td>73993229357</td>
-        <td>226162284926311</td>
+        <td>214187513069315</td>
     </tr>
 </table>
 Total: 1 rows affected.
 
 </details><br>
+
+
+
+
+<details><summary>Statement</summary>You have correctly updated the pilot's status. Now update yours to 'emigrated', and show the table `inhabitant`.<br><br>
+
+<table>
+    <tr>
+        <th>personid</th>
+        <th>name</th>
+        <th>villageid</th>
+        <th>gender</th>
+        <th>job</th>
+        <th>gold</th>
+        <th>state</th>
+        <th>hash</th>
+        <th>token</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Paul Bakerman</td>
+        <td>1</td>
+        <td>m</td>
+        <td>baker</td>
+        <td>750</td>
+        <td>friendly</td>
+        <td>221738647112</td>
+        <td>255276062128450</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Ernest Perry</td>
+        <td>3</td>
+        <td>m</td>
+        <td>weaponsmith</td>
+        <td>280</td>
+        <td>friendly</td>
+        <td>73993229357</td>
+        <td>255276062128450</td>
+    </tr>
+</table>
+Total: 1 rows affected.
+
+</details><br>
+
+
+
+
+<details><summary>Statement</summary>You have correctly updated your status. Now update the pilot's state to 'friendly', and show the table `inhabitant`.<br><br>
+
+<table>
+    <tr>
+        <th>personid</th>
+        <th>name</th>
+        <th>villageid</th>
+        <th>gender</th>
+        <th>job</th>
+        <th>gold</th>
+        <th>state</th>
+        <th>hash</th>
+        <th>token</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Paul Bakerman</td>
+        <td>1</td>
+        <td>m</td>
+        <td>baker</td>
+        <td>750</td>
+        <td>friendly</td>
+        <td>221738647112</td>
+        <td>148646393118578</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Ernest Perry</td>
+        <td>3</td>
+        <td>m</td>
+        <td>weaponsmith</td>
+        <td>280</td>
+        <td>friendly</td>
+        <td>73993229357</td>
+        <td>148646393118578</td>
+    </tr>
+</table>
+Total: 1 rows affected.
+
+</details><br>
+
+
+You have completed SQL Island. What a big adventure!
+
+
+You have completed SQL Island. What a big adventure!
 
 
 You have completed SQL Island. What a big adventure!

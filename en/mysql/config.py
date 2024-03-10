@@ -12,7 +12,7 @@ config = {
     },
     "info": {
         "description": "An SQLab adaptation of SQL Island under MySQL.",
-        "version": "1.2.0",
+        "version": "1.3.0",
         "repository": "https://github.com/laowantong/sqlab_island",
         "license": "https://creativecommons.org/licenses/by-sa/4.0/",
         "author_name": "Aristide Grange",
