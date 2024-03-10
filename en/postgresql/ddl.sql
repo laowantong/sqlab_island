@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS sql_island;
-CREATE DATABASE sql_island WITH ENCODING 'UTF8';
-\c sql_island
+DROP DATABASE IF EXISTS sqlab_island;
+CREATE DATABASE sqlab_island WITH ENCODING 'UTF8';
+\c sqlab_island
 
 CREATE TABLE inhabitant (
   personid SERIAL NOT NULL,

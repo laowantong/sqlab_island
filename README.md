@@ -13,10 +13,10 @@ To play SQLab Island, you just need to download a dump of the self-contained dat
 ### MySQL
 
 1. [Download dump.sql](https://raw.githubusercontent.com/laowantong/sqlab_island/main/en/mysql/output/dump.sql) (right-click and "Save link as...").
-2. On the command line, create a new database called `sql_island`, populate it and connect to it:
+2. On the command line, create a new database called `sqlab_island`, populate it and connect to it:
    ```bash
    mysql -u username -p < dump.sql
-   mysql -u username -p sql_island
+   mysql -u username -p sqlab_island
    ```
 3. On the MySQL prompt, access the first episode of the adventure:
    ```sql
@@ -26,10 +26,10 @@ To play SQLab Island, you just need to download a dump of the self-contained dat
 ### PostgreSQL
 
 1. [Download dump.sql](https://raw.githubusercontent.com/laowantong/sqlab_island/main/en/postgresql/output/dump.sql) (right-click and "Save link as...").
-2. On the command line, create a new database called `sql_island`, populate it and connect to it:
+2. On the command line, create a new database called `sqlab_island`, populate it and connect to it:
    ```bash
    psql -U username -f dump.sql
-   psql -U username sql_island
+   psql -U username sqlab_island
    ```
 3. On the PostgreSQL prompt, access the first episode of the adventure:
    ```sql

@@ -6,10 +6,9 @@
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
-DROP DATABASE IF EXISTS sql_island;
-CREATE DATABASE sql_island DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
 
 USE sql_island;
+USE sqlab_island;
 
 CREATE TABLE inhabitant (
   personid int(11) NOT NULL AUTO_INCREMENT,

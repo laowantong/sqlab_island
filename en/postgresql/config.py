@@ -4,7 +4,7 @@ config = {
     "language": "en",
     "ddl_path": "./ddl.sql",
     "dataset_dir": "../dataset",
-    "source_path": "./sql_island.ipynb",
+    "source_path": "./sqlab_island.ipynb",
     "output_dir": "./output",
     "reformat_sql": False,
     "info": {

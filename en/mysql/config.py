@@ -4,9 +4,12 @@ config = {
     "language": "en",
     "ddl_path": "./ddl.sql",
     "dataset_dir": "../dataset",
-    "source_path": "./sql_island.ipynb",
+    "source_path": "./sqlab_island.ipynb",
     "output_dir": "./output",
     "reformat_sql": False,
+    "sqlparse_subs": {
+        "lowercase_user_names": (r"\b(OWNER)\b", lambda m: m[0].lower()),
+    },
     "info": {
         "description": "An SQLab adaptation of SQL Island under MySQL.",
         "version": "1.2.0",
