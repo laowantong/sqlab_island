@@ -1249,11 +1249,11 @@ Total: 1 rows affected.
 </details><br>
 
 
-You have completed SQL Island. What a big adventure!
+You have completed SQLab Island. What a big adventure!
 
 
-You have completed SQL Island. What a big adventure!
+You have completed SQLab Island. What a big adventure!
 
 
-You have completed SQL Island. What a big adventure!
+You have completed SQLab Island. What a big adventure!
 
