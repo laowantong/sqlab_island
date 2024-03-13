@@ -6,7 +6,7 @@
     Hint (47890482868936): 'Filter out the evil inhabitants, not the friendly ones.'
     Hint (37150133620128): 'Filter out the evil inhabitants.'
   Question 5 (49081739277115): 'Now try to find a friendly weaponsmith to forge you one.\n\n_Tip._ You can combine predicates in the `'
-  Question 6 (111903790755050): "Maybe other friendly smiths can help you out, e.g. a blacksmith.\n\n_Tip._ Try out: job `LIKE` '%smith"
+  Question 6 (111903790755050): "Maybe other friendly smiths can help you out, e.g. a blacksmith.\n\n_Tip._ Try out: job LIKE '%smith' "
     Hint (71218742664725): "Keep all villagers whose job's name ends with 'smith' (e.g., 'smith', 'blacksmith', etc.)."
     Hint (75420150557596): "Filter out the villagers whose job's name doesn't ends with 'smith'."
     Hint (72792619708639): 'Filter out the villagers which are not friendly.'

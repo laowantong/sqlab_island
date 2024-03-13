@@ -106,7 +106,7 @@
     "kind": "episode",
     "counter": 6,
     "context": "\nOh, that does not look good.",
-    "statement": "Maybe other friendly smiths can help you out, e.g. a blacksmith.\n\n_Tip._ Try out: job `LIKE` '%smith' to find all inhabitants whose job ends with 'smith' (% is a wildcard for any number of characters).",
+    "statement": "Maybe other friendly smiths can help you out, e.g. a blacksmith.\n\n_Tip._ Try out: job LIKE '%smith' to find all inhabitants whose job ends with 'smith' (% is a wildcard for any number of characters).",
     "salt": "069",
     "formula": "salt_069(sum(hash) OVER ()) AS token",
     "solutions": [

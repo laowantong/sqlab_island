@@ -1,15 +1,14 @@
 config = {
-    "vendor": "PostgreSQL",
+    "dbms": "PostgreSQL",
     "cnx_path": "./cnx.ini",
     "language": "en",
     "ddl_path": "./ddl.sql",
     "dataset_dir": "../dataset",
     "source_path": "./sqlab_island.ipynb",
-    "output_dir": "./output",
     "reformat_sql": False,
     "info": {
         "description": "An SQLab adaptation of SQL Island under PostgreSQL.",
-        "version": "1.2.0",
+        "version": "1.4.0",
         "repository": "https://github.com/laowantong/sqlab_island",
         "license_name": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",

@@ -4,7 +4,7 @@
 
 ### Episode 1
 
-**Token.** `call decrypt(042)`
+**Token.** 042.
 
 Copy-paste the previous query. After the star `*`, add a comma and the given formula. Execute the complete query.
 
@@ -17,7 +17,7 @@ FROM village
 
 ### Episode 2
 
-**Token.** `call decrypt(279731784972193)`
+**Token.** 279731784972193.
 
 How can you see a list of all inhabitants?
 
@@ -30,7 +30,7 @@ FROM inhabitant
 
 ### Episode 3
 
-**Token.** `call decrypt(128589543210724)`
+**Token.** 128589543210724.
 
 Copy-paste the previous query, add the given formula, and execute it.
 
@@ -44,7 +44,7 @@ WHERE job = 'butcher'
 
 ### Episode 4
 
-**Token.** `call decrypt(280206676651511)`
+**Token.** 280206676651511.
 
 Okay, let's see who is friendly on this island...
 
@@ -58,7 +58,7 @@ WHERE state = 'friendly'
 
 ### Episode 5
 
-**Token.** `call decrypt(49081739277115)`
+**Token.** 49081739277115.
 
 Now try to find a friendly weaponsmith to forge you one.
 
@@ -75,11 +75,11 @@ WHERE state = 'friendly'
 
 ### Episode 6
 
-**Token.** `call decrypt(111903790755050)`
+**Token.** 111903790755050.
 
 Maybe other friendly smiths can help you out, e.g. a blacksmith.
 
-_Tip._ Try out: job `LIKE` '%smith' to find all inhabitants whose job ends with 'smith' (% is a wildcard for any number of characters).
+_Tip._ Try out: job LIKE '%smith' to find all inhabitants whose job ends with 'smith' (% is a wildcard for any number of characters).
 
 **Formula**. `salt_069(sum(hash) OVER ()) AS token`
 
@@ -92,7 +92,7 @@ WHERE state = 'friendly'
 
 ### Episode 7
 
-**Token.** `call decrypt(71115866585707)`
+**Token.** 71115866585707.
 
 First, execute the `INSERT` query. Then, look for your personid.
 
@@ -112,7 +112,7 @@ WHERE name = 'Stranger';
 
 ### Episode 8
 
-**Token.** `call decrypt(29896704364823)`
+**Token.** 29896704364823.
 
 How much gold do you have?
 
@@ -126,7 +126,7 @@ WHERE personid = 20
 
 ### Episode 9
 
-**Token.** `call decrypt(7708171354493)`
+**Token.** 7708171354493.
 
 Make a list of all items that don't belong to anyone.
 
@@ -142,7 +142,7 @@ WHERE owner IS NULL
 
 ### Episode 10
 
-**Token.** `call decrypt(253789061748229)`
+**Token.** 253789061748229.
 
 Execute the `UPDATE` query, and check the `item` table afterwards.
 
@@ -160,7 +160,7 @@ FROM item
 
 ### Episode 11
 
-**Token.** `call decrypt(107025105236366)`
+**Token.** 107025105236366.
 
 Do you know a trick how to collect all the ownerless items? Afterwards, list all of the items you own.
 
@@ -188,7 +188,7 @@ FROM item
 
 ### Episode 12
 
-**Token.** `call decrypt(140217850902324)`
+**Token.** 140217850902324.
 
 Let's give them back to their rightful owners: the cane to 5, the hammer to 2 and the rope to 17. Afterwards, list all of the items you own.
 
@@ -214,11 +214,13 @@ WHERE owner = 20
 
 ### Episode 13
 
-**Token.** `call decrypt(206054094742976)`
+**Token.** 206054094742976.
 
 Find a friendly inhabitant who is either a merchant or a dealer. Maybe they want to buy some of your items.
 
 **Formula**. `salt_024(sum(hash) OVER ()) AS token`
+
+With a logical `OR`.
 
 ```sql
 SELECT *
@@ -226,6 +228,8 @@ FROM inhabitant
 WHERE state = 'friendly'
     AND (job = 'merchant' OR job = 'dealer')
 ```
+
+With the `IN` operator (recommended). A cleaner, more scalable way to check a column against multiple values.
 
 ```sql
 SELECT *
@@ -236,11 +240,13 @@ WHERE state = 'friendly'
 
 ### Episode 13
 
-**Token.** `call decrypt(139744599079637)`
+**Token.** 139744599079637.
 
 Find a friendly inhabitant who is either a merchant or a dealer. Maybe they want to buy some of your items.
 
 **Formula**. `salt_024(sum(hash) OVER ()) AS token`
+
+With a logical `OR`.
 
 ```sql
 SELECT *
@@ -248,6 +254,8 @@ FROM inhabitant
 WHERE state = 'friendly'
     AND (job = 'merchant' OR job = 'dealer')
 ```
+
+With the `IN` operator (recommended). A cleaner, more scalable way to check a column against multiple values.
 
 ```sql
 SELECT *
@@ -258,7 +266,7 @@ WHERE state = 'friendly'
 
 ### Episode 14
 
-**Token.** `call decrypt(166788243175236)`
+**Token.** 166788243175236.
 
 Afterwards, check the items that she owns.
 
@@ -277,7 +285,7 @@ WHERE owner = 15
 
 ### Episode 15
 
-**Token.** `call decrypt(261661938333343)`
+**Token.** 261661938333343.
 
 Transfer 120 from Helen's gold to yours, and then check the new amounts of your two rows.
 
@@ -328,7 +336,7 @@ WHERE personid IN (15, 20)
 
 ### Episode 16
 
-**Token.** `call decrypt(34989396526869)`
+**Token.** 34989396526869.
 
 You have correctly updated Helen's gold. Now update yours.
 
@@ -348,7 +356,7 @@ WHERE personid IN (15, 20)
 
 ### Episode 17
 
-**Token.** `call decrypt(35091420089868)`
+**Token.** 35091420089868.
 
 You have correctly updated your gold. Now update Helen's.
 
@@ -368,7 +376,7 @@ WHERE personid IN (15, 20)
 
 ### Episode 18
 
-**Token.** `call decrypt(36876251558115)`
+**Token.** 36876251558115.
 
 Update your name to 'Leslie Qualls' and show the updated row.
 
@@ -387,7 +395,7 @@ WHERE personid = 20
 
 ### Episode 18
 
-**Token.** `call decrypt(11246510018033)`
+**Token.** 11246510018033.
 
 Update your name to 'Leslie Qualls' and show the updated row.
 
@@ -406,7 +414,7 @@ WHERE personid = 20
 
 ### Episode 18
 
-**Token.** `call decrypt(34807888636366)`
+**Token.** 34807888636366.
 
 Update your name to 'Leslie Qualls' and show the updated row.
 
@@ -425,7 +433,7 @@ WHERE personid = 20
 
 ### Episode 19
 
-**Token.** `call decrypt(17809976537863)`
+**Token.** 17809976537863.
 
 Since baking is one of your hobbies, why not find a baker who you can work for?
 
@@ -442,7 +450,7 @@ ORDER BY gold DESC
 
 ### Episode 20
 
-**Token.** `call decrypt(34285849060426)`
+**Token.** 34285849060426.
 
 Transfer your salary (100) from Paul's gold to yours, and substract the price of the sword (150). Then, display your gold balance.
 
@@ -466,7 +474,7 @@ WHERE personid = 20
 
 ### Episode 21
 
-**Token.** `call decrypt(156346887286586)`
+**Token.** 156346887286586.
 
 Is there a pilot on this island by any chance? He could fly you home.
 
@@ -480,7 +488,7 @@ WHERE job = 'pilot'
 
 ### Episode 22
 
-**Token.** `call decrypt(229615318980909)`
+**Token.** 229615318980909.
 
 Copy-paste the previous query, add the given formula, and execute it.
 
@@ -496,6 +504,8 @@ JOIN inhabitant B ON A.villageid = B.villageid
 WHERE B.name = 'Dirty Dieter'
 ```
 
+Implicit `JOIN`. You may encounter a syntax where the join conditions are mixed with the filter conditions. This can make the query harder to understand, especially as the number of tables and conditions increases. While this method is still supported for backward compatibility, it is generally considered outdated. The explicit JOIN syntax is recommended for new SQL code.
+
 ```sql
 SELECT A.name
 FROM village A, inhabitant B
@@ -505,7 +515,7 @@ WHERE A.villageid = B.villageid
 
 ### Episode 23
 
-**Token.** `call decrypt(256975312978711)`
+**Token.** 256975312978711.
 
 Use the join to find out the chief's name of the village Onionville.
 
@@ -522,7 +532,7 @@ WHERE A.name = 'Onionville'
 
 ### Episode 24
 
-**Token.** `call decrypt(240365303417698)`
+**Token.** 240365303417698.
 
 Copy-paste the previous query, add the given formula, and execute it.
 
@@ -537,7 +547,7 @@ WHERE B.name = 'Onionville'
 
 ### Episode 25
 
-**Token.** `call decrypt(237781870732912)`
+**Token.** 237781870732912.
 
 Shall I tell you how many women there are in Onionville? Nah, you can figure it out by yourself!
 
@@ -555,7 +565,7 @@ JOIN village B ON A.villageid = B.villageid
 
 ### Episode 26
 
-**Token.** `call decrypt(41535988500868)`
+**Token.** 41535988500868.
 
 What's her name?
 
@@ -571,7 +581,7 @@ WHERE B.name = 'Onionville'
 
 ### Episode 27
 
-**Token.** `call decrypt(124493698100759)`
+**Token.** 124493698100759.
 
 Copy-paste the previous query, add the given formula, and execute it.
 
@@ -586,7 +596,7 @@ WHERE B.name = 'Cucumbertown'
 
 ### Episode 28
 
-**Token.** `call decrypt(152867079397994)`
+**Token.** 152867079397994.
 
 Sum the gold of all these people.
 
@@ -600,7 +610,7 @@ WHERE job IN ('baker', 'dealer', 'merchant')
 
 ### Episode 29
 
-**Token.** `call decrypt(204439262662667)`
+**Token.** 204439262662667.
 
 Copy-paste the previous query, add the given formula, and execute it.
 
@@ -616,7 +626,7 @@ ORDER BY average
 
 ### Episode 30
 
-**Token.** `call decrypt(221233433966939)`
+**Token.** 221233433966939.
 
 Execute the previous query. Which item is now ownerless?
 
@@ -635,7 +645,7 @@ WHERE owner IS NULL
 
 ### Episode 31
 
-**Token.** `call decrypt(193619246200652)`
+**Token.** 193619246200652.
 
 Delete Dirty Diane, and show the remaining inhabitants of Onionville (villageid 3).
 
@@ -654,7 +664,7 @@ WHERE villageid = 3
 
 ### Episode 32
 
-**Token.** `call decrypt(60167643205863)`
+**Token.** 60167643205863.
 
 Change the pilot's status to 'friendly', your own status to 'emigrated', and show the table `inhabitant`.
 
@@ -695,7 +705,7 @@ FROM inhabitant;
 
 ### Episode 33
 
-**Token.** `call decrypt(214187513069315)`
+**Token.** 214187513069315.
 
 You have correctly updated the pilot's status. Now update yours to 'emigrated', and show the table `inhabitant`.
 
@@ -712,7 +722,7 @@ FROM inhabitant;
 
 ### Episode 34
 
-**Token.** `call decrypt(225550015813321)`
+**Token.** 225550015813321.
 
 You have correctly updated your status. Now update the pilot's state to 'friendly', and show the table `inhabitant`.
 
@@ -729,16 +739,16 @@ FROM inhabitant;
 
 ### Episode 35
 
-**Token.** `call decrypt(255276062128450)`
+**Token.** 255276062128450.
 
 
 ### Episode 35
 
-**Token.** `call decrypt(148646393118578)`
+**Token.** 148646393118578.
 
 
 ### Episode 35
 
-**Token.** `call decrypt(213893536427211)`
+**Token.** 213893536427211.
 
 

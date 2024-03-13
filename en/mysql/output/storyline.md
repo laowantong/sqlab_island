@@ -222,7 +222,7 @@ Oh, that does not look good.
 
 <details><summary>Statement</summary>Maybe other friendly smiths can help you out, e.g. a blacksmith.
 
-_Tip._ Try out: job `LIKE` '%smith' to find all inhabitants whose job ends with 'smith' (% is a wildcard for any number of characters).<br><br>
+_Tip._ Try out: job LIKE '%smith' to find all inhabitants whose job ends with 'smith' (% is a wildcard for any number of characters).<br><br>
 
 <table>
     <tr>

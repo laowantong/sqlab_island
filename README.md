@@ -20,7 +20,7 @@ To play SQLab Island, you just need to download a dump of the self-contained dat
    ```
 3. On the MySQL prompt, access the first episode of the adventure:
    ```sql
-   call decrypt(42)
+   select decrypt(42)
    ```
 
 ### PostgreSQL
