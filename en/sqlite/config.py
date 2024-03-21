@@ -1,16 +1,19 @@
 config = {
-    "dbms": "MySQL",
+    "dbms": "SQLite",
     "cnx_path": "./cnx.ini",
     "language": "en",
     "ddl_path": "./ddl.sql",
     "dataset_dir": "../dataset",
     "source_path": "./sqlab_island.ipynb",
     "reformat_sql": False,
-    "sqlparse_subs": {
-        "lowercase_user_names": (r"\b(OWNER)\b", lambda m: m[0].lower()),
-    },
+    "extensions": [
+        "~/.sqlpkg/nalgeon/crypto/crypto",
+        "~/.sqlpkg/nalgeon/define/define",
+        "~/.sqlpkg/nalgeon/regexp/regexp",
+        "~/.sqlpkg/nyurik/compressions/libsqlite_compressions",
+    ],
     "info": {
-        "description": "An SQLab adaptation of SQL Island for MySQL.",
+        "description": "An SQLab adaptation of SQL Island for SQLite.",
         "version": "1.4.1",
         "repository": "https://github.com/laowantong/sqlab_island",
         "license_name": "CC BY-SA 4.0",

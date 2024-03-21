@@ -20,6 +20,7 @@
   Question 9 (7708171354493): "Make a list of all items that don't belong to anyone.\n\n_Tip._ You can recognize ownerless items by: "
   Question 10 (253789061748229): 'Execute the `UPDATE` query, and check the `item` table afterwards.'
   Question 11 (107025105236366): 'Do you know a trick how to collect all the ownerless items? Afterwards, list all of the items you ow'
+    Hint (138282073330312): 'It seems you have failed to collect any other ownerless item. Remember: comparing to `NULL` with the'
     Hint (138996212731035): "Restrict the result to the Stranger's rows (personid: 20)."
   Question 12 (140217850902324): "Let's give them back to their rightful owners: the cane to 5, the hammer to 2 and the rope to 17. Af"
   Question 13 (206054094742976): 'Find a friendly inhabitant who is either a merchant or a dealer. Maybe they want to buy some of your'

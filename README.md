@@ -20,7 +20,7 @@ To play SQLab Island, you just need to download a dump of the self-contained dat
    ```
 3. On the MySQL prompt, access the first episode of the adventure:
    ```sql
-   select decrypt(42)
+   SELECT decrypt(42)
    ```
 
 ### PostgreSQL
@@ -33,7 +33,32 @@ To play SQLab Island, you just need to download a dump of the self-contained dat
    ```
 3. On the PostgreSQL prompt, access the first episode of the adventure:
    ```sql
-   select decrypt(42)
+   SELECT decrypt(42)
+   ```
+
+### SQLite
+
+1. Install [`sqlpkg`](https://github.com/nalgeon/sqlpkg-cli).
+2. On the command line, install the required SQLite extensions:
+   ```bash
+   sqlpkg install nalgeon/crypto
+   sqlpkg install nalgeon/define
+   sqlpkg install nalgeon/regexp
+   sqlpkg install nyurik/compressions
+   ```
+3. [Download dump.sql](https://raw.githubusercontent.com/laowantong/sqlab_island/main/en/sqlite/output/dump.sql) (right-click and "Save link as...").
+4. On the command line, launch SQLite:
+   ```bash
+   sqlite3
+   ```
+5. On the SQLite prompt, load the required extensions, read the dump and access the first episode of the adventure:
+   ```sql
+   .load /path/to/.sqlpkg/nalgeon/crypto/crypto
+   .load /path/to/.sqlpkg/nalgeon/define/define
+   .load /path/to/.sqlpkg/nalgeon/regexp/regexp
+   .load /path/to/.sqlpkg/nyurik/compressions/libsqlite_compressions
+   .read dump.sql
+   SELECT * FROM decrypt(42)
    ```
 
 ## Disclaimer and potential issues

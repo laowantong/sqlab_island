@@ -212,7 +212,7 @@ _Tip._ You can combine predicates in the `WHERE` clause with `AND`.<br><br>
         <td>111903790755050</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 1 row affected.
 
 </details><br>
 
@@ -289,7 +289,7 @@ _Tip._ In former queries, the * stands for: all columns. Instead of the star, yo
         <td>29896704364823</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 1 row affected.
 
 </details><br>
 
@@ -311,7 +311,7 @@ Total: 1 rows affected.
         <td>7708171354493</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 1 row affected.
 
 </details><br>
 
@@ -380,7 +380,7 @@ WHERE item = 'coffee cup'
         <td>107025105236366</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 9 rows affected.
 
 </details><br>
 
@@ -403,7 +403,7 @@ Total: 1 rows affected.
         <td>139744599079637</td>
     </tr>
 </table>
-Total: 5 rows affected.
+Total: 6 rows affected.
 
 </details><br>
 
@@ -426,7 +426,7 @@ So greedy! You've snapped up all items, even those that already had an owner.
         <td>206054094742976</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 6 rows affected.
 
 </details><br>
 
@@ -575,7 +575,7 @@ _Tip._ SQL has no “transfer” operation. Use two `UPDATE` statements.<br><br>
         <td>34807888636366</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 2 rows affected.
 
 </details><br>
 
@@ -601,7 +601,7 @@ Total: 1 rows affected.
         <td>36876251558115</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 2 rows affected.
 
 </details><br>
 
@@ -627,7 +627,7 @@ Total: 1 rows affected.
         <td>11246510018033</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 2 rows affected.
 
 </details><br>
 
@@ -660,7 +660,7 @@ Unfortunately, that's not enough gold to buy a sword. Seems like I do have to wo
         <td>17809976537863</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 1 row affected.
 
 </details><br>
 
@@ -693,7 +693,7 @@ Unfortunately, that's not enough gold to buy a sword. Seems like I do have to wo
         <td>17809976537863</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 1 row affected.
 
 </details><br>
 
@@ -726,7 +726,7 @@ Unfortunately, that's not enough gold to buy a sword. Seems like I do have to wo
         <td>17809976537863</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 1 row affected.
 
 </details><br>
 
@@ -799,7 +799,7 @@ Here's your new sword, Losloo Qoolls! Now you can go everywhere.
         <td>156346887286586</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 1 row affected.
 
 </details><br>
 
@@ -834,7 +834,7 @@ Total: 1 rows affected.
         <td>229615318980909</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 1 row affected.
 
 </details><br>
 
@@ -862,7 +862,7 @@ WHERE B.name = 'Dirty Dieter'
         <td>256975312978711</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 1 row affected.
 
 </details><br>
 
@@ -885,7 +885,7 @@ _Tip._ In the column `chief` in the village table, the `personid` of the chief i
         <td>240365303417698</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 1 row affected.
 
 </details><br>
 
@@ -913,7 +913,7 @@ WHERE B.name = 'Onionville'
         <td>237781870732912</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 1 row affected.
 
 </details><br>
 
@@ -936,7 +936,7 @@ _Tip._ Women show up as gender = 'f'.<br><br>
         <td>41535988500868</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 1 row affected.
 
 </details><br>
 
@@ -955,7 +955,7 @@ Oh, only one woman.
         <td>124493698100759</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 1 row affected.
 
 </details><br>
 
@@ -983,7 +983,7 @@ WHERE B.name = 'Cucumbertown'
         <td>152867079397994</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 1 row affected.
 
 </details><br>
 
@@ -1002,7 +1002,7 @@ Oh no, baking bread alone can't solve my problems. If I continue working and sel
         <td>204439262662667</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 1 row affected.
 
 </details><br>
 
@@ -1062,7 +1062,7 @@ WHERE name = 'Dirty Dieter'
         <td>193619246200652</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 1 row affected.
 
 </details><br>
 
@@ -1108,7 +1108,7 @@ What will you do next, Leslie Qualls?
         <td>60167643205863</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 6 rows affected.
 
 </details><br>
 
@@ -1156,7 +1156,7 @@ Total: 1 rows affected.
         <td>214187513069315</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 18 rows affected.
 
 </details><br>
 
@@ -1200,7 +1200,7 @@ Total: 1 rows affected.
         <td>255276062128450</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 18 rows affected.
 
 </details><br>
 
@@ -1244,7 +1244,7 @@ Total: 1 rows affected.
         <td>148646393118578</td>
     </tr>
 </table>
-Total: 1 rows affected.
+Total: 18 rows affected.
 
 </details><br>
 

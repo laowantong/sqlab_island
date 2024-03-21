@@ -7,7 +7,7 @@ config = {
     "source_path": "./sqlab_island.ipynb",
     "reformat_sql": False,
     "info": {
-        "description": "An SQLab adaptation of SQL Island under PostgreSQL.",
+        "description": "An SQLab adaptation of SQL Island for PostgreSQL.",
         "version": "1.4.0",
         "repository": "https://github.com/laowantong/sqlab_island",
         "license_name": "CC BY-SA 4.0",
