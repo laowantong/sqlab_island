@@ -8,7 +8,7 @@ The original game was adapted by Aristide Grange (University of Lorraine, France
 
 ## Versions
 
-To play SQLab Island, you just need to download a dump of the self-contained database and import it into your favorite SQL database management system (DBMS). There are currently two versions, both in English:
+To play SQLab Island, you just need to download a dump of the self-contained database and import it into your favorite SQL database management system (DBMS). There are currently three versions, all of them in English:
 
 ### MySQL
 
