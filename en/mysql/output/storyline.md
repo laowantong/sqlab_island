@@ -477,50 +477,6 @@ Total: 3 rows affected.
 
 
 
-<details><summary>Statement</summary>Find a friendly inhabitant who is either a merchant or a dealer. Maybe they want to buy some of your items.<br><br>
-
-<table>
-    <tr>
-        <th>personid</th>
-        <th>name</th>
-        <th>villageid</th>
-        <th>gender</th>
-        <th>job</th>
-        <th>gold</th>
-        <th>state</th>
-        <th>hash</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td>Carl Ox</td>
-        <td>1</td>
-        <td>m</td>
-        <td>merchant</td>
-        <td>250</td>
-        <td>friendly</td>
-        <td>843473717421</td>
-        <td>166788243175236</td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>Otto Alexander</td>
-        <td>2</td>
-        <td>m</td>
-        <td>dealer</td>
-        <td>680</td>
-        <td>friendly</td>
-        <td>371232179800</td>
-        <td>166788243175236</td>
-    </tr>
-</table>
-Total: 3 rows affected.
-
-</details><br>
-
-
-
-
 – I'd like to get the ring and the teapot. The rest is nothing but scrap. Please give me the two items. My `personid` is 15.
 
 <details><summary>Statement</summary>Afterwards, check the items that she owns.<br><br>
@@ -628,72 +584,6 @@ Total: 2 rows affected.
     </tr>
 </table>
 Total: 2 rows affected.
-
-</details><br>
-
-
-Unfortunately, that's not enough gold to buy a sword. Seems like I do have to work after all. Maybe it's not a bad idea to change my name from Stranger to my real name before I will apply for a job.
-
-<details><summary>Statement</summary>Update your name to 'Leslie Qualls' and show the updated row.<br><br>
-
-<table>
-    <tr>
-        <th>personid</th>
-        <th>name</th>
-        <th>villageid</th>
-        <th>gender</th>
-        <th>job</th>
-        <th>gold</th>
-        <th>state</th>
-        <th>hash</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>20</td>
-        <td>Leslie Qualls</td>
-        <td>1</td>
-        <td>?</td>
-        <td>?</td>
-        <td>240</td>
-        <td>?</td>
-        <td>168889591841</td>
-        <td>17809976537863</td>
-    </tr>
-</table>
-Total: 1 row affected.
-
-</details><br>
-
-
-Unfortunately, that's not enough gold to buy a sword. Seems like I do have to work after all. Maybe it's not a bad idea to change my name from Stranger to my real name before I will apply for a job.
-
-<details><summary>Statement</summary>Update your name to 'Leslie Qualls' and show the updated row.<br><br>
-
-<table>
-    <tr>
-        <th>personid</th>
-        <th>name</th>
-        <th>villageid</th>
-        <th>gender</th>
-        <th>job</th>
-        <th>gold</th>
-        <th>state</th>
-        <th>hash</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>20</td>
-        <td>Leslie Qualls</td>
-        <td>1</td>
-        <td>?</td>
-        <td>?</td>
-        <td>240</td>
-        <td>?</td>
-        <td>168889591841</td>
-        <td>17809976537863</td>
-    </tr>
-</table>
-Total: 1 row affected.
 
 </details><br>
 
@@ -1247,12 +1137,6 @@ Total: 18 rows affected.
 Total: 18 rows affected.
 
 </details><br>
-
-
-You have completed SQLab Island. What a big adventure!
-
-
-You have completed SQLab Island. What a big adventure!
 
 
 You have completed SQLab Island. What a big adventure!

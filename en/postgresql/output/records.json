@@ -10,7 +10,7 @@
     "context": "\nOh dear, what happened? It seems that I am the only survivor of the air crash. Wow, there are some villages on this island.\n\n```sql\nSELECT *\nFROM village\n```",
     "statement": "Copy-paste the previous query. After the star `*`, add a comma and the given formula. Execute the complete query.",
     "salt": "042",
-    "formula": "salt_042(sum(hash) OVER ()) AS token",
+    "formula": "salt_042(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "SELECT *\nFROM village",
@@ -26,7 +26,7 @@
     "context": "It seems there are a few people living in these villages.",
     "statement": "How can you see a list of all inhabitants?",
     "salt": "002",
-    "formula": "salt_002(sum(hash) OVER ()) AS token",
+    "formula": "salt_002(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "SELECT *\nFROM inhabitant",
@@ -42,7 +42,7 @@
     "context": "\nWoah, so many people!\n\nMan! I'm hungry. I will go and find a butcher to ask for some free sausages.\n\n```sql\nSELECT *\nFROM inhabitant\nWHERE job = 'butcher'\n```",
     "statement": "Copy-paste the previous query, add the given formula, and execute it.",
     "salt": "048",
-    "formula": "salt_048(sum(hash) OVER ()) AS token",
+    "formula": "salt_048(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "SELECT *\nFROM inhabitant A\nWHERE job = 'butcher'",
@@ -58,7 +58,7 @@
     "context": "\n\n– There you are! Enjoy your meal! But take care of yourself. As long as you are unarmed, stay away from villains. Not everyone on this island is friendly.  \n– Thank you, Edward!",
     "statement": "Okay, let's see who is friendly on this island...",
     "salt": "023",
-    "formula": "salt_023(sum(hash) OVER ()) AS token",
+    "formula": "salt_023(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "SELECT *\nFROM inhabitant\nWHERE state = 'friendly'",
@@ -72,19 +72,19 @@
     "kind": "hint",
     "counter": 4,
     "text": "Some inhabitants are neither friendly or evil.",
-    "query": "SELECT *\n     , salt_023(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE state != 'evil'"
+    "query": "SELECT *\n     , salt_023(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE state != 'evil'"
   },
   "48044556087693": {
     "kind": "hint",
     "counter": 4,
     "text": "Filter out the evil inhabitants, not the friendly ones.",
-    "query": "SELECT *\n     , salt_023(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE state = 'evil'"
+    "query": "SELECT *\n     , salt_023(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE state = 'evil'"
   },
   "37598288701617": {
     "kind": "hint",
     "counter": 4,
     "text": "Filter out the evil inhabitants.",
-    "query": "SELECT *\n     , salt_023(sum(hash) OVER ()) AS token\nFROM inhabitant"
+    "query": "SELECT *\n     , salt_023(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant"
   },
   "50980998180879": {
     "kind": "episode",
@@ -92,7 +92,7 @@
     "context": "\nThere is no way around getting a sword for myself. ",
     "statement": "Now try to find a friendly weaponsmith to forge you one.\n\n_Tip._ You can combine predicates in the `WHERE` clause with `AND`.",
     "salt": "060",
-    "formula": "salt_060(sum(hash) OVER ()) AS token",
+    "formula": "salt_060(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "SELECT *\nFROM inhabitant\nWHERE state = 'friendly'\n    AND job = 'weaponsmith'",
@@ -108,7 +108,7 @@
     "context": "\nOh, that does not look good.",
     "statement": "Maybe other friendly smiths can help you out, e.g. a blacksmith.\n\n_Tip._ Try out: job LIKE '%smith' to find all inhabitants whose job ends with 'smith' (% is a wildcard for any number of characters).",
     "salt": "069",
-    "formula": "salt_069(sum(hash) OVER ()) AS token",
+    "formula": "salt_069(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "SELECT *\nFROM inhabitant\nWHERE state = 'friendly'\n    AND job LIKE '%smith'",
@@ -122,19 +122,19 @@
     "kind": "hint",
     "counter": 6,
     "text": "Keep all villagers whose job's name ends with 'smith' (e.g., 'smith', 'blacksmith', etc.).",
-    "query": "SELECT *\n     , salt_069(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE state = 'friendly'\n    AND job LIKE 'smith'"
+    "query": "SELECT *\n     , salt_069(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE state = 'friendly'\n    AND job LIKE 'smith'"
   },
   "77405320603816": {
     "kind": "hint",
     "counter": 6,
     "text": "Filter out the villagers whose job's name doesn't ends with 'smith'.",
-    "query": "SELECT *\n     , salt_069(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE state = 'friendly'"
+    "query": "SELECT *\n     , salt_069(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE state = 'friendly'"
   },
   "73618022250895": {
     "kind": "hint",
     "counter": 6,
     "text": "Filter out the villagers which are not friendly.",
-    "query": "SELECT *\n     , salt_069(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE job LIKE '%smith'"
+    "query": "SELECT *\n     , salt_069(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE job LIKE '%smith'"
   },
   "71849070099607": {
     "kind": "episode",
@@ -142,7 +142,7 @@
     "context": "\nThat looks better! I will go and visit those smiths.\n\n– Hi stranger! Where are you going? I'm Paul, I'm the major of Monkeycity. I will go ahead and register you as a citizen.\n\n```sql\nINSERT INTO inhabitant (name, villageid, gender, job, gold, state) VALUES ('Stranger', 1, '?', '?', 0, '?')\n```\n\n– No need to call me stranger!",
     "statement": "First, execute the `INSERT` query. Then, look for your personid.\n\n_Tip._ In former queries, the * stands for: all columns. Instead of the star, you can also address one or more columns (separated by a comma) and you will only get the columns you need.",
     "salt": "090",
-    "formula": "salt_090(sum(hash) OVER ()) AS token",
+    "formula": "salt_090(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\n\nSELECT personid\nFROM inhabitant\nWHERE name = 'Stranger';",
@@ -156,27 +156,27 @@
     "kind": "hint",
     "counter": 7,
     "text": "Oops, it seems you have executed the `INSERT` query twice or more. Execute the following queries to cancel all these insertions: DELETE FROM inhabitant WHERE name = 'Stranger'; SELECT setval('inhabitant_personid_seq', 19)",
-    "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT personid\n     , salt_090(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';"
+    "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT personid\n     , salt_090(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';"
   },
   "28936146647069": {
     "kind": "hint",
     "counter": 7,
     "text": "Oops, it seems you have executed the `INSERT` query twice or more. Execute the following queries to cancel all these insertions: DELETE FROM inhabitant WHERE name = 'Stranger'; SELECT setval('inhabitant_personid_seq', 19)",
-    "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT personid\n     , salt_090(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';",
+    "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT personid\n     , salt_090(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';",
     "salt": "090"
   },
   "27750710965709": {
     "kind": "hint",
     "counter": 7,
     "text": "Oops, it seems you have executed the `INSERT` query twice or more. Execute the following queries to cancel all these insertions: DELETE FROM inhabitant WHERE name = 'Stranger'; SELECT setval('inhabitant_personid_seq', 19)",
-    "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT personid\n     , salt_090(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';",
+    "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT personid\n     , salt_090(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';",
     "salt": "090"
   },
   "27856316173838": {
     "kind": "hint",
     "counter": 7,
     "text": "Oops, it seems you have executed the `INSERT` query twice or more. Execute the following queries to cancel all these insertions: DELETE FROM inhabitant WHERE name = 'Stranger'; SELECT setval('inhabitant_personid_seq', 19)",
-    "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT personid\n     , salt_090(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';",
+    "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT personid\n     , salt_090(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';",
     "salt": "090"
   },
   "30525141563126": {
@@ -185,7 +185,7 @@
     "context": "\n\n– Hi Ernest! How much is a sword?  \n– I can offer to make you a sword for 150 gold. That's the cheapest you will find!",
     "statement": "How much gold do you have?",
     "salt": "099",
-    "formula": "salt_099(sum(hash) OVER ()) AS token",
+    "formula": "salt_099(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "SELECT gold\nFROM inhabitant\nWHERE personid = 20",
@@ -199,7 +199,7 @@
     "kind": "hint",
     "counter": 8,
     "text": "Restrict the result to the Stranger's row (personid: 20).",
-    "query": "SELECT personid, gold\n     , salt_099(sum(hash) OVER ()) AS token\nFROM inhabitant"
+    "query": "SELECT personid, gold\n     , salt_099(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant"
   },
   "8733222069916": {
     "kind": "episode",
@@ -207,7 +207,7 @@
     "context": "\nDamn! No mon, no fun. There has to be another option to earn gold other than going to work. Maybe I could collect ownerless items and sell them!",
     "statement": "Make a list of all items that don't belong to anyone.\n\n_Tip._ You can recognize ownerless items by: WHERE owner IS NULL",
     "salt": "073",
-    "formula": "salt_073(sum(hash) OVER ()) AS token",
+    "formula": "salt_073(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "SELECT *\nFROM item\nWHERE owner IS NULL",
@@ -223,7 +223,7 @@
     "context": "So much cool stuff!\n\nYay, a coffee cup. Let's collect it!\n\n```sql\nUPDATE item\nSET owner = 20\nWHERE item = 'coffee cup'\n```",
     "statement": "Execute the `UPDATE` query, and check the `item` table afterwards.",
     "salt": "093",
-    "formula": "salt_093(sum(hash) OVER ()) AS token",
+    "formula": "salt_093(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "UPDATE item\nSET owner = 20\nWHERE item = 'coffee cup';\n\n\nSELECT *\nFROM item",
@@ -239,7 +239,7 @@
     "context": "",
     "statement": "Do you know a trick how to collect all the ownerless items? Afterwards, list all of the items you own.",
     "salt": "033",
-    "formula": "salt_033(sum(hash) OVER ()) AS token",
+    "formula": "salt_033(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "UPDATE item\nSET owner = 20\nWHERE owner IS NULL;\n\n\nSELECT item\nFROM item\nWHERE owner = 20",
@@ -258,13 +258,13 @@
     "kind": "hint",
     "counter": 11,
     "text": "It seems you have failed to collect any other ownerless item. Remember: comparing to `NULL` with the `=` operator always returns... `NULL`. You need the special operator `IS` instead.",
-    "query": "SELECT item\n     , salt_033(sum(hash) OVER ()) AS token\nFROM item\nWHERE item = 'coffee cup'"
+    "query": "SELECT item\n     , salt_033(sum(nn(hash)) OVER ()) AS token\nFROM item\nWHERE item = 'coffee cup'"
   },
   "138996212731035": {
     "kind": "hint",
     "counter": 11,
     "text": "Restrict the result to the Stranger's rows (personid: 20).",
-    "query": "SELECT item\n     , salt_033(sum(hash) OVER ()) AS token\nFROM item"
+    "query": "SELECT item\n     , salt_033(sum(nn(hash)) OVER ()) AS token\nFROM item"
   },
   "140217850902324": {
     "kind": "episode",
@@ -272,7 +272,7 @@
     "context": "So greedy! You've snapped up all items, even those that already had an owner.",
     "statement": "Let's give them back to their rightful owners: the cane to 5, the hammer to 2 and the rope to 17. Afterwards, list all of the items you own.",
     "salt": "025",
-    "formula": "salt_025(sum(hash) OVER ()) AS token",
+    "formula": "salt_025(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "UPDATE item\nSET owner = 5\nWHERE item = 'cane';\n\nUPDATE item\nSET owner = 2\nWHERE item = 'hammer';\n\nUPDATE item\nSET owner = 17\nWHERE item = 'rope';\n\nSELECT item\nFROM item\nWHERE owner = 20",
@@ -288,7 +288,7 @@
     "context": "",
     "statement": "Find a friendly inhabitant who is either a merchant or a dealer. Maybe they want to buy some of your items.",
     "salt": "024",
-    "formula": "salt_024(sum(hash) OVER ()) AS token",
+    "formula": "salt_024(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "solution_preamble": "With a logical `OR`.",
@@ -311,7 +311,7 @@
     "context": "",
     "statement": "Find a friendly inhabitant who is either a merchant or a dealer. Maybe they want to buy some of your items.",
     "salt": "024",
-    "formula": "salt_024(sum(hash) OVER ()) AS token",
+    "formula": "salt_024(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "solution_preamble": "With a logical `OR`.",
@@ -332,25 +332,25 @@
     "kind": "hint",
     "counter": 13,
     "text": "Your result include one evil villager. Use both `AND` and `OR`, and don't forget to put the brackets correctly.",
-    "query": "SELECT *\n     , salt_024(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE state = 'friendly' AND job = 'merchant'\n    OR job = 'dealer'"
+    "query": "SELECT *\n     , salt_024(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE state = 'friendly' AND job = 'merchant'\n    OR job = 'dealer'"
   },
   "158940675065632": {
     "kind": "hint",
     "counter": 13,
     "text": "You have found inhabitants who are either friendly, or dealers, or merchants, but \"friendly\" is not an option.",
-    "query": "SELECT *\n     , salt_024(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE state = 'friendly'\n    OR job = 'dealer'\n    OR job = 'merchant'"
+    "query": "SELECT *\n     , salt_024(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE state = 'friendly'\n    OR job = 'dealer'\n    OR job = 'merchant'"
   },
   "166516902594714": {
     "kind": "hint",
     "counter": 13,
     "text": "Include the friendly merchants too.",
-    "query": "SELECT *\n     , salt_024(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE state = 'friendly' AND job = 'dealer'"
+    "query": "SELECT *\n     , salt_024(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE state = 'friendly' AND job = 'dealer'"
   },
   "165468115894776": {
     "kind": "hint",
     "counter": 13,
     "text": "Include the friendly dealers too.",
-    "query": "SELECT *\n     , salt_024(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE state = 'friendly' AND job = 'merchant'"
+    "query": "SELECT *\n     , salt_024(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE state = 'friendly' AND job = 'merchant'"
   },
   "166940006711685": {
     "kind": "episode",
@@ -358,7 +358,7 @@
     "context": "\n\n– I'd like to get the ring and the teapot. The rest is nothing but scrap. Please give me the two items. My `personid` is 15.",
     "statement": "Afterwards, check the items that she owns.",
     "salt": "034",
-    "formula": "salt_034(sum(hash) OVER ()) AS token",
+    "formula": "salt_034(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "UPDATE item\nSET owner = 15\nWHERE item IN ('ring', 'teapot');\n\n\nSELECT *\nFROM item\nWHERE owner = 15",
@@ -374,7 +374,7 @@
     "context": "\n\n— Thank you! Here, some gold!",
     "statement": "Transfer 120 from Helen's gold to yours, and then check the new amounts of your two rows.\n\n_Tip._ SQL has no “transfer” operation. Use two `UPDATE` statements.",
     "salt": "091",
-    "formula": "salt_091(sum(hash) OVER ()) AS token",
+    "formula": "salt_091(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "UPDATE inhabitant\nSET gold = gold - 120\nWHERE personid = 15;\n\n\nUPDATE inhabitant\nSET gold = gold + 120\nWHERE personid = 20;\n\n\nSELECT name\n     , gold\nFROM inhabitant\nWHERE personid IN (15, 20)",
@@ -398,19 +398,19 @@
     "kind": "hint",
     "counter": 15,
     "text": "Restrict the result to the row of Helen (15) and yours (20).",
-    "query": "SELECT name\n     , gold\n     , salt_091(sum(hash) OVER ()) AS token\nFROM inhabitant\nLIMIT 1"
+    "query": "SELECT name\n     , gold\n     , salt_091(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nLIMIT 1"
   },
   "24056167280055": {
     "kind": "hint",
     "counter": 15,
     "text": "Restrict the result to the row of Helen (15) and yours (20).",
-    "query": "SELECT name\n     , gold\n     , salt_091(sum(hash) OVER ()) AS token\nFROM inhabitant\nlimit 1"
+    "query": "SELECT name\n     , gold\n     , salt_091(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nlimit 1"
   },
   "24026656455753": {
     "kind": "hint",
     "counter": 15,
     "text": "Restrict the result to the row of Helen (15) and yours (20).",
-    "query": "SELECT name\n     , gold\n     , salt_091(sum(hash) OVER ()) AS token\nFROM inhabitant\nlimit 1",
+    "query": "SELECT name\n     , gold\n     , salt_091(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nlimit 1",
     "salt": "091"
   },
   "33486899158028": {
@@ -419,7 +419,7 @@
     "context": "",
     "statement": "You have correctly updated Helen's gold. Now update yours.",
     "salt": "075",
-    "formula": "salt_075(sum(hash) OVER ()) AS token",
+    "formula": "salt_075(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "UPDATE inhabitant\nSET gold = gold + 120\nWHERE personid = 20;\n\n\nSELECT name\n     , gold\nFROM inhabitant\nWHERE personid IN (15, 20)",
@@ -435,7 +435,7 @@
     "context": "",
     "statement": "You have correctly updated your gold. Now update Helen's.",
     "salt": "076",
-    "formula": "salt_076(sum(hash) OVER ()) AS token",
+    "formula": "salt_076(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "UPDATE inhabitant\nSET gold = gold - 120\nWHERE personid = 15;\n\n\nSELECT name\n     , gold\nFROM inhabitant\nWHERE personid IN (15, 20)",
@@ -451,7 +451,7 @@
     "context": "Unfortunately, that's not enough gold to buy a sword. Seems like I do have to work after all. Maybe it's not a bad idea to change my name from Stranger to my real name before I will apply for a job.",
     "statement": "Update your name to 'Leslie Qualls' and show the updated row.",
     "salt": "080",
-    "formula": "salt_080(sum(hash) OVER ()) AS token",
+    "formula": "salt_080(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "UPDATE inhabitant\nSET name = 'Leslie Qualls'\nWHERE personid = 20;\n\n\nSELECT *\nFROM inhabitant\nWHERE personid = 20",
@@ -467,7 +467,7 @@
     "context": "Unfortunately, that's not enough gold to buy a sword. Seems like I do have to work after all. Maybe it's not a bad idea to change my name from Stranger to my real name before I will apply for a job.",
     "statement": "Update your name to 'Leslie Qualls' and show the updated row.",
     "salt": "080",
-    "formula": "salt_080(sum(hash) OVER ()) AS token",
+    "formula": "salt_080(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "UPDATE inhabitant\nSET name = 'Leslie Qualls'\nWHERE personid = 20;\n\n\nSELECT *\nFROM inhabitant\nWHERE personid = 20",
@@ -483,7 +483,7 @@
     "context": "Unfortunately, that's not enough gold to buy a sword. Seems like I do have to work after all. Maybe it's not a bad idea to change my name from Stranger to my real name before I will apply for a job.",
     "statement": "Update your name to 'Leslie Qualls' and show the updated row.",
     "salt": "080",
-    "formula": "salt_080(sum(hash) OVER ()) AS token",
+    "formula": "salt_080(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "UPDATE inhabitant\nSET name = 'Leslie Qualls'\nWHERE personid = 20;\n\n\nSELECT *\nFROM inhabitant\nWHERE personid = 20",
@@ -497,13 +497,13 @@
     "kind": "hint",
     "counter": 18,
     "text": "Restrict the result to your row (20).",
-    "query": "SELECT *\n     , salt_080(sum(hash) OVER ()) AS token\nFROM inhabitant\nlimit 1"
+    "query": "SELECT *\n     , salt_080(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nlimit 1"
   },
   "18322049360738": {
     "kind": "hint",
     "counter": 18,
     "text": "The name Qualls contains two 'l's.",
-    "query": "UPDATE inhabitant\nSET name = 'Leslie Quals'\nWHERE personid = 20;\n\n\nSELECT *\n     , salt_080(sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE personid = 20"
+    "query": "UPDATE inhabitant\nSET name = 'Leslie Quals'\nWHERE personid = 20;\n\n\nSELECT *\n     , salt_080(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE personid = 20"
   },
   "18336198393759": {
     "kind": "episode",
@@ -511,7 +511,7 @@
     "context": "",
     "statement": "Since baking is one of your hobbies, why not find a baker who you can work for?\n\n_Tip._ List all bakers and use `ORDER BY` gold to sort the results. `ORDER BY` gold `DESC` is even better because then the richest baker is on top.",
     "salt": "078",
-    "formula": "salt_078(👀 + sum(hash) OVER ()) AS token",
+    "formula": "salt_078(👀 + sum(nn(hash)) OVER ()) AS token",
     "tweak": "gold on the last row",
     "solutions": [
       {
@@ -526,19 +526,19 @@
     "kind": "hint",
     "counter": 19,
     "text": "Don't forget to sort the result by decreasing gold.",
-    "query": "SELECT *\n     , salt_078({{x}} + sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE job = 'baker'"
+    "query": "SELECT *\n     , salt_078({{x}} + sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE job = 'baker'"
   },
   "30928237956025": {
     "kind": "hint",
     "counter": 19,
     "text": "The gold must be sorted by decreasing order.",
-    "query": "SELECT *\n     , salt_078({{x}} + sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE job = 'baker'\nORDER BY gold"
+    "query": "SELECT *\n     , salt_078({{x}} + sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE job = 'baker'\nORDER BY gold"
   },
   "30928237956875": {
     "kind": "hint",
     "counter": 19,
     "text": "Don't forget to update the token formula.",
-    "query": "SELECT *\n     , salt_078(0 + sum(hash) OVER ()) AS token\nFROM inhabitant\nWHERE job = 'baker'"
+    "query": "SELECT *\n     , salt_078(0 + sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE job = 'baker'"
   },
   "30928237956525": {
     "kind": "episode",
@@ -546,7 +546,7 @@
     "context": "Aha, Paul! I know him!\n\n– Hi, you again! I saw you want to work as a baker? Okay! You will be paid 1 gold for 100 bread rolls.\n\n(8 hours later...)\n\n– Here, I made ten thousand bread rolls! I quit! This should be enough money to buy a sword. Let's see what happens with my gold balance.\n\nHere's your new sword, Losloo Qoolls! Now you can go everywhere.",
     "statement": "Transfer your salary (100) from Paul's gold to yours, and substract the price of the sword (150). Then, display your gold balance.",
     "salt": "010",
-    "formula": "salt_010(sum(hash) OVER ()) AS token",
+    "formula": "salt_010(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "UPDATE inhabitant\nSET gold = gold - 100\nWHERE personid = 1;\n\n\nUPDATE inhabitant\nSET gold = gold + 100 - 150\nWHERE personid = 20;\n\n\nSELECT gold\nFROM inhabitant\nWHERE personid = 20",
@@ -562,7 +562,7 @@
     "context": "\n\n– My name is Leslie qualls! Thanks anyway!",
     "statement": "Is there a pilot on this island by any chance? He could fly you home.",
     "salt": "086",
-    "formula": "salt_086(sum(hash) OVER ()) AS token",
+    "formula": "salt_086(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "SELECT *\nFROM inhabitant\nWHERE job = 'pilot'",
@@ -578,7 +578,7 @@
     "context": "Oh no, his state is 'kidnapped'.\n\nHorrible, the pilot is held captive by Dirty Dieter! I will show you a trick how to find out the name of the village where Dirty Dieter lives.\n\n```sql\nSELECT A.name\nFROM village A\nJOIN inhabitant B ON A.villageid = B.villageid\nWHERE B.name = 'Dirty Dieter'\n```",
     "statement": "Copy-paste the previous query, add the given formula, and execute it.",
     "salt": "029",
-    "formula": "salt_029(sum(A.hash + B.hash) OVER ()) AS token",
+    "formula": "salt_029(sum(nn(A.hash) + nn(B.hash)) OVER ()) AS token",
     "solutions": [
       "The expression presented here is called a join. It combines the information of the `inhabitant`\ntable with information of the `village` table by matching `villageid` values.",
       {
@@ -601,7 +601,7 @@
     "context": "\n\n– Thanks for the hint!",
     "statement": "Use the join to find out the chief's name of the village Onionville.\n\n_Tip._ In the column `chief` in the village table, the `personid` of the chief is stored.",
     "salt": "045",
-    "formula": "salt_045(sum(A.hash + B.hash) OVER ()) AS token",
+    "formula": "salt_045(sum(nn(A.hash) + nn(B.hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "SELECT B.name\nFROM village A\nJOIN inhabitant B ON A.chief = B.personid\nWHERE A.name = 'Onionville'",
@@ -615,13 +615,13 @@
     "kind": "hint",
     "counter": 23,
     "text": "We are only interested in the chief of Onionville.",
-    "query": "SELECT B.name\n     , salt_045(sum(A.hash + B.hash) OVER ()) AS token\nFROM village A\nJOIN inhabitant B ON A.chief = B.personid"
+    "query": "SELECT B.name\n     , salt_045(sum(nn(A.hash) + nn(B.hash)) OVER ()) AS token\nFROM village A\nJOIN inhabitant B ON A.chief = B.personid"
   },
   "227797463040767": {
     "kind": "hint",
     "counter": 23,
     "text": "Don't forget the join condition (`ON ...`). Without it, you make a cartesian product.",
-    "query": "SELECT B.name\n     , salt_045(sum(A.hash + B.hash) OVER ()) AS token\nFROM village A, inhabitant B\nWHERE A.name = 'Onionville'"
+    "query": "SELECT B.name\n     , salt_045(sum(nn(A.hash) + nn(B.hash)) OVER ()) AS token\nFROM village A, inhabitant B\nWHERE A.name = 'Onionville'"
   },
   "241491762019151": {
     "kind": "episode",
@@ -629,7 +629,7 @@
     "context": "I've got it! I will visit Fred and ask him about Dirty Dieter and the pilot.\n\nUm, how many inhabitants does Onionville have?\n\n```sql\nSELECT COUNT(*) as population\nFROM inhabitant A\nJOIN village B ON A.villageid = B.villageid\nWHERE B.name = 'Onionville'\n```",
     "statement": "Copy-paste the previous query, add the given formula, and execute it.",
     "salt": "012",
-    "formula": "salt_012(sum(bit_xor(A.hash + B.hash)) OVER ()) AS token",
+    "formula": "salt_012(sum(bit_xor(nn(A.hash) + nn(B.hash))) OVER ()) AS token",
     "solutions": [
       {
         "query": "SELECT count(*) AS population\nFROM inhabitant A\nJOIN village B ON A.villageid = B.villageid\nWHERE B.name = 'Onionville'",
@@ -645,7 +645,7 @@
     "context": "\n\n– Hello Leslie Qualls, the pilot is held captive by Dirty Dieter in his sister's house.",
     "statement": "Shall I tell you how many women there are in Onionville? Nah, you can figure it out by yourself!\n\n_Tip._ Women show up as gender = 'f'.",
     "salt": "032",
-    "formula": "salt_032(👀 + sum(bit_xor(A.hash + B.hash)) OVER ()) AS token",
+    "formula": "salt_032(👀 + sum(bit_xor(nn(A.hash) + nn(B.hash))) OVER ()) AS token",
     "tweak": "this number",
     "solutions": [
       {
@@ -660,19 +660,19 @@
     "kind": "hint",
     "counter": 25,
     "text": "This is the population of Onionville. We are only interested in its women.",
-    "query": "SELECT count(*) AS women\n     , salt_032({{x}} + sum(bit_xor(A.hash + B.hash)) OVER ()) AS token\nFROM inhabitant A, village B\nWHERE A.villageid = B.villageid\n    AND B.name = 'Onionville'"
+    "query": "SELECT count(*) AS women\n     , salt_032({{x}} + sum(bit_xor(nn(A.hash) + nn(B.hash))) OVER ()) AS token\nFROM inhabitant A, village B\nWHERE A.villageid = B.villageid\n    AND B.name = 'Onionville'"
   },
   "41253217103657": {
     "kind": "hint",
     "counter": 25,
     "text": "This is the total number of women. We are only interested in those of Onionville.",
-    "query": "SELECT count(*) AS women\n     , salt_032({{x}} + sum(bit_xor(A.hash + B.hash)) OVER ()) AS token\nFROM inhabitant A, village B\nWHERE A.villageid = B.villageid\n    AND gender = 'f'"
+    "query": "SELECT count(*) AS women\n     , salt_032({{x}} + sum(bit_xor(nn(A.hash) + nn(B.hash))) OVER ()) AS token\nFROM inhabitant A, village B\nWHERE A.villageid = B.villageid\n    AND gender = 'f'"
   },
   "40200892941243": {
     "kind": "hint",
     "counter": 25,
     "text": "Don't forget the join condition (`ON ...`).",
-    "query": "SELECT count(*) AS women\n     , salt_032({{x}} + sum(bit_xor(A.hash + B.hash)) OVER ()) AS token\nFROM inhabitant A, village B\nWHERE gender = 'f'\n    AND B.name = 'Onionville'"
+    "query": "SELECT count(*) AS women\n     , salt_032({{x}} + sum(bit_xor(nn(A.hash) + nn(B.hash))) OVER ()) AS token\nFROM inhabitant A, village B\nWHERE gender = 'f'\n    AND B.name = 'Onionville'"
   },
   "41770464086333": {
     "kind": "episode",
@@ -680,7 +680,7 @@
     "context": "Oh, only one woman.",
     "statement": "What's her name?",
     "salt": "036",
-    "formula": "salt_036(sum(A.hash + B.hash) OVER ()) AS token",
+    "formula": "salt_036(sum(nn(A.hash) + nn(B.hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "SELECT A.name\nFROM inhabitant A\nJOIN village B ON A.villageid = B.villageid\nWHERE B.name = 'Onionville'\n    AND gender = 'f'",
@@ -694,13 +694,13 @@
     "kind": "hint",
     "counter": 26,
     "text": "Restrict the result to Onionville.",
-    "query": "SELECT A.name\n     , salt_036(sum(A.hash + B.hash) OVER ()) AS token\nFROM inhabitant A\nJOIN village B ON A.villageid = B.villageid\nWHERE gender = 'f'"
+    "query": "SELECT A.name\n     , salt_036(sum(nn(A.hash) + nn(B.hash)) OVER ()) AS token\nFROM inhabitant A\nJOIN village B ON A.villageid = B.villageid\nWHERE gender = 'f'"
   },
   "132776239100886": {
     "kind": "hint",
     "counter": 26,
     "text": "Restrict the result to the women.",
-    "query": "SELECT A.name\n     , salt_036(sum(A.hash + B.hash) OVER ()) AS token\nFROM inhabitant A\nJOIN village B ON A.villageid = B.villageid\nWHERE B.name = 'Onionville'"
+    "query": "SELECT A.name\n     , salt_036(sum(nn(A.hash) + nn(B.hash)) OVER ()) AS token\nFROM inhabitant A\nJOIN village B ON A.villageid = B.villageid\nWHERE B.name = 'Onionville'"
   },
   "124254928334508": {
     "kind": "episode",
@@ -708,7 +708,7 @@
     "context": "Let's go!\n\n– Leslie Qualls, if you hand me over the entire property of our nearby village Cucumbertown, I will release the pilot. I will show you now what this property consists of.\n\n```sql\nSELECT SUM(A.gold) as total\nFROM inhabitant A\nJOIN village B ON A.villageid = B.villageid\nWHERE B.name = 'Cucumbertown'\n```",
     "statement": "Copy-paste the previous query, add the given formula, and execute it.",
     "salt": "035",
-    "formula": "salt_035(sum(bit_xor(A.hash + B.hash)) OVER ()) AS token",
+    "formula": "salt_035(sum(bit_xor(nn(A.hash) + nn(B.hash))) OVER ()) AS token",
     "solutions": [
       {
         "query": "SELECT sum(A.gold) AS total\nFROM inhabitant A\nJOIN village B ON A.villageid = B.villageid\nWHERE B.name = 'Cucumbertown'",
@@ -724,7 +724,7 @@
     "context": "Oh no, baking bread alone can't solve my problems. If I continue working and selling items though, I could earn more gold than the worth of gold inventories of all bakers, dealers and merchants together.",
     "statement": "Sum the gold of all these people.",
     "salt": "046",
-    "formula": "salt_046(👀 + sum(bit_xor(hash)) OVER ()) AS token",
+    "formula": "salt_046(👀 + sum(bit_xor(nn(hash))) OVER ()) AS token",
     "tweak": "this sum",
     "solutions": [
       {
@@ -739,7 +739,7 @@
     "kind": "hint",
     "counter": 28,
     "text": "Restrict your queries to the bakers, dealers and merchants together.",
-    "query": "SELECT sum(inhabitant.gold) AS total\n     , salt_046({{x}} + sum(bit_xor(hash)) OVER ()) AS token\nFROM inhabitant"
+    "query": "SELECT sum(inhabitant.gold) AS total\n     , salt_046({{x}} + sum(bit_xor(nn(hash))) OVER ()) AS token\nFROM inhabitant"
   },
   "204307571743111": {
     "kind": "episode",
@@ -747,7 +747,7 @@
     "context": "That's not enough.\n\nLet's have a look at how much average gold people own, depending on their job.\n\n```sql\nSELECT job, avg(gold)\nFROM inhabitant\nGROUP BY job\nORDER BY avg(gold)\n```",
     "statement": "Copy-paste the previous query, add the given formula, and execute it.",
     "salt": "071",
-    "formula": "salt_071(sum(bit_xor(hash)) OVER ()) AS token",
+    "formula": "salt_071(sum(bit_xor(nn(hash))) OVER ()) AS token",
     "solutions": [
       {
         "query": "SELECT job\n     , avg(gold) AS average\nFROM inhabitant\nGROUP BY job\nORDER BY average",
@@ -763,7 +763,7 @@
     "context": "Ok, so the only way is to mug the villains. Or I might as well go ahead and just kill Dirty Dieter with my sword!\n\n```sql\nDELETE\nFROM inhabitant\nWHERE name = 'Dirty Dieter'\n```",
     "statement": "Execute the previous query. Which item is now ownerless?",
     "salt": "018",
-    "formula": "salt_018(sum(hash) OVER ()) AS token",
+    "formula": "salt_018(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "DELETE\nFROM inhabitant\nWHERE name = 'Dirty Dieter';\n\n\nSELECT item\nFROM item\nWHERE owner IS NULL",
@@ -779,7 +779,7 @@
     "context": "Dirty Diane: Heeeey! Now I'm very angry!\n\nWhat will you do next, Leslie Qualls?",
     "statement": "Delete Dirty Diane, and show the remaining inhabitants of Onionville (villageid 3).",
     "salt": "004",
-    "formula": "salt_004(sum(hash) OVER ()) AS token",
+    "formula": "salt_004(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "DELETE\nFROM inhabitant\nWHERE name = 'Dirty Diane';\n\n\nSELECT *\nFROM inhabitant\nWHERE villageid = 3",
@@ -793,7 +793,7 @@
     "kind": "hint",
     "counter": 31,
     "text": "Restrict the result to the village of Onionville.",
-    "query": "SELECT *\n     , salt_004(sum(hash) OVER ()) AS token\nFROM inhabitant"
+    "query": "SELECT *\n     , salt_004(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant"
   },
   "59998173561476": {
     "kind": "episode",
@@ -801,7 +801,7 @@
     "context": "\n\n– Yeah! Now I release the pilot!<br>\n– Thank's for releasing me, Leslie Qualls! I will fly you home!<br>\n– I take my sword, some gold and lots of useless items with me as a souvenir.",
     "statement": "Change the pilot's status to 'friendly', your own status to 'emigrated', and show the table `inhabitant`.",
     "salt": "051",
-    "formula": "salt_051(sum(hash) OVER ()) AS token",
+    "formula": "salt_051(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "UPDATE inhabitant\nSET state = 'friendly'\nWHERE job = 'pilot';\n\nSELECT *\nFROM inhabitant;",
@@ -827,7 +827,7 @@
     "context": "",
     "statement": "You have correctly updated the pilot's status. Now update yours to 'emigrated', and show the table `inhabitant`.",
     "salt": "052",
-    "formula": "salt_052(sum(hash) OVER ()) AS token",
+    "formula": "salt_052(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "UPDATE inhabitant\nSET state = 'emigrated'\nWHERE personid = 20;\n\nSELECT *\nFROM inhabitant;",
@@ -843,7 +843,7 @@
     "context": "",
     "statement": "You have correctly updated your status. Now update the pilot's state to 'friendly', and show the table `inhabitant`.",
     "salt": "053",
-    "formula": "salt_053(sum(hash) OVER ()) AS token",
+    "formula": "salt_053(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
         "query": "UPDATE inhabitant\nSET state = 'friendly'\nWHERE job = 'pilot';\n\nSELECT *\nFROM inhabitant;",
