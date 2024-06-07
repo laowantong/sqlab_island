@@ -218,7 +218,7 @@ Total: 1 row affected.
 
 
 
-Oh, that does not look good.
+Hm, that's very few.
 
 <details><summary>Statement</summary>Maybe other friendly smiths can help you out, e.g. a blacksmith.
 

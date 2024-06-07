@@ -105,7 +105,7 @@
   "111512971675362": {
     "kind": "episode",
     "counter": 6,
-    "context": "\nOh, that does not look good.",
+    "context": "\nHm, that's very few.",
     "statement": "Maybe other friendly smiths can help you out, e.g. a blacksmith.\n\n_Tip._ Try out: job LIKE '%smith' to find all inhabitants whose job ends with 'smith' (% is a wildcard for any number of characters).",
     "salt": "069",
     "formula": "salt_069(sum(nn(hash)) OVER ()) AS token",
