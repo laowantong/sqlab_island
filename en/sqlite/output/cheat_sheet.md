@@ -17,7 +17,7 @@ FROM village
 
 ### Episode 2
 
-**Token.** 279854843287661.
+**Token.** 280010183117016.
 
 How can you see a list of all inhabitants?
 
@@ -30,7 +30,7 @@ FROM inhabitant
 
 ### Episode 3
 
-**Token.** 134232424188549.
+**Token.** 127572182569252.
 
 Copy-paste the previous query, add the given formula, and execute it.
 
@@ -44,7 +44,7 @@ WHERE job = 'butcher'
 
 ### Episode 4
 
-**Token.** 277365272722984.
+**Token.** 278655325129117.
 
 Okay, let's see who is friendly on this island...
 
@@ -58,7 +58,7 @@ WHERE state = 'friendly'
 
 ### Episode 5
 
-**Token.** 48742798564201.
+**Token.** 49877984153702.
 
 Now try to find a friendly weaponsmith to forge you one.
 
@@ -75,7 +75,7 @@ WHERE state = 'friendly'
 
 ### Episode 6
 
-**Token.** 111512971675362.
+**Token.** 111347585921835.
 
 Maybe other friendly smiths can help you out, e.g. a blacksmith.
 
@@ -92,7 +92,7 @@ WHERE state = 'friendly'
 
 ### Episode 7
 
-**Token.** 71982920310535.
+**Token.** 71493821063775.
 
 First, execute the `INSERT` query. Then, look for your personid.
 
@@ -112,7 +112,7 @@ WHERE name = 'Stranger';
 
 ### Episode 8
 
-**Token.** 30369443645964.
+**Token.** 30398186716581.
 
 How much gold do you have?
 
@@ -126,7 +126,7 @@ WHERE personid = 20
 
 ### Episode 9
 
-**Token.** 8437518293606.
+**Token.** 8348573347279.
 
 Make a list of all items that don't belong to anyone.
 
@@ -142,7 +142,7 @@ WHERE owner IS NULL
 
 ### Episode 10
 
-**Token.** 250855062766413.
+**Token.** 250823105679734.
 
 Execute the `UPDATE` query, and check the `item` table afterwards.
 
@@ -160,7 +160,7 @@ FROM item
 
 ### Episode 11
 
-**Token.** 112212343494901.
+**Token.** 112781382726964.
 
 Do you know a trick how to collect all the ownerless items? Afterwards, list all of the items you own.
 
@@ -240,7 +240,7 @@ WHERE state = 'friendly'
 
 ### Episode 14
 
-**Token.** 166118557530211.
+**Token.** 166475576240457.
 
 Afterwards, check the items that she owns.
 
@@ -386,7 +386,7 @@ ORDER BY gold DESC
 
 ### Episode 20
 
-**Token.** 34387157037879.
+**Token.** 34691307363878.
 
 Transfer your salary (100) from Paul's gold to yours, and substract the price of the sword (150). Then, display your gold balance.
 
@@ -424,7 +424,7 @@ WHERE job = 'pilot'
 
 ### Episode 22
 
-**Token.** 229611341712473.
+**Token.** 228820229151258.
 
 Copy-paste the previous query, add the given formula, and execute it.
 
@@ -451,7 +451,7 @@ WHERE A.villageid = B.villageid
 
 ### Episode 23
 
-**Token.** 256549873381875.
+**Token.** 256416647551874.
 
 Use the join to find out the chief's name of the village Onionville.
 
@@ -468,7 +468,7 @@ WHERE A.name = 'Onionville'
 
 ### Episode 24
 
-**Token.** 240130125947971.
+**Token.** 241551827838277.
 
 Copy-paste the previous query, add the given formula, and execute it.
 
@@ -483,7 +483,7 @@ WHERE B.name = 'Onionville'
 
 ### Episode 25
 
-**Token.** 239033309293379.
+**Token.** 238207576521752.
 
 Shall I tell you how many women there are in Onionville? Nah, you can figure it out by yourself!
 
@@ -501,7 +501,7 @@ JOIN village B ON A.villageid = B.villageid
 
 ### Episode 26
 
-**Token.** 40087148930214.
+**Token.** 41269257906868.
 
 What's her name?
 
@@ -517,7 +517,7 @@ WHERE B.name = 'Onionville'
 
 ### Episode 27
 
-**Token.** 123740947235637.
+**Token.** 124758398389543.
 
 Copy-paste the previous query, add the given formula, and execute it.
 
@@ -532,7 +532,7 @@ WHERE B.name = 'Cucumbertown'
 
 ### Episode 28
 
-**Token.** 152726963163365.
+**Token.** 152687633573299.
 
 Sum the gold of all these people.
 
@@ -546,7 +546,7 @@ WHERE job IN ('baker', 'dealer', 'merchant')
 
 ### Episode 29
 
-**Token.** 203677077709662.
+**Token.** 203591029657813.
 
 Copy-paste the previous query, add the given formula, and execute it.
 
@@ -562,7 +562,7 @@ ORDER BY average
 
 ### Episode 30
 
-**Token.** 220503802201059.
+**Token.** 222052332563255.
 
 Execute the previous query. Which item is now ownerless?
 
@@ -600,7 +600,7 @@ WHERE villageid = 3
 
 ### Episode 32
 
-**Token.** 58856868131435.
+**Token.** 60216806700812.
 
 Change the pilot's status to 'friendly', your own status to 'emigrated', and show the table `inhabitant`.
 
@@ -641,7 +641,7 @@ FROM inhabitant;
 
 ### Episode 33
 
-**Token.** 214972673887395.
+**Token.** 225765442742136.
 
 You have correctly updated the pilot's status. Now update yours to 'emigrated', and show the table `inhabitant`.
 
@@ -658,7 +658,7 @@ FROM inhabitant;
 
 ### Episode 34
 
-**Token.** 215180942853051.
+**Token.** 225973728467568.
 
 You have correctly updated your status. Now update the pilot's state to 'friendly', and show the table `inhabitant`.
 
@@ -675,6 +675,6 @@ FROM inhabitant;
 
 ### Episode 35
 
-**Token.** 256344827302981.
+**Token.** 255035326205192.
 
 

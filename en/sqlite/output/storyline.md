@@ -21,15 +21,15 @@ FROM village
         <td>1</td>
         <td>Monkeycity</td>
         <td>1</td>
-        <td>88658831093</td>
-        <td>279854843287661</td>
+        <td>626144185414</td>
+        <td>280010183117016</td>
     </tr>
     <tr>
         <td>2</td>
         <td>Cucumbertown</td>
         <td>6</td>
-        <td>440373806842</td>
-        <td>279854843287661</td>
+        <td>433400391491</td>
+        <td>280010183117016</td>
     </tr>
 </table>
 Total: 3 rows affected.
@@ -61,8 +61,8 @@ It seems there are a few people living in these villages.
         <td>baker</td>
         <td>850</td>
         <td>friendly</td>
-        <td>629712842257</td>
-        <td>134232424188549</td>
+        <td>646611776879</td>
+        <td>127572182569252</td>
     </tr>
     <tr>
         <td>2</td>
@@ -72,8 +72,8 @@ It seems there are a few people living in these villages.
         <td>weaponsmith</td>
         <td>280</td>
         <td>friendly</td>
-        <td>808409497125</td>
-        <td>134232424188549</td>
+        <td>630197013484</td>
+        <td>127572182569252</td>
     </tr>
 </table>
 Total: 19 rows affected.
@@ -114,8 +114,8 @@ WHERE job = 'butcher'
         <td>butcher</td>
         <td>4850</td>
         <td>evil</td>
-        <td>723139316417</td>
-        <td>277365272722984</td>
+        <td>856968177321</td>
+        <td>278655325129117</td>
     </tr>
     <tr>
         <td>7</td>
@@ -125,8 +125,8 @@ WHERE job = 'butcher'
         <td>butcher</td>
         <td>3250</td>
         <td>evil</td>
-        <td>43765911445</td>
-        <td>277365272722984</td>
+        <td>681036005590</td>
+        <td>278655325129117</td>
     </tr>
 </table>
 Total: 4 rows affected.
@@ -161,8 +161,8 @@ Total: 4 rows affected.
         <td>baker</td>
         <td>850</td>
         <td>friendly</td>
-        <td>629712842257</td>
-        <td>48742798564201</td>
+        <td>646611776879</td>
+        <td>49877984153702</td>
     </tr>
     <tr>
         <td>2</td>
@@ -172,8 +172,8 @@ Total: 4 rows affected.
         <td>weaponsmith</td>
         <td>280</td>
         <td>friendly</td>
-        <td>808409497125</td>
-        <td>48742798564201</td>
+        <td>630197013484</td>
+        <td>49877984153702</td>
     </tr>
 </table>
 Total: 11 rows affected.
@@ -208,8 +208,8 @@ _Tip._ You can combine predicates in the `WHERE` clause with `AND`.<br><br>
         <td>weaponsmith</td>
         <td>280</td>
         <td>friendly</td>
-        <td>808409497125</td>
-        <td>111512971675362</td>
+        <td>630197013484</td>
+        <td>111347585921835</td>
     </tr>
 </table>
 Total: 1 row affected.
@@ -244,8 +244,8 @@ _Tip._ Try out: job LIKE '%smith' to find all inhabitants whose job ends with 's
         <td>weaponsmith</td>
         <td>280</td>
         <td>friendly</td>
-        <td>808409497125</td>
-        <td>71982920310535</td>
+        <td>630197013484</td>
+        <td>71493821063775</td>
     </tr>
     <tr>
         <td>10</td>
@@ -255,8 +255,8 @@ _Tip._ Try out: job LIKE '%smith' to find all inhabitants whose job ends with 's
         <td>smith</td>
         <td>600</td>
         <td>friendly</td>
-        <td>197435936456</td>
-        <td>71982920310535</td>
+        <td>445353142598</td>
+        <td>71493821063775</td>
     </tr>
 </table>
 Total: 3 rows affected.
@@ -286,7 +286,7 @@ _Tip._ In former queries, the * stands for: all columns. Instead of the star, yo
     </tr>
     <tr>
         <td>20</td>
-        <td>30369443645964</td>
+        <td>30398186716581</td>
     </tr>
 </table>
 Total: 1 row affected.
@@ -308,7 +308,7 @@ Total: 1 row affected.
     </tr>
     <tr>
         <td>0</td>
-        <td>8437518293606</td>
+        <td>8348573347279</td>
     </tr>
 </table>
 Total: 1 row affected.
@@ -333,14 +333,14 @@ _Tip._ You can recognize ownerless items by: WHERE owner IS NULL<br><br>
     <tr>
         <td>bucket</td>
         <td>None</td>
-        <td>886234623795</td>
-        <td>250855062766413</td>
+        <td>798643833227</td>
+        <td>250823105679734</td>
     </tr>
     <tr>
         <td>carton</td>
         <td>None</td>
-        <td>716044046042</td>
-        <td>250855062766413</td>
+        <td>255607005723</td>
+        <td>250823105679734</td>
     </tr>
 </table>
 Total: 6 rows affected.
@@ -370,14 +370,14 @@ WHERE item = 'coffee cup'
     <tr>
         <td>bucket</td>
         <td>None</td>
-        <td>886234623795</td>
-        <td>112212343494901</td>
+        <td>798643833227</td>
+        <td>112781382726964</td>
     </tr>
     <tr>
         <td>carton</td>
         <td>None</td>
-        <td>716044046042</td>
-        <td>112212343494901</td>
+        <td>255607005723</td>
+        <td>112781382726964</td>
     </tr>
 </table>
 Total: 9 rows affected.
@@ -455,8 +455,8 @@ Total: 6 rows affected.
         <td>merchant</td>
         <td>250</td>
         <td>friendly</td>
-        <td>828787612014</td>
-        <td>166118557530211</td>
+        <td>850110253458</td>
+        <td>166475576240457</td>
     </tr>
     <tr>
         <td>12</td>
@@ -466,8 +466,8 @@ Total: 6 rows affected.
         <td>dealer</td>
         <td>680</td>
         <td>friendly</td>
-        <td>76959311691</td>
-        <td>166118557530211</td>
+        <td>591142648847</td>
+        <td>166475576240457</td>
     </tr>
 </table>
 Total: 3 rows affected.
@@ -647,8 +647,8 @@ _Tip._ List all bakers and use `ORDER BY` gold to sort the results. `ORDER BY` g
         <td>baker</td>
         <td>850</td>
         <td>friendly</td>
-        <td>629712842257</td>
-        <td>34387157037879</td>
+        <td>646611776879</td>
+        <td>34691307363878</td>
     </tr>
     <tr>
         <td>9</td>
@@ -658,8 +658,8 @@ _Tip._ List all bakers and use `ORDER BY` gold to sort the results. `ORDER BY` g
         <td>baker</td>
         <td>550</td>
         <td>evil</td>
-        <td>343966752713</td>
-        <td>34387157037879</td>
+        <td>592129557518</td>
+        <td>34691307363878</td>
     </tr>
 </table>
 Total: 3 rows affected.
@@ -720,8 +720,8 @@ Total: 1 row affected.
         <td>pilot</td>
         <td>490</td>
         <td>kidnapped</td>
-        <td>817131000772</td>
-        <td>229611341712473</td>
+        <td>509268313479</td>
+        <td>228820229151258</td>
     </tr>
 </table>
 Total: 1 row affected.
@@ -749,7 +749,7 @@ WHERE B.name = 'Dirty Dieter'
     </tr>
     <tr>
         <td>Onionville</td>
-        <td>256549873381875</td>
+        <td>256416647551874</td>
     </tr>
 </table>
 Total: 1 row affected.
@@ -772,7 +772,7 @@ _Tip._ In the column `chief` in the village table, the `personid` of the chief i
     </tr>
     <tr>
         <td>Fred Dix</td>
-        <td>240130125947971</td>
+        <td>241551827838277</td>
     </tr>
 </table>
 Total: 1 row affected.
@@ -800,7 +800,7 @@ WHERE B.name = 'Onionville'
     </tr>
     <tr>
         <td>8</td>
-        <td>239033309293379</td>
+        <td>238207576521752</td>
     </tr>
 </table>
 Total: 1 row affected.
@@ -823,7 +823,7 @@ _Tip._ Women show up as gender = 'f'.<br><br>
     </tr>
     <tr>
         <td>1</td>
-        <td>40087148930214</td>
+        <td>41269257906868</td>
     </tr>
 </table>
 Total: 1 row affected.
@@ -842,7 +842,7 @@ Oh, only one woman.
     </tr>
     <tr>
         <td>Dirty Diane</td>
-        <td>123740947235637</td>
+        <td>124758398389543</td>
     </tr>
 </table>
 Total: 1 row affected.
@@ -870,7 +870,7 @@ WHERE B.name = 'Cucumbertown'
     </tr>
     <tr>
         <td>8860</td>
-        <td>152726963163365</td>
+        <td>152687633573299</td>
     </tr>
 </table>
 Total: 1 row affected.
@@ -889,7 +889,7 @@ Oh no, baking bread alone can't solve my problems. If I continue working and sel
     </tr>
     <tr>
         <td>3910</td>
-        <td>203677077709662</td>
+        <td>203591029657813</td>
     </tr>
 </table>
 Total: 1 row affected.
@@ -919,12 +919,12 @@ ORDER BY avg(gold)
     <tr>
         <td>farmer</td>
         <td>10.0</td>
-        <td>220503802201059</td>
+        <td>222052332563255</td>
     </tr>
     <tr>
         <td>?</td>
         <td>190.0</td>
-        <td>220503802201059</td>
+        <td>222052332563255</td>
     </tr>
 </table>
 Total: 11 rows affected.
@@ -983,8 +983,8 @@ What will you do next, Leslie Qualls?
         <td>weaponsmith</td>
         <td>280</td>
         <td>friendly</td>
-        <td>808409497125</td>
-        <td>58856868131435</td>
+        <td>630197013484</td>
+        <td>60216806700812</td>
     </tr>
     <tr>
         <td>7</td>
@@ -994,8 +994,8 @@ What will you do next, Leslie Qualls?
         <td>butcher</td>
         <td>3250</td>
         <td>evil</td>
-        <td>43765911445</td>
-        <td>58856868131435</td>
+        <td>681036005590</td>
+        <td>60216806700812</td>
     </tr>
 </table>
 Total: 6 rows affected.
@@ -1032,7 +1032,7 @@ Total: 6 rows affected.
         <td>750</td>
         <td>friendly</td>
         <td>503254218482</td>
-        <td>214972673887395</td>
+        <td>225765442742136</td>
     </tr>
     <tr>
         <td>2</td>
@@ -1042,8 +1042,8 @@ Total: 6 rows affected.
         <td>weaponsmith</td>
         <td>280</td>
         <td>friendly</td>
-        <td>808409497125</td>
-        <td>214972673887395</td>
+        <td>630197013484</td>
+        <td>225765442742136</td>
     </tr>
 </table>
 Total: 18 rows affected.
@@ -1076,7 +1076,7 @@ Total: 18 rows affected.
         <td>750</td>
         <td>friendly</td>
         <td>503254218482</td>
-        <td>256344827302981</td>
+        <td>255035326205192</td>
     </tr>
     <tr>
         <td>2</td>
@@ -1086,8 +1086,8 @@ Total: 18 rows affected.
         <td>weaponsmith</td>
         <td>280</td>
         <td>friendly</td>
-        <td>808409497125</td>
-        <td>256344827302981</td>
+        <td>630197013484</td>
+        <td>255035326205192</td>
     </tr>
 </table>
 Total: 18 rows affected.
@@ -1120,7 +1120,7 @@ Total: 18 rows affected.
         <td>750</td>
         <td>friendly</td>
         <td>503254218482</td>
-        <td>147581890646645</td>
+        <td>150536228948792</td>
     </tr>
     <tr>
         <td>2</td>
@@ -1130,8 +1130,8 @@ Total: 18 rows affected.
         <td>weaponsmith</td>
         <td>280</td>
         <td>friendly</td>
-        <td>808409497125</td>
-        <td>147581890646645</td>
+        <td>630197013484</td>
+        <td>150536228948792</td>
     </tr>
 </table>
 Total: 18 rows affected.
