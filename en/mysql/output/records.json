@@ -511,7 +511,7 @@
     "context": "",
     "statement": "Since baking is one of your hobbies, why not find a baker who you can work for?\n\n_Tip._ List all bakers and use `ORDER BY` gold to sort the results. `ORDER BY` gold `DESC` is even better because then the richest baker is on top.",
     "salt": "078",
-    "formula": "salt_078(👀 + sum(nn(hash)) OVER ()) AS token",
+    "formula": "salt_078((0.0) + sum(nn(hash)) OVER ()) AS token",
     "tweak": "gold on the last row",
     "solutions": [
       {
@@ -645,7 +645,7 @@
     "context": "\n\n– Hello Leslie Qualls, the pilot is held captive by Dirty Dieter in his sister's house.",
     "statement": "Shall I tell you how many women there are in Onionville? Nah, you can figure it out by yourself!\n\n_Tip._ Women show up as gender = 'f'.",
     "salt": "032",
-    "formula": "salt_032(👀 + sum(bit_xor(nn(A.hash) + nn(B.hash))) OVER ()) AS token",
+    "formula": "salt_032((0.0) + sum(bit_xor(nn(A.hash) + nn(B.hash))) OVER ()) AS token",
     "tweak": "this number",
     "solutions": [
       {
@@ -724,7 +724,7 @@
     "context": "Oh no, baking bread alone can't solve my problems. If I continue working and selling items though, I could earn more gold than the worth of gold inventories of all bakers, dealers and merchants together.",
     "statement": "Sum the gold of all these people.",
     "salt": "046",
-    "formula": "salt_046(👀 + sum(bit_xor(nn(hash))) OVER ()) AS token",
+    "formula": "salt_046((0.0) + sum(bit_xor(nn(hash))) OVER ()) AS token",
     "tweak": "this sum",
     "solutions": [
       {
