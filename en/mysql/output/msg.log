@@ -52,18 +52,18 @@
     Hint (238466580765852): 'We are only interested in the chief of Onionville.'
     Hint (218198158603602): "Don't forget the join condition (`ON ...`). Without it, you make a cartesian product."
   Question 24 (240365303417698): 'Copy-paste the previous query, add the given formula, and execute it.'
-  Question 25 (237781870732912): 'Shall I tell you how many women there are in Onionville? Nah, you can figure it out by yourself!\n\n_T'
-    Hint (40325190811833): 'This is the population of Onionville. We are only interested in its women.'
-    Hint (40259238245673): 'This is the total number of women. We are only interested in those of Onionville.'
-    Hint (39678966017348): "Don't forget the join condition (`ON ...`)."
+  Question 25 (233051995253998): 'Shall I tell you how many women there are in Onionville? Nah, you can figure it out by yourself!\n\n_T'
+    Hint (51796000688695): 'This is the population of Onionville. We are only interested in its women.'
+    Hint (37373906110135): 'This is the total number of women. We are only interested in those of Onionville.'
+    Hint (48955627140666): "Don't forget the join condition (`ON ...`)."
   Question 26 (41535988500868): "What's her name?"
     Hint (128655226577199): 'Restrict the result to Onionville.'
     Hint (136221754469805): 'Restrict the result to the women.'
   Question 27 (124493698100759): 'Copy-paste the previous query, add the given formula, and execute it.'
-  Question 28 (152867079397994): 'Sum the gold of all these people.'
-    Hint (204071674029542): 'Restrict your queries to the bakers, dealers and merchants together.'
-  Question 29 (204439262662667): 'Copy-paste the previous query, add the given formula, and execute it.'
-  Question 30 (221233433966939): 'Execute the previous query. Which item is now ownerless?'
+  Question 28 (157771240628108): 'Sum the gold of all these people.'
+    Hint (193594500728372): 'Restrict your queries to the bakers, dealers and merchants together.'
+  Question 29 (205678511338701): 'Copy-paste the previous query, add the given formula, and execute it.'
+  Question 30 (227531204698033): 'Execute the previous query. Which item is now ownerless?'
   Question 31 (193619246200652): 'Delete Dirty Diane, and show the remaining inhabitants of Onionville (villageid 3).'
     Hint (66098661366712): 'Restrict the result to the village of Onionville.'
   Question 32 (60167643205863): "Change the pilot's status to 'friendly', your own status to 'emigrated', and show the table `inhabit"

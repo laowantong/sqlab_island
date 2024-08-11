@@ -800,7 +800,7 @@ WHERE B.name = 'Onionville'
     </tr>
     <tr>
         <td>8</td>
-        <td>237857954360385</td>
+        <td>229606212629141</td>
     </tr>
 </table>
 Total: 1 row affected.
@@ -870,7 +870,7 @@ WHERE B.name = 'Cucumbertown'
     </tr>
     <tr>
         <td>8860</td>
-        <td>153383718998319</td>
+        <td>158000323613499</td>
     </tr>
 </table>
 Total: 1 row affected.
@@ -889,7 +889,7 @@ Oh no, baking bread alone can't solve my problems. If I continue working and sel
     </tr>
     <tr>
         <td>3910</td>
-        <td>204307571743111</td>
+        <td>208022858214383</td>
     </tr>
 </table>
 Total: 1 row affected.
@@ -919,12 +919,12 @@ ORDER BY avg(gold)
     <tr>
         <td>farmer</td>
         <td>10.0000000000000000</td>
-        <td>222005781953802</td>
+        <td>228039061975856</td>
     </tr>
     <tr>
         <td>?</td>
         <td>190.0000000000000000</td>
-        <td>222005781953802</td>
+        <td>228039061975856</td>
     </tr>
 </table>
 Total: 11 rows affected.

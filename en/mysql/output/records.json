@@ -629,23 +629,23 @@
     "context": "I've got it! I will visit Fred and ask him about Dirty Dieter and the pilot.\n\nUm, how many inhabitants does Onionville have?\n\n```sql\nSELECT COUNT(*) as population\nFROM inhabitant A\nJOIN village B ON A.villageid = B.villageid\nWHERE B.name = 'Onionville'\n```",
     "statement": "Copy-paste the previous query, add the given formula, and execute it.",
     "salt": "012",
-    "formula": "salt_012(sum(bit_xor(nn(A.hash) + nn(B.hash))) OVER ()) AS token",
+    "formula": "salt_012(bit_xor(sum(nn(A.hash) + nn(B.hash))) OVER ()) AS token",
     "solutions": [
       {
         "query": "SELECT count(*) AS population\nFROM inhabitant A\nJOIN village B ON A.villageid = B.villageid\nWHERE B.name = 'Onionville'",
-        "result_head": "<table>\n    <tr>\n        <th>population</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>8</td>\n        <td>237781870732912</td>\n    </tr>\n</table>\nTotal: 1 row affected.",
-        "token": "237781870732912"
+        "result_head": "<table>\n    <tr>\n        <th>population</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>8</td>\n        <td>233051995253998</td>\n    </tr>\n</table>\nTotal: 1 row affected.",
+        "token": "233051995253998"
       }
     ],
     "adventure": 1
   },
-  "237781870732912": {
+  "233051995253998": {
     "kind": "episode",
     "counter": 25,
     "context": "\n\n– Hello Leslie Qualls, the pilot is held captive by Dirty Dieter in his sister's house.",
     "statement": "Shall I tell you how many women there are in Onionville? Nah, you can figure it out by yourself!\n\n_Tip._ Women show up as gender = 'f'.",
     "salt": "032",
-    "formula": "salt_032((0.0) + sum(bit_xor(nn(A.hash) + nn(B.hash))) OVER ()) AS token",
+    "formula": "salt_032((0.0) + bit_xor(sum(nn(A.hash) + nn(B.hash))) OVER ()) AS token",
     "tweak": "this number",
     "solutions": [
       {
@@ -656,23 +656,23 @@
     ],
     "adventure": 1
   },
-  "40325190811833": {
+  "51796000688695": {
     "kind": "hint",
     "counter": 25,
     "text": "This is the population of Onionville. We are only interested in its women.",
-    "query": "SELECT count(*) AS women\n     , salt_032({{x}} + sum(bit_xor(nn(A.hash) + nn(B.hash))) OVER ()) AS token\nFROM inhabitant A, village B\nWHERE A.villageid = B.villageid\n    AND B.name = 'Onionville'"
+    "query": "SELECT count(*) AS women\n     , salt_032({{x}} + bit_xor(sum(nn(A.hash) + nn(B.hash))) OVER ()) AS token\nFROM inhabitant A, village B\nWHERE A.villageid = B.villageid\n    AND B.name = 'Onionville'"
   },
-  "40259238245673": {
+  "37373906110135": {
     "kind": "hint",
     "counter": 25,
     "text": "This is the total number of women. We are only interested in those of Onionville.",
-    "query": "SELECT count(*) AS women\n     , salt_032({{x}} + sum(bit_xor(nn(A.hash) + nn(B.hash))) OVER ()) AS token\nFROM inhabitant A, village B\nWHERE A.villageid = B.villageid\n    AND gender = 'f'"
+    "query": "SELECT count(*) AS women\n     , salt_032({{x}} + bit_xor(sum(nn(A.hash) + nn(B.hash))) OVER ()) AS token\nFROM inhabitant A, village B\nWHERE A.villageid = B.villageid\n    AND gender = 'f'"
   },
-  "39678966017348": {
+  "48955627140666": {
     "kind": "hint",
     "counter": 25,
     "text": "Don't forget the join condition (`ON ...`).",
-    "query": "SELECT count(*) AS women\n     , salt_032({{x}} + sum(bit_xor(nn(A.hash) + nn(B.hash))) OVER ()) AS token\nFROM inhabitant A, village B\nWHERE gender = 'f'\n    AND B.name = 'Onionville'"
+    "query": "SELECT count(*) AS women\n     , salt_032({{x}} + bit_xor(sum(nn(A.hash) + nn(B.hash))) OVER ()) AS token\nFROM inhabitant A, village B\nWHERE gender = 'f'\n    AND B.name = 'Onionville'"
   },
   "41535988500868": {
     "kind": "episode",
@@ -708,56 +708,56 @@
     "context": "Let's go!\n\n– Leslie Qualls, if you hand me over the entire property of our nearby village Cucumbertown, I will release the pilot. I will show you now what this property consists of.\n\n```sql\nSELECT SUM(A.gold) as total\nFROM inhabitant A\nJOIN village B ON A.villageid = B.villageid\nWHERE B.name = 'Cucumbertown'\n```",
     "statement": "Copy-paste the previous query, add the given formula, and execute it.",
     "salt": "035",
-    "formula": "salt_035(sum(bit_xor(nn(A.hash) + nn(B.hash))) OVER ()) AS token",
+    "formula": "salt_035(bit_xor(sum(nn(A.hash) + nn(B.hash))) OVER ()) AS token",
     "solutions": [
       {
         "query": "SELECT sum(A.gold) AS total\nFROM inhabitant A\nJOIN village B ON A.villageid = B.villageid\nWHERE B.name = 'Cucumbertown'",
-        "result_head": "<table>\n    <tr>\n        <th>total</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>8860</td>\n        <td>152867079397994</td>\n    </tr>\n</table>\nTotal: 1 row affected.",
-        "token": "152867079397994"
+        "result_head": "<table>\n    <tr>\n        <th>total</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>8860</td>\n        <td>157771240628108</td>\n    </tr>\n</table>\nTotal: 1 row affected.",
+        "token": "157771240628108"
       }
     ],
     "adventure": 1
   },
-  "152867079397994": {
+  "157771240628108": {
     "kind": "episode",
     "counter": 28,
     "context": "Oh no, baking bread alone can't solve my problems. If I continue working and selling items though, I could earn more gold than the worth of gold inventories of all bakers, dealers and merchants together.",
     "statement": "Sum the gold of all these people.",
     "salt": "046",
-    "formula": "salt_046((0.0) + sum(bit_xor(nn(hash))) OVER ()) AS token",
+    "formula": "salt_046((0.0) + bit_xor(sum(nn(hash))) OVER ()) AS token",
     "tweak": "this sum",
     "solutions": [
       {
         "query": "SELECT sum(inhabitant.gold) AS total\nFROM inhabitant\nWHERE job IN ('baker', 'dealer', 'merchant')",
-        "result_head": "<table>\n    <tr>\n        <th>total</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>3910</td>\n        <td>204439262662667</td>\n    </tr>\n</table>\nTotal: 1 row affected.",
-        "token": "204439262662667"
+        "result_head": "<table>\n    <tr>\n        <th>total</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>3910</td>\n        <td>205678511338701</td>\n    </tr>\n</table>\nTotal: 1 row affected.",
+        "token": "205678511338701"
       }
     ],
     "adventure": 1
   },
-  "204071674029542": {
+  "193594500728372": {
     "kind": "hint",
     "counter": 28,
     "text": "Restrict your queries to the bakers, dealers and merchants together.",
-    "query": "SELECT sum(inhabitant.gold) AS total\n     , salt_046({{x}} + sum(bit_xor(nn(hash))) OVER ()) AS token\nFROM inhabitant"
+    "query": "SELECT sum(inhabitant.gold) AS total\n     , salt_046({{x}} + bit_xor(sum(nn(hash))) OVER ()) AS token\nFROM inhabitant"
   },
-  "204439262662667": {
+  "205678511338701": {
     "kind": "episode",
     "counter": 29,
     "context": "That's not enough.\n\nLet's have a look at how much average gold people own, depending on their job.\n\n```sql\nSELECT job, avg(gold)\nFROM inhabitant\nGROUP BY job\nORDER BY avg(gold)\n```",
     "statement": "Copy-paste the previous query, add the given formula, and execute it.",
     "salt": "071",
-    "formula": "salt_071(sum(bit_xor(nn(hash))) OVER ()) AS token",
+    "formula": "salt_071(bit_xor(sum(nn(hash))) OVER ()) AS token",
     "solutions": [
       {
         "query": "SELECT job\n     , avg(gold) AS average\nFROM inhabitant\nGROUP BY job\nORDER BY average",
-        "result_head": "<table>\n    <tr>\n        <th>job</th>\n        <th>average</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>farmer</td>\n        <td>10.0000</td>\n        <td>221233433966939</td>\n    </tr>\n    <tr>\n        <td>?</td>\n        <td>190.0000</td>\n        <td>221233433966939</td>\n    </tr>\n</table>\nTotal: 11 rows affected.",
-        "token": "221233433966939"
+        "result_head": "<table>\n    <tr>\n        <th>job</th>\n        <th>average</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>farmer</td>\n        <td>10.0000</td>\n        <td>227531204698033</td>\n    </tr>\n    <tr>\n        <td>?</td>\n        <td>190.0000</td>\n        <td>227531204698033</td>\n    </tr>\n</table>\nTotal: 11 rows affected.",
+        "token": "227531204698033"
       }
     ],
     "adventure": 1
   },
-  "221233433966939": {
+  "227531204698033": {
     "kind": "episode",
     "counter": 30,
     "context": "Ok, so the only way is to mug the villains. Or I might as well go ahead and just kill Dirty Dieter with my sword!\n\n```sql\nDELETE\nFROM inhabitant\nWHERE name = 'Dirty Dieter'\n```",

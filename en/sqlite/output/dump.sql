@@ -378,7 +378,7 @@ INSERT INTO sqlab_msg (msg) VALUES
 
 INSERT INTO sqlab_info (name, value) VALUES
   ('description', 'An SQLab adaptation of SQL Island for SQLite.'),
-  ('version', '2.1.0'),
+  ('version', '3.0.0'),
   ('repository', 'https://github.com/laowantong/sqlab_island'),
   ('license_name', 'CC BY-SA 4.0'),
   ('license_url', 'https://creativecommons.org/licenses/by-sa/4.0/'),
@@ -401,8 +401,8 @@ INSERT INTO sqlab_info (name, value) VALUES
   ('sqlab_database_language', 'en'),
   ('dbms', 'SQLite'),
   ('dbms_version', '3.39.2'),
-  ('sqlab_version', '0.5.5'),
-  ('created_at', '2024-06-10T19:31:44.324243')
+  ('sqlab_version', '0.6.0'),
+  ('created_at', '2024-08-11T17:10:44.483643')
 ;
 
 

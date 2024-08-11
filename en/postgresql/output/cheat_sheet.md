@@ -472,7 +472,7 @@ WHERE A.name = 'Onionville'
 
 Copy-paste the previous query, add the given formula, and execute it.
 
-**Formula**. `salt_012(sum(bit_xor(nn(A.hash) + nn(B.hash))) OVER ()) AS token`
+**Formula**. `salt_012(bit_xor(sum(nn(A.hash) + nn(B.hash))) OVER ()) AS token`
 
 ```sql
 SELECT count(*) AS population
@@ -483,13 +483,13 @@ WHERE B.name = 'Onionville'
 
 ### Episode 25
 
-**Token.** 237857954360385.
+**Token.** 229606212629141.
 
 Shall I tell you how many women there are in Onionville? Nah, you can figure it out by yourself!
 
 _Tip._ Women show up as gender = 'f'.
 
-**Formula** (replace (0.0) with this number). `salt_032((0.0) + sum(bit_xor(nn(A.hash) + nn(B.hash))) OVER ()) AS token`
+**Formula** (replace (0.0) with this number). `salt_032((0.0) + bit_xor(sum(nn(A.hash) + nn(B.hash))) OVER ()) AS token`
 
 ```sql
 SELECT count(*) AS women
@@ -521,7 +521,7 @@ WHERE B.name = 'Onionville'
 
 Copy-paste the previous query, add the given formula, and execute it.
 
-**Formula**. `salt_035(sum(bit_xor(nn(A.hash) + nn(B.hash))) OVER ()) AS token`
+**Formula**. `salt_035(bit_xor(sum(nn(A.hash) + nn(B.hash))) OVER ()) AS token`
 
 ```sql
 SELECT sum(A.gold) AS total
@@ -532,11 +532,11 @@ WHERE B.name = 'Cucumbertown'
 
 ### Episode 28
 
-**Token.** 153383718998319.
+**Token.** 158000323613499.
 
 Sum the gold of all these people.
 
-**Formula** (replace (0.0) with this sum). `salt_046((0.0) + sum(bit_xor(nn(hash))) OVER ()) AS token`
+**Formula** (replace (0.0) with this sum). `salt_046((0.0) + bit_xor(sum(nn(hash))) OVER ()) AS token`
 
 ```sql
 SELECT sum(inhabitant.gold) AS total
@@ -546,11 +546,11 @@ WHERE job IN ('baker', 'dealer', 'merchant')
 
 ### Episode 29
 
-**Token.** 204307571743111.
+**Token.** 208022858214383.
 
 Copy-paste the previous query, add the given formula, and execute it.
 
-**Formula**. `salt_071(sum(bit_xor(nn(hash))) OVER ()) AS token`
+**Formula**. `salt_071(bit_xor(sum(nn(hash))) OVER ()) AS token`
 
 ```sql
 SELECT job
@@ -562,7 +562,7 @@ ORDER BY average
 
 ### Episode 30
 
-**Token.** 222005781953802.
+**Token.** 228039061975856.
 
 Execute the previous query. Which item is now ownerless?
 
