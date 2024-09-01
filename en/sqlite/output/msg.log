@@ -10,15 +10,15 @@
     Hint (70387888034034): "Keep all villagers whose job's name ends with 'smith' (e.g., 'smith', 'blacksmith', etc.)."
     Hint (76307533465793): "Filter out the villagers whose job's name doesn't ends with 'smith'."
     Hint (73596625706163): 'Filter out the villagers which are not friendly.'
-  Question 7 (71493821063775): 'First, execute the `INSERT` query. Then, look for your personid.\n\n_Tip._ In former queries, the * st'
-    Hint (30529521407667): 'Oops, it seems you have executed the `INSERT` query twice or more. Execute the following queries to '
-    Hint (29198809911474): 'Oops, it seems you have executed the `INSERT` query twice or more. Execute the following queries to '
-    Hint (29560835575636): 'Oops, it seems you have executed the `INSERT` query twice or more. Execute the following queries to '
-    Hint (28658891523095): 'Oops, it seems you have executed the `INSERT` query twice or more. Execute the following queries to '
+  Question 7 (71493821063775): 'First, execute the `INSERT` statement. Then, look for your personid.\n\n_Tip._ In former queries, the '
+    Hint (30529521407667): 'Oops, it seems you have executed the `INSERT` statement twice or more. Execute the following queries'
+    Hint (29198809911474): 'Oops, it seems you have executed the `INSERT` statement twice or more. Execute the following queries'
+    Hint (29560835575636): 'Oops, it seems you have executed the `INSERT` statement twice or more. Execute the following queries'
+    Hint (28658891523095): 'Oops, it seems you have executed the `INSERT` statement twice or more. Execute the following queries'
   Question 8 (30398186716581): 'How much gold do you have?'
     Hint (16427621247298): "Restrict the result to the Stranger's row (personid: 20)."
   Question 9 (8348573347279): "Make a list of all items that don't belong to anyone.\n\n_Tip._ You can recognize ownerless items by: "
-  Question 10 (250823105679734): 'Execute the `UPDATE` query, and check the `item` table afterwards.'
+  Question 10 (250823105679734): 'Execute the `UPDATE` statement, and check the `item` table afterwards.'
   Question 11 (112781382726964): 'Do you know a trick how to collect all the ownerless items? Afterwards, list all of the items you ow'
     Hint (137567818264690): 'It seems you have failed to collect any other ownerless item. Remember: comparing to `NULL` with the'
     Hint (133844634368524): "Restrict the result to the Stranger's rows (personid: 20)."
@@ -63,7 +63,7 @@
   Question 28 (152687633573299): 'Sum the gold of all these people.'
     Hint (203589828702201): 'Restrict your queries to the bakers, dealers and merchants together.'
   Question 29 (203591029657813): 'Copy-paste the previous query, add the given formula, and execute it.'
-  Question 30 (222052332563255): 'Execute the previous query. Which item is now ownerless?'
+  Question 30 (222052332563255): 'Execute the previous statement. Which item is now ownerless?'
   Question 31 (193773092890240): 'Delete Dirty Diane, and show the remaining inhabitants of Onionville (villageid 3).'
     Hint (66225330703443): 'Restrict the result to the village of Onionville.'
   Question 32 (60216806700812): "Change the pilot's status to 'friendly', your own status to 'emigrated', and show the table `inhabit"

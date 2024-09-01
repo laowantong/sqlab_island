@@ -10,14 +10,14 @@ CREATE TABLE inhabitant (
   job VARCHAR(255) DEFAULT NULL,
   gold INTEGER DEFAULT NULL,
   state VARCHAR(50) DEFAULT NULL,
-  hash BIGINT NULL,
+  hash BIGINT,
   PRIMARY KEY (personid)
 );
 
 CREATE TABLE item (
   item VARCHAR(255) NOT NULL,
   owner INTEGER DEFAULT NULL,
-  hash BIGINT NULL,
+  hash BIGINT,
   PRIMARY KEY (item)
 );
 
@@ -25,7 +25,7 @@ CREATE TABLE village (
   villageid SERIAL NOT NULL,
   name VARCHAR(255) DEFAULT NULL,
   chief INTEGER DEFAULT NULL,
-  hash BIGINT NULL,
+  hash BIGINT,
   PRIMARY KEY (villageid)
 );
 

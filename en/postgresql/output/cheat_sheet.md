@@ -94,7 +94,7 @@ WHERE state = 'friendly'
 
 **Token.** 71849070099607.
 
-First, execute the `INSERT` query. Then, look for your personid.
+First, execute the `INSERT` statement. Then, look for your personid.
 
 _Tip._ In former queries, the * stands for: all columns. Instead of the star, you can also address one or more columns (separated by a comma) and you will only get the columns you need.
 
@@ -144,7 +144,7 @@ WHERE owner IS NULL
 
 **Token.** 253789061748229.
 
-Execute the `UPDATE` query, and check the `item` table afterwards.
+Execute the `UPDATE` statement, and check the `item` table afterwards.
 
 **Formula**. `salt_093(sum(nn(hash)) OVER ()) AS token`
 
@@ -440,7 +440,7 @@ JOIN inhabitant B ON A.villageid = B.villageid
 WHERE B.name = 'Dirty Dieter'
 ```
 
-Implicit `JOIN`. You may encounter a syntax where the join conditions are mixed with the filter conditions. This can make the query harder to understand, especially as the number of tables and conditions increases. While this method is still supported for backward compatibility, it is generally considered outdated. The explicit JOIN syntax is recommended for new SQL code.
+Variant. Implicit JOIN. You may encounter a syntax where the join conditions are mixed with the filter conditions. This can make the query harder to understand, especially as the number of tables and conditions increases. While this method is still supported for backward compatibility, it is generally considered outdated. The explicit JOIN syntax is recommended for new SQL code.
 
 ```sql
 SELECT A.name
@@ -564,7 +564,7 @@ ORDER BY average
 
 **Token.** 228039061975856.
 
-Execute the previous query. Which item is now ownerless?
+Execute the previous statement. Which item is now ownerless?
 
 **Formula**. `salt_018(sum(nn(hash)) OVER ()) AS token`
 

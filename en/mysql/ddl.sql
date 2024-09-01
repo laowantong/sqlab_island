@@ -16,14 +16,14 @@ CREATE TABLE inhabitant (
   job varchar(255) DEFAULT NULL,
   gold int(11) DEFAULT NULL,
   state varchar(50) DEFAULT NULL,
-  hash bigint NULL,
+  hash BIGINT,
   PRIMARY KEY (personid)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE item (
   item varchar(255) NOT NULL,
   owner int(11) DEFAULT NULL,
-  hash bigint NULL,
+  hash BIGINT,
   PRIMARY KEY (item)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -31,7 +31,7 @@ CREATE TABLE village (
   villageid int(11) NOT NULL AUTO_INCREMENT,
   name varchar(255) DEFAULT NULL,
   chief int(11) DEFAULT NULL,
-  hash bigint NULL,
+  hash BIGINT,
   PRIMARY KEY (villageid)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

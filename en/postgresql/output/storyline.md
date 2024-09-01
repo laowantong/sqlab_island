@@ -275,7 +275,7 @@ INSERT INTO inhabitant (name, villageid, gender, job, gold, state) VALUES ('Stra
 
 – No need to call me stranger!
 
-<details><summary>Statement</summary>First, execute the `INSERT` query. Then, look for your personid.
+<details><summary>Statement</summary>First, execute the `INSERT` statement. Then, look for your personid.
 
 _Tip._ In former queries, the * stands for: all columns. Instead of the star, you can also address one or more columns (separated by a comma) and you will only get the columns you need.<br><br>
 
@@ -358,7 +358,7 @@ SET owner = 20
 WHERE item = 'coffee cup'
 ```
 
-<details><summary>Statement</summary>Execute the `UPDATE` query, and check the `item` table afterwards.<br><br>
+<details><summary>Statement</summary>Execute the `UPDATE` statement, and check the `item` table afterwards.<br><br>
 
 <table>
     <tr>
@@ -940,7 +940,7 @@ FROM inhabitant
 WHERE name = 'Dirty Dieter'
 ```
 
-<details><summary>Statement</summary>Execute the previous query. Which item is now ownerless?<br><br>
+<details><summary>Statement</summary>Execute the previous statement. Which item is now ownerless?<br><br>
 
 <table>
     <tr>

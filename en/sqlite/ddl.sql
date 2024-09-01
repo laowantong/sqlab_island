@@ -7,14 +7,14 @@ CREATE TABLE inhabitant (
   job TEXT DEFAULT NULL,
   gold INTEGER DEFAULT NULL,
   state TEXT DEFAULT NULL,
-  hash INTEGER NULL
+  hash INTEGER
 );
 
 DROP TABLE IF EXISTS item;
 CREATE TABLE item (
   item TEXT NOT NULL PRIMARY KEY,
   owner INTEGER DEFAULT NULL,
-  hash INTEGER NULL,
+  hash INTEGER,
   FOREIGN KEY (owner) REFERENCES inhabitant (personid) ON DELETE SET NULL
 );
 
@@ -23,6 +23,6 @@ CREATE TABLE village (
   villageid INTEGER NOT NULL PRIMARY KEY,
   name TEXT DEFAULT NULL,
   chief INTEGER DEFAULT NULL,
-  hash INTEGER NULL,
+  hash INTEGER,
   FOREIGN KEY (chief) REFERENCES inhabitant (personid)
 );

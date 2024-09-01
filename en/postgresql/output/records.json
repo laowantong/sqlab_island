@@ -140,7 +140,7 @@
     "kind": "episode",
     "counter": 7,
     "context": "\nThat looks better! I will go and visit those smiths.\n\n– Hi stranger! Where are you going? I'm Paul, I'm the major of Monkeycity. I will go ahead and register you as a citizen.\n\n```sql\nINSERT INTO inhabitant (name, villageid, gender, job, gold, state) VALUES ('Stranger', 1, '?', '?', 0, '?')\n```\n\n– No need to call me stranger!",
-    "statement": "First, execute the `INSERT` query. Then, look for your personid.\n\n_Tip._ In former queries, the * stands for: all columns. Instead of the star, you can also address one or more columns (separated by a comma) and you will only get the columns you need.",
+    "statement": "First, execute the `INSERT` statement. Then, look for your personid.\n\n_Tip._ In former queries, the * stands for: all columns. Instead of the star, you can also address one or more columns (separated by a comma) and you will only get the columns you need.",
     "salt": "090",
     "formula": "salt_090(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
@@ -155,27 +155,27 @@
   "29469479875314": {
     "kind": "hint",
     "counter": 7,
-    "text": "Oops, it seems you have executed the `INSERT` query twice or more. Execute the following queries to cancel all these insertions: DELETE FROM inhabitant WHERE name = 'Stranger'; SELECT setval('inhabitant_personid_seq', 19)",
+    "text": "Oops, it seems you have executed the `INSERT` statement twice or more. Execute the following queries to cancel all these insertions: DELETE FROM inhabitant WHERE name = 'Stranger'; SELECT setval('inhabitant_personid_seq', 19)",
     "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT personid\n     , salt_090(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';"
   },
   "28936146647069": {
     "kind": "hint",
     "counter": 7,
-    "text": "Oops, it seems you have executed the `INSERT` query twice or more. Execute the following queries to cancel all these insertions: DELETE FROM inhabitant WHERE name = 'Stranger'; SELECT setval('inhabitant_personid_seq', 19)",
+    "text": "Oops, it seems you have executed the `INSERT` statement twice or more. Execute the following queries to cancel all these insertions: DELETE FROM inhabitant WHERE name = 'Stranger'; SELECT setval('inhabitant_personid_seq', 19)",
     "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT personid\n     , salt_090(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';",
     "salt": "090"
   },
   "27750710965709": {
     "kind": "hint",
     "counter": 7,
-    "text": "Oops, it seems you have executed the `INSERT` query twice or more. Execute the following queries to cancel all these insertions: DELETE FROM inhabitant WHERE name = 'Stranger'; SELECT setval('inhabitant_personid_seq', 19)",
+    "text": "Oops, it seems you have executed the `INSERT` statement twice or more. Execute the following queries to cancel all these insertions: DELETE FROM inhabitant WHERE name = 'Stranger'; SELECT setval('inhabitant_personid_seq', 19)",
     "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT personid\n     , salt_090(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';",
     "salt": "090"
   },
   "27856316173838": {
     "kind": "hint",
     "counter": 7,
-    "text": "Oops, it seems you have executed the `INSERT` query twice or more. Execute the following queries to cancel all these insertions: DELETE FROM inhabitant WHERE name = 'Stranger'; SELECT setval('inhabitant_personid_seq', 19)",
+    "text": "Oops, it seems you have executed the `INSERT` statement twice or more. Execute the following queries to cancel all these insertions: DELETE FROM inhabitant WHERE name = 'Stranger'; SELECT setval('inhabitant_personid_seq', 19)",
     "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT personid\n     , salt_090(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';",
     "salt": "090"
   },
@@ -221,7 +221,7 @@
     "kind": "episode",
     "counter": 10,
     "context": "So much cool stuff!\n\nYay, a coffee cup. Let's collect it!\n\n```sql\nUPDATE item\nSET owner = 20\nWHERE item = 'coffee cup'\n```",
-    "statement": "Execute the `UPDATE` query, and check the `item` table afterwards.",
+    "statement": "Execute the `UPDATE` statement, and check the `item` table afterwards.",
     "salt": "093",
     "formula": "salt_093(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
@@ -587,7 +587,7 @@
         "token": "256500123076880"
       },
       {
-        "solution_preamble": "Implicit `JOIN`. You may encounter a syntax where the join conditions are mixed with the filter conditions. This can make the query harder to understand, especially as the number of tables and conditions increases. While this method is still supported for backward compatibility, it is generally considered outdated. The explicit JOIN syntax is recommended for new SQL code.",
+        "solution_preamble": "Variant. Implicit JOIN. You may encounter a syntax where the join conditions are mixed with the filter conditions. This can make the query harder to understand, especially as the number of tables and conditions increases. While this method is still supported for backward compatibility, it is generally considered outdated. The explicit JOIN syntax is recommended for new SQL code.",
         "query": "SELECT A.name\nFROM village A, inhabitant B\nWHERE A.villageid = B.villageid\n  AND B.name = 'Dirty Dieter'",
         "result_head": "<table>\n    <tr>\n        <th>name</th>\n        <th>token</th>\n    </tr>\n    <tr>\n        <td>Onionville</td>\n        <td>256500123076880</td>\n    </tr>\n</table>\nTotal: 1 row affected.",
         "token": "256500123076880"
@@ -761,7 +761,7 @@
     "kind": "episode",
     "counter": 30,
     "context": "Ok, so the only way is to mug the villains. Or I might as well go ahead and just kill Dirty Dieter with my sword!\n\n```sql\nDELETE\nFROM inhabitant\nWHERE name = 'Dirty Dieter'\n```",
-    "statement": "Execute the previous query. Which item is now ownerless?",
+    "statement": "Execute the previous statement. Which item is now ownerless?",
     "salt": "018",
     "formula": "salt_018(sum(nn(hash)) OVER ()) AS token",
     "solutions": [

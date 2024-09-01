@@ -14,7 +14,7 @@ config = {
     ],
     "info": {
         "description": "An SQLab adaptation of SQL Island for SQLite.",
-        "version": "3.0.0",
+        "version": "3.0.1",
         "repository": "https://github.com/laowantong/sqlab_island",
         "license_name": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
