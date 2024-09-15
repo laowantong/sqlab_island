@@ -10,27 +10,30 @@ FROM village
 <details><summary>Statement</summary>Copy-paste the previous query. After the star `*`, add a comma and the given formula. Execute the complete query.<br><br>
 
 <table>
-    <tr>
-        <th>villageid</th>
-        <th>name</th>
-        <th>chief</th>
-        <th>hash</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Monkeycity</td>
-        <td>1</td>
-        <td>537616450612</td>
-        <td>279731784972193</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Cucumbertown</td>
-        <td>6</td>
-        <td>506002862681</td>
-        <td>279731784972193</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>villageid</th>
+            <th>name</th>
+            <th>chief</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Monkeycity</td>
+            <td>1</td>
+            <td>537616450612</td>
+            <td>279731784972193</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Cucumbertown</td>
+            <td>6</td>
+            <td>506002862681</td>
+            <td>279731784972193</td>
+        </tr>
 </table>
 Total: 3 rows affected.
 
@@ -42,39 +45,42 @@ It seems there are a few people living in these villages.
 <details><summary>Statement</summary>How can you see a list of all inhabitants?<br><br>
 
 <table>
-    <tr>
-        <th>personid</th>
-        <th>name</th>
-        <th>villageid</th>
-        <th>gender</th>
-        <th>job</th>
-        <th>gold</th>
-        <th>state</th>
-        <th>hash</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Paul Bakerman</td>
-        <td>1</td>
-        <td>m</td>
-        <td>baker</td>
-        <td>850</td>
-        <td>friendly</td>
-        <td>667574576304</td>
-        <td>128589543210724</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Ernest Perry</td>
-        <td>3</td>
-        <td>m</td>
-        <td>weaponsmith</td>
-        <td>280</td>
-        <td>friendly</td>
-        <td>73993229357</td>
-        <td>128589543210724</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>personid</th>
+            <th>name</th>
+            <th>villageid</th>
+            <th>gender</th>
+            <th>job</th>
+            <th>gold</th>
+            <th>state</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Paul Bakerman</td>
+            <td>1</td>
+            <td>m</td>
+            <td>baker</td>
+            <td>850</td>
+            <td>friendly</td>
+            <td>667574576304</td>
+            <td>128589543210724</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ernest Perry</td>
+            <td>3</td>
+            <td>m</td>
+            <td>weaponsmith</td>
+            <td>280</td>
+            <td>friendly</td>
+            <td>73993229357</td>
+            <td>128589543210724</td>
+        </tr>
 </table>
 Total: 19 rows affected.
 
@@ -95,39 +101,42 @@ WHERE job = 'butcher'
 <details><summary>Statement</summary>Copy-paste the previous query, add the given formula, and execute it.<br><br>
 
 <table>
-    <tr>
-        <th>personid</th>
-        <th>name</th>
-        <th>villageid</th>
-        <th>gender</th>
-        <th>job</th>
-        <th>gold</th>
-        <th>state</th>
-        <th>hash</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>6</td>
-        <td>Gerry Slaughterer</td>
-        <td>2</td>
-        <td>m</td>
-        <td>butcher</td>
-        <td>4850</td>
-        <td>evil</td>
-        <td>872618219253</td>
-        <td>280206676651511</td>
-    </tr>
-    <tr>
-        <td>7</td>
-        <td>Peter Slaughterer</td>
-        <td>3</td>
-        <td>m</td>
-        <td>butcher</td>
-        <td>3250</td>
-        <td>evil</td>
-        <td>648197551204</td>
-        <td>280206676651511</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>personid</th>
+            <th>name</th>
+            <th>villageid</th>
+            <th>gender</th>
+            <th>job</th>
+            <th>gold</th>
+            <th>state</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>6</td>
+            <td>Gerry Slaughterer</td>
+            <td>2</td>
+            <td>m</td>
+            <td>butcher</td>
+            <td>4850</td>
+            <td>evil</td>
+            <td>872618219253</td>
+            <td>280206676651511</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Peter Slaughterer</td>
+            <td>3</td>
+            <td>m</td>
+            <td>butcher</td>
+            <td>3250</td>
+            <td>evil</td>
+            <td>648197551204</td>
+            <td>280206676651511</td>
+        </tr>
 </table>
 Total: 4 rows affected.
 
@@ -142,39 +151,42 @@ Total: 4 rows affected.
 <details><summary>Statement</summary>Okay, let's see who is friendly on this island...<br><br>
 
 <table>
-    <tr>
-        <th>personid</th>
-        <th>name</th>
-        <th>villageid</th>
-        <th>gender</th>
-        <th>job</th>
-        <th>gold</th>
-        <th>state</th>
-        <th>hash</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Paul Bakerman</td>
-        <td>1</td>
-        <td>m</td>
-        <td>baker</td>
-        <td>850</td>
-        <td>friendly</td>
-        <td>667574576304</td>
-        <td>49081739277115</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Ernest Perry</td>
-        <td>3</td>
-        <td>m</td>
-        <td>weaponsmith</td>
-        <td>280</td>
-        <td>friendly</td>
-        <td>73993229357</td>
-        <td>49081739277115</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>personid</th>
+            <th>name</th>
+            <th>villageid</th>
+            <th>gender</th>
+            <th>job</th>
+            <th>gold</th>
+            <th>state</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Paul Bakerman</td>
+            <td>1</td>
+            <td>m</td>
+            <td>baker</td>
+            <td>850</td>
+            <td>friendly</td>
+            <td>667574576304</td>
+            <td>49081739277115</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ernest Perry</td>
+            <td>3</td>
+            <td>m</td>
+            <td>weaponsmith</td>
+            <td>280</td>
+            <td>friendly</td>
+            <td>73993229357</td>
+            <td>49081739277115</td>
+        </tr>
 </table>
 Total: 11 rows affected.
 
@@ -189,28 +201,31 @@ There is no way around getting a sword for myself.
 _Tip._ You can combine predicates in the `WHERE` clause with `AND`.<br><br>
 
 <table>
-    <tr>
-        <th>personid</th>
-        <th>name</th>
-        <th>villageid</th>
-        <th>gender</th>
-        <th>job</th>
-        <th>gold</th>
-        <th>state</th>
-        <th>hash</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Ernest Perry</td>
-        <td>3</td>
-        <td>m</td>
-        <td>weaponsmith</td>
-        <td>280</td>
-        <td>friendly</td>
-        <td>73993229357</td>
-        <td>111903790755050</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>personid</th>
+            <th>name</th>
+            <th>villageid</th>
+            <th>gender</th>
+            <th>job</th>
+            <th>gold</th>
+            <th>state</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2</td>
+            <td>Ernest Perry</td>
+            <td>3</td>
+            <td>m</td>
+            <td>weaponsmith</td>
+            <td>280</td>
+            <td>friendly</td>
+            <td>73993229357</td>
+            <td>111903790755050</td>
+        </tr>
 </table>
 Total: 1 row affected.
 
@@ -225,39 +240,42 @@ Hm, that's very few.
 _Tip._ Try out: job LIKE '%smith' to find all inhabitants whose job ends with 'smith' (% is a wildcard for any number of characters).<br><br>
 
 <table>
-    <tr>
-        <th>personid</th>
-        <th>name</th>
-        <th>villageid</th>
-        <th>gender</th>
-        <th>job</th>
-        <th>gold</th>
-        <th>state</th>
-        <th>hash</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Ernest Perry</td>
-        <td>3</td>
-        <td>m</td>
-        <td>weaponsmith</td>
-        <td>280</td>
-        <td>friendly</td>
-        <td>73993229357</td>
-        <td>71115866585707</td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>Peter Drummer</td>
-        <td>1</td>
-        <td>m</td>
-        <td>smith</td>
-        <td>600</td>
-        <td>friendly</td>
-        <td>713565808545</td>
-        <td>71115866585707</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>personid</th>
+            <th>name</th>
+            <th>villageid</th>
+            <th>gender</th>
+            <th>job</th>
+            <th>gold</th>
+            <th>state</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2</td>
+            <td>Ernest Perry</td>
+            <td>3</td>
+            <td>m</td>
+            <td>weaponsmith</td>
+            <td>280</td>
+            <td>friendly</td>
+            <td>73993229357</td>
+            <td>71115866585707</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Peter Drummer</td>
+            <td>1</td>
+            <td>m</td>
+            <td>smith</td>
+            <td>600</td>
+            <td>friendly</td>
+            <td>713565808545</td>
+            <td>71115866585707</td>
+        </tr>
 </table>
 Total: 3 rows affected.
 
@@ -280,14 +298,17 @@ INSERT INTO inhabitant (name, villageid, gender, job, gold, state) VALUES ('Stra
 _Tip._ In former queries, the * stands for: all columns. Instead of the star, you can also address one or more columns (separated by a comma) and you will only get the columns you need.<br><br>
 
 <table>
-    <tr>
-        <th>personid</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>20</td>
-        <td>29896704364823</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>personid</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>20</td>
+            <td>29896704364823</td>
+        </tr>
 </table>
 Total: 1 row affected.
 
@@ -302,14 +323,17 @@ Total: 1 row affected.
 <details><summary>Statement</summary>How much gold do you have?<br><br>
 
 <table>
-    <tr>
-        <th>gold</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>0</td>
-        <td>7708171354493</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>gold</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>0</td>
+            <td>7708171354493</td>
+        </tr>
 </table>
 Total: 1 row affected.
 
@@ -324,24 +348,27 @@ Damn! No mon, no fun. There has to be another option to earn gold other than goi
 _Tip._ You can recognize ownerless items by: WHERE owner IS NULL<br><br>
 
 <table>
-    <tr>
-        <th>item</th>
-        <th>owner</th>
-        <th>hash</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>bucket</td>
-        <td>None</td>
-        <td>184436083777</td>
-        <td>253789061748229</td>
-    </tr>
-    <tr>
-        <td>carton</td>
-        <td>None</td>
-        <td>456410402076</td>
-        <td>253789061748229</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>item</th>
+            <th>owner</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>bucket</td>
+            <td>None</td>
+            <td>184436083777</td>
+            <td>253789061748229</td>
+        </tr>
+        <tr>
+            <td>carton</td>
+            <td>None</td>
+            <td>456410402076</td>
+            <td>253789061748229</td>
+        </tr>
 </table>
 Total: 6 rows affected.
 
@@ -361,24 +388,27 @@ WHERE item = 'coffee cup'
 <details><summary>Statement</summary>Execute the `UPDATE` statement, and check the `item` table afterwards.<br><br>
 
 <table>
-    <tr>
-        <th>item</th>
-        <th>owner</th>
-        <th>hash</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>bucket</td>
-        <td>None</td>
-        <td>184436083777</td>
-        <td>107025105236366</td>
-    </tr>
-    <tr>
-        <td>cane</td>
-        <td>5</td>
-        <td>11384476511</td>
-        <td>107025105236366</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>item</th>
+            <th>owner</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>bucket</td>
+            <td>None</td>
+            <td>184436083777</td>
+            <td>107025105236366</td>
+        </tr>
+        <tr>
+            <td>cane</td>
+            <td>5</td>
+            <td>11384476511</td>
+            <td>107025105236366</td>
+        </tr>
 </table>
 Total: 9 rows affected.
 
@@ -390,18 +420,21 @@ Total: 9 rows affected.
 <details><summary>Statement</summary>Do you know a trick how to collect all the ownerless items? Afterwards, list all of the items you own.<br><br>
 
 <table>
-    <tr>
-        <th>item</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>bucket</td>
-        <td>139744599079637</td>
-    </tr>
-    <tr>
-        <td>carton</td>
-        <td>139744599079637</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>item</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>bucket</td>
+            <td>139744599079637</td>
+        </tr>
+        <tr>
+            <td>carton</td>
+            <td>139744599079637</td>
+        </tr>
 </table>
 Total: 6 rows affected.
 
@@ -413,18 +446,21 @@ So greedy! You've snapped up all items, even those that already had an owner.
 <details><summary>Statement</summary>Let's give them back to their rightful owners: the cane to 5, the hammer to 2 and the rope to 17. Afterwards, list all of the items you own.<br><br>
 
 <table>
-    <tr>
-        <th>item</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>bucket</td>
-        <td>206054094742976</td>
-    </tr>
-    <tr>
-        <td>carton</td>
-        <td>206054094742976</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>item</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>bucket</td>
+            <td>206054094742976</td>
+        </tr>
+        <tr>
+            <td>carton</td>
+            <td>206054094742976</td>
+        </tr>
 </table>
 Total: 6 rows affected.
 
@@ -436,39 +472,42 @@ Total: 6 rows affected.
 <details><summary>Statement</summary>Find a friendly inhabitant who is either a merchant or a dealer. Maybe they want to buy some of your items.<br><br>
 
 <table>
-    <tr>
-        <th>personid</th>
-        <th>name</th>
-        <th>villageid</th>
-        <th>gender</th>
-        <th>job</th>
-        <th>gold</th>
-        <th>state</th>
-        <th>hash</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td>Carl Ox</td>
-        <td>1</td>
-        <td>m</td>
-        <td>merchant</td>
-        <td>250</td>
-        <td>friendly</td>
-        <td>843473717421</td>
-        <td>166788243175236</td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>Otto Alexander</td>
-        <td>2</td>
-        <td>m</td>
-        <td>dealer</td>
-        <td>680</td>
-        <td>friendly</td>
-        <td>371232179800</td>
-        <td>166788243175236</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>personid</th>
+            <th>name</th>
+            <th>villageid</th>
+            <th>gender</th>
+            <th>job</th>
+            <th>gold</th>
+            <th>state</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>4</td>
+            <td>Carl Ox</td>
+            <td>1</td>
+            <td>m</td>
+            <td>merchant</td>
+            <td>250</td>
+            <td>friendly</td>
+            <td>843473717421</td>
+            <td>166788243175236</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Otto Alexander</td>
+            <td>2</td>
+            <td>m</td>
+            <td>dealer</td>
+            <td>680</td>
+            <td>friendly</td>
+            <td>371232179800</td>
+            <td>166788243175236</td>
+        </tr>
 </table>
 Total: 3 rows affected.
 
@@ -482,24 +521,27 @@ Total: 3 rows affected.
 <details><summary>Statement</summary>Afterwards, check the items that she owns.<br><br>
 
 <table>
-    <tr>
-        <th>item</th>
-        <th>owner</th>
-        <th>hash</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>ring</td>
-        <td>15</td>
-        <td>972837695337</td>
-        <td>261661938333343</td>
-    </tr>
-    <tr>
-        <td>teapot</td>
-        <td>15</td>
-        <td>503611185415</td>
-        <td>261661938333343</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>item</th>
+            <th>owner</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ring</td>
+            <td>15</td>
+            <td>972837695337</td>
+            <td>261661938333343</td>
+        </tr>
+        <tr>
+            <td>teapot</td>
+            <td>15</td>
+            <td>503611185415</td>
+            <td>261661938333343</td>
+        </tr>
 </table>
 Total: 2 rows affected.
 
@@ -515,21 +557,24 @@ Total: 2 rows affected.
 _Tip._ SQL has no “transfer” operation. Use two `UPDATE` statements.<br><br>
 
 <table>
-    <tr>
-        <th>name</th>
-        <th>gold</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>Helen Grasshead</td>
-        <td>560</td>
-        <td>34807888636366</td>
-    </tr>
-    <tr>
-        <td>Stranger</td>
-        <td>120</td>
-        <td>34807888636366</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>gold</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Helen Grasshead</td>
+            <td>560</td>
+            <td>34807888636366</td>
+        </tr>
+        <tr>
+            <td>Stranger</td>
+            <td>120</td>
+            <td>34807888636366</td>
+        </tr>
 </table>
 Total: 2 rows affected.
 
@@ -541,21 +586,24 @@ Total: 2 rows affected.
 <details><summary>Statement</summary>You have correctly updated Helen's gold. Now update yours.<br><br>
 
 <table>
-    <tr>
-        <th>name</th>
-        <th>gold</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>Helen Grasshead</td>
-        <td>680</td>
-        <td>36876251558115</td>
-    </tr>
-    <tr>
-        <td>Stranger</td>
-        <td>240</td>
-        <td>36876251558115</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>gold</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Helen Grasshead</td>
+            <td>680</td>
+            <td>36876251558115</td>
+        </tr>
+        <tr>
+            <td>Stranger</td>
+            <td>240</td>
+            <td>36876251558115</td>
+        </tr>
 </table>
 Total: 2 rows affected.
 
@@ -567,21 +615,24 @@ Total: 2 rows affected.
 <details><summary>Statement</summary>You have correctly updated your gold. Now update Helen's.<br><br>
 
 <table>
-    <tr>
-        <th>name</th>
-        <th>gold</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>Helen Grasshead</td>
-        <td>560</td>
-        <td>11246510018033</td>
-    </tr>
-    <tr>
-        <td>Stranger</td>
-        <td>240</td>
-        <td>11246510018033</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>gold</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Helen Grasshead</td>
+            <td>560</td>
+            <td>11246510018033</td>
+        </tr>
+        <tr>
+            <td>Stranger</td>
+            <td>240</td>
+            <td>11246510018033</td>
+        </tr>
 </table>
 Total: 2 rows affected.
 
@@ -593,28 +644,31 @@ Unfortunately, that's not enough gold to buy a sword. Seems like I do have to wo
 <details><summary>Statement</summary>Update your name to 'Leslie Qualls' and show the updated row.<br><br>
 
 <table>
-    <tr>
-        <th>personid</th>
-        <th>name</th>
-        <th>villageid</th>
-        <th>gender</th>
-        <th>job</th>
-        <th>gold</th>
-        <th>state</th>
-        <th>hash</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>20</td>
-        <td>Leslie Qualls</td>
-        <td>1</td>
-        <td>?</td>
-        <td>?</td>
-        <td>240</td>
-        <td>?</td>
-        <td>168889591841</td>
-        <td>17809976537863</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>personid</th>
+            <th>name</th>
+            <th>villageid</th>
+            <th>gender</th>
+            <th>job</th>
+            <th>gold</th>
+            <th>state</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>20</td>
+            <td>Leslie Qualls</td>
+            <td>1</td>
+            <td>?</td>
+            <td>?</td>
+            <td>240</td>
+            <td>?</td>
+            <td>168889591841</td>
+            <td>17809976537863</td>
+        </tr>
 </table>
 Total: 1 row affected.
 
@@ -628,39 +682,42 @@ Total: 1 row affected.
 _Tip._ List all bakers and use `ORDER BY` gold to sort the results. `ORDER BY` gold `DESC` is even better because then the richest baker is on top.<br><br>
 
 <table>
-    <tr>
-        <th>personid</th>
-        <th>name</th>
-        <th>villageid</th>
-        <th>gender</th>
-        <th>job</th>
-        <th>gold</th>
-        <th>state</th>
-        <th>hash</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Paul Bakerman</td>
-        <td>1</td>
-        <td>m</td>
-        <td>baker</td>
-        <td>850</td>
-        <td>friendly</td>
-        <td>667574576304</td>
-        <td>34285849060426</td>
-    </tr>
-    <tr>
-        <td>9</td>
-        <td>Tiffany Drummer</td>
-        <td>1</td>
-        <td>f</td>
-        <td>baker</td>
-        <td>550</td>
-        <td>evil</td>
-        <td>434738589188</td>
-        <td>34285849060426</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>personid</th>
+            <th>name</th>
+            <th>villageid</th>
+            <th>gender</th>
+            <th>job</th>
+            <th>gold</th>
+            <th>state</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Paul Bakerman</td>
+            <td>1</td>
+            <td>m</td>
+            <td>baker</td>
+            <td>850</td>
+            <td>friendly</td>
+            <td>667574576304</td>
+            <td>34285849060426</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Tiffany Drummer</td>
+            <td>1</td>
+            <td>f</td>
+            <td>baker</td>
+            <td>550</td>
+            <td>evil</td>
+            <td>434738589188</td>
+            <td>34285849060426</td>
+        </tr>
 </table>
 Total: 3 rows affected.
 
@@ -680,14 +737,17 @@ Here's your new sword, Losloo Qoolls! Now you can go everywhere.
 <details><summary>Statement</summary>Transfer your salary (100) from Paul's gold to yours, and substract the price of the sword (150). Then, display your gold balance.<br><br>
 
 <table>
-    <tr>
-        <th>gold</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>190</td>
-        <td>156346887286586</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>gold</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>190</td>
+            <td>156346887286586</td>
+        </tr>
 </table>
 Total: 1 row affected.
 
@@ -701,28 +761,31 @@ Total: 1 row affected.
 <details><summary>Statement</summary>Is there a pilot on this island by any chance? He could fly you home.<br><br>
 
 <table>
-    <tr>
-        <th>personid</th>
-        <th>name</th>
-        <th>villageid</th>
-        <th>gender</th>
-        <th>job</th>
-        <th>gold</th>
-        <th>state</th>
-        <th>hash</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>8</td>
-        <td>Arthur Tailor</td>
-        <td>2</td>
-        <td>m</td>
-        <td>pilot</td>
-        <td>490</td>
-        <td>kidnapped</td>
-        <td>823379478192</td>
-        <td>229615318980909</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>personid</th>
+            <th>name</th>
+            <th>villageid</th>
+            <th>gender</th>
+            <th>job</th>
+            <th>gold</th>
+            <th>state</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>8</td>
+            <td>Arthur Tailor</td>
+            <td>2</td>
+            <td>m</td>
+            <td>pilot</td>
+            <td>490</td>
+            <td>kidnapped</td>
+            <td>823379478192</td>
+            <td>229615318980909</td>
+        </tr>
 </table>
 Total: 1 row affected.
 
@@ -743,14 +806,17 @@ WHERE B.name = 'Dirty Dieter'
 <details><summary>Statement</summary>Copy-paste the previous query, add the given formula, and execute it.<br><br>
 
 <table>
-    <tr>
-        <th>name</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>Onionville</td>
-        <td>256975312978711</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Onionville</td>
+            <td>256975312978711</td>
+        </tr>
 </table>
 Total: 1 row affected.
 
@@ -766,14 +832,17 @@ Total: 1 row affected.
 _Tip._ In the column `chief` in the village table, the `personid` of the chief is stored.<br><br>
 
 <table>
-    <tr>
-        <th>name</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>Fred Dix</td>
-        <td>240365303417698</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Fred Dix</td>
+            <td>240365303417698</td>
+        </tr>
 </table>
 Total: 1 row affected.
 
@@ -794,14 +863,17 @@ WHERE B.name = 'Onionville'
 <details><summary>Statement</summary>Copy-paste the previous query, add the given formula, and execute it.<br><br>
 
 <table>
-    <tr>
-        <th>population</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>8</td>
-        <td>233051995253998</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>population</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>8</td>
+            <td>233051995253998</td>
+        </tr>
 </table>
 Total: 1 row affected.
 
@@ -817,14 +889,17 @@ Total: 1 row affected.
 _Tip._ Women show up as gender = 'f'.<br><br>
 
 <table>
-    <tr>
-        <th>women</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>41535988500868</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>women</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>41535988500868</td>
+        </tr>
 </table>
 Total: 1 row affected.
 
@@ -836,14 +911,17 @@ Oh, only one woman.
 <details><summary>Statement</summary>What's her name?<br><br>
 
 <table>
-    <tr>
-        <th>name</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>Dirty Diane</td>
-        <td>124493698100759</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Dirty Diane</td>
+            <td>124493698100759</td>
+        </tr>
 </table>
 Total: 1 row affected.
 
@@ -864,14 +942,17 @@ WHERE B.name = 'Cucumbertown'
 <details><summary>Statement</summary>Copy-paste the previous query, add the given formula, and execute it.<br><br>
 
 <table>
-    <tr>
-        <th>total</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>8860</td>
-        <td>157771240628108</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>total</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>8860</td>
+            <td>157771240628108</td>
+        </tr>
 </table>
 Total: 1 row affected.
 
@@ -883,14 +964,17 @@ Oh no, baking bread alone can't solve my problems. If I continue working and sel
 <details><summary>Statement</summary>Sum the gold of all these people.<br><br>
 
 <table>
-    <tr>
-        <th>total</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>3910</td>
-        <td>205678511338701</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>total</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>3910</td>
+            <td>205678511338701</td>
+        </tr>
 </table>
 Total: 1 row affected.
 
@@ -911,21 +995,24 @@ ORDER BY avg(gold)
 <details><summary>Statement</summary>Copy-paste the previous query, add the given formula, and execute it.<br><br>
 
 <table>
-    <tr>
-        <th>job</th>
-        <th>average</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>farmer</td>
-        <td>10.0000</td>
-        <td>227531204698033</td>
-    </tr>
-    <tr>
-        <td>?</td>
-        <td>190.0000</td>
-        <td>227531204698033</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>job</th>
+            <th>average</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>farmer</td>
+            <td>10.0000</td>
+            <td>227531204698033</td>
+        </tr>
+        <tr>
+            <td>?</td>
+            <td>190.0000</td>
+            <td>227531204698033</td>
+        </tr>
 </table>
 Total: 11 rows affected.
 
@@ -943,14 +1030,17 @@ WHERE name = 'Dirty Dieter'
 <details><summary>Statement</summary>Execute the previous statement. Which item is now ownerless?<br><br>
 
 <table>
-    <tr>
-        <th>item</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>cane</td>
-        <td>193619246200652</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>item</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>cane</td>
+            <td>193619246200652</td>
+        </tr>
 </table>
 Total: 1 row affected.
 
@@ -964,39 +1054,42 @@ What will you do next, Leslie Qualls?
 <details><summary>Statement</summary>Delete Dirty Diane, and show the remaining inhabitants of Onionville (villageid 3).<br><br>
 
 <table>
-    <tr>
-        <th>personid</th>
-        <th>name</th>
-        <th>villageid</th>
-        <th>gender</th>
-        <th>job</th>
-        <th>gold</th>
-        <th>state</th>
-        <th>hash</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Ernest Perry</td>
-        <td>3</td>
-        <td>m</td>
-        <td>weaponsmith</td>
-        <td>280</td>
-        <td>friendly</td>
-        <td>73993229357</td>
-        <td>60167643205863</td>
-    </tr>
-    <tr>
-        <td>7</td>
-        <td>Peter Slaughterer</td>
-        <td>3</td>
-        <td>m</td>
-        <td>butcher</td>
-        <td>3250</td>
-        <td>evil</td>
-        <td>648197551204</td>
-        <td>60167643205863</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>personid</th>
+            <th>name</th>
+            <th>villageid</th>
+            <th>gender</th>
+            <th>job</th>
+            <th>gold</th>
+            <th>state</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2</td>
+            <td>Ernest Perry</td>
+            <td>3</td>
+            <td>m</td>
+            <td>weaponsmith</td>
+            <td>280</td>
+            <td>friendly</td>
+            <td>73993229357</td>
+            <td>60167643205863</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Peter Slaughterer</td>
+            <td>3</td>
+            <td>m</td>
+            <td>butcher</td>
+            <td>3250</td>
+            <td>evil</td>
+            <td>648197551204</td>
+            <td>60167643205863</td>
+        </tr>
 </table>
 Total: 6 rows affected.
 
@@ -1012,39 +1105,42 @@ Total: 6 rows affected.
 <details><summary>Statement</summary>Change the pilot's status to 'friendly', your own status to 'emigrated', and show the table `inhabitant`.<br><br>
 
 <table>
-    <tr>
-        <th>personid</th>
-        <th>name</th>
-        <th>villageid</th>
-        <th>gender</th>
-        <th>job</th>
-        <th>gold</th>
-        <th>state</th>
-        <th>hash</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Paul Bakerman</td>
-        <td>1</td>
-        <td>m</td>
-        <td>baker</td>
-        <td>750</td>
-        <td>friendly</td>
-        <td>221738647112</td>
-        <td>214187513069315</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Ernest Perry</td>
-        <td>3</td>
-        <td>m</td>
-        <td>weaponsmith</td>
-        <td>280</td>
-        <td>friendly</td>
-        <td>73993229357</td>
-        <td>214187513069315</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>personid</th>
+            <th>name</th>
+            <th>villageid</th>
+            <th>gender</th>
+            <th>job</th>
+            <th>gold</th>
+            <th>state</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Paul Bakerman</td>
+            <td>1</td>
+            <td>m</td>
+            <td>baker</td>
+            <td>750</td>
+            <td>friendly</td>
+            <td>221738647112</td>
+            <td>214187513069315</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ernest Perry</td>
+            <td>3</td>
+            <td>m</td>
+            <td>weaponsmith</td>
+            <td>280</td>
+            <td>friendly</td>
+            <td>73993229357</td>
+            <td>214187513069315</td>
+        </tr>
 </table>
 Total: 18 rows affected.
 
@@ -1056,39 +1152,42 @@ Total: 18 rows affected.
 <details><summary>Statement</summary>You have correctly updated the pilot's status. Now update yours to 'emigrated', and show the table `inhabitant`.<br><br>
 
 <table>
-    <tr>
-        <th>personid</th>
-        <th>name</th>
-        <th>villageid</th>
-        <th>gender</th>
-        <th>job</th>
-        <th>gold</th>
-        <th>state</th>
-        <th>hash</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Paul Bakerman</td>
-        <td>1</td>
-        <td>m</td>
-        <td>baker</td>
-        <td>750</td>
-        <td>friendly</td>
-        <td>221738647112</td>
-        <td>255276062128450</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Ernest Perry</td>
-        <td>3</td>
-        <td>m</td>
-        <td>weaponsmith</td>
-        <td>280</td>
-        <td>friendly</td>
-        <td>73993229357</td>
-        <td>255276062128450</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>personid</th>
+            <th>name</th>
+            <th>villageid</th>
+            <th>gender</th>
+            <th>job</th>
+            <th>gold</th>
+            <th>state</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Paul Bakerman</td>
+            <td>1</td>
+            <td>m</td>
+            <td>baker</td>
+            <td>750</td>
+            <td>friendly</td>
+            <td>221738647112</td>
+            <td>255276062128450</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ernest Perry</td>
+            <td>3</td>
+            <td>m</td>
+            <td>weaponsmith</td>
+            <td>280</td>
+            <td>friendly</td>
+            <td>73993229357</td>
+            <td>255276062128450</td>
+        </tr>
 </table>
 Total: 18 rows affected.
 
@@ -1100,39 +1199,42 @@ Total: 18 rows affected.
 <details><summary>Statement</summary>You have correctly updated your status. Now update the pilot's state to 'friendly', and show the table `inhabitant`.<br><br>
 
 <table>
-    <tr>
-        <th>personid</th>
-        <th>name</th>
-        <th>villageid</th>
-        <th>gender</th>
-        <th>job</th>
-        <th>gold</th>
-        <th>state</th>
-        <th>hash</th>
-        <th>token</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Paul Bakerman</td>
-        <td>1</td>
-        <td>m</td>
-        <td>baker</td>
-        <td>750</td>
-        <td>friendly</td>
-        <td>221738647112</td>
-        <td>148646393118578</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Ernest Perry</td>
-        <td>3</td>
-        <td>m</td>
-        <td>weaponsmith</td>
-        <td>280</td>
-        <td>friendly</td>
-        <td>73993229357</td>
-        <td>148646393118578</td>
-    </tr>
+    <thead>
+        <tr>
+            <th>personid</th>
+            <th>name</th>
+            <th>villageid</th>
+            <th>gender</th>
+            <th>job</th>
+            <th>gold</th>
+            <th>state</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Paul Bakerman</td>
+            <td>1</td>
+            <td>m</td>
+            <td>baker</td>
+            <td>750</td>
+            <td>friendly</td>
+            <td>221738647112</td>
+            <td>148646393118578</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ernest Perry</td>
+            <td>3</td>
+            <td>m</td>
+            <td>weaponsmith</td>
+            <td>280</td>
+            <td>friendly</td>
+            <td>73993229357</td>
+            <td>148646393118578</td>
+        </tr>
 </table>
 Total: 18 rows affected.
 
