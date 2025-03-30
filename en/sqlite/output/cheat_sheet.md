@@ -375,7 +375,7 @@ Since baking is one of your hobbies, why not find a baker who you can work for?
 
 _Tip._ List all bakers and use `ORDER BY` gold to sort the results. `ORDER BY` gold `DESC` is even better because then the richest baker is on top.
 
-**Formula** (replace (0.0) with gold on the last row). `salt_078((0.0) + sum(nn(hash)) OVER ()) AS token`
+**Formula** (replace (0) with gold on the last row). `salt_078((0) + sum(nn(hash)) OVER ()) AS token`
 
 ```sql
 SELECT *
@@ -489,7 +489,7 @@ Shall I tell you how many women there are in Onionville? Nah, you can figure it 
 
 _Tip._ Women show up as gender = 'f'.
 
-**Formula** (replace (0.0) with this number). `salt_032((0.0) + sum(avg(nn(A.hash) + nn(B.hash))) OVER ()) AS token`
+**Formula** (replace (0) with this number). `salt_032((0) + sum(avg(nn(A.hash) + nn(B.hash))) OVER ()) AS token`
 
 ```sql
 SELECT count(*) AS women
@@ -536,7 +536,7 @@ WHERE B.name = 'Cucumbertown'
 
 Sum the gold of all these people.
 
-**Formula** (replace (0.0) with this sum). `salt_046((0.0) + sum(avg(nn(hash))) OVER ()) AS token`
+**Formula** (replace (0) with this sum). `salt_046((0) + sum(avg(nn(hash))) OVER ()) AS token`
 
 ```sql
 SELECT sum(inhabitant.gold) AS total
