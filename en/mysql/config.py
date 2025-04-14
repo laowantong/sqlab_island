@@ -1,5 +1,9 @@
 config = {
     "dbms": "MySQL",
+    "drivername": "mysql+pymysql",
+    "username": "root",
+    "host": "localhost",
+    "port": "3306",
     "cnx_path": "./cnx.ini",
     "language": "en",
     "ddl_path": "./ddl.sql",
