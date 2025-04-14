@@ -2,3 +2,5 @@
 cnx.ini
 .ipynb_checkpoints/
 __pycache__/
+.idea/*
+anaconda_projects/db/project_filebrowser.db
