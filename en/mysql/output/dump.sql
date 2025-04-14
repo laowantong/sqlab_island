@@ -387,9 +387,9 @@ INSERT INTO sqlab_info (name, value) VALUES
   ('message_count', '74'),
   ('sqlab_database_language', 'en'),
   ('dbms', 'MySQL'),
-  ('dbms_version', '8.4.4'),
-  ('sqlab_version', '0.6.5'),
-  ('created_at', '2025-03-30T13:23:19.786511')
+  ('dbms_version', '8.0.31'),
+  ('sqlab_version', '0.6.6'),
+  ('created_at', '2025-04-14T19:16:13.483384')
 ;
 
 

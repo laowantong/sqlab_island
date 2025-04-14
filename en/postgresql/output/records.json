@@ -383,7 +383,7 @@
       },
       {
         "query": "UPDATE inhabitant\nSET gold = gold - 120\nWHERE personid = 15;\n\n\nSELECT name\n     , gold\nFROM inhabitant\nWHERE personid IN (15, 20)",
-        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>name</th>\n            <th>gold</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Helen Grasshead</td>\n            <td>560</td>\n            <td>33486899158028</td>\n        </tr>\n        <tr>\n            <td>Stranger</td>\n            <td>0</td>\n            <td>33486899158028</td>\n        </tr>\n</table>\nTotal: 2 rows affected.",
+        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>name</th>\n            <th>gold</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Stranger</td>\n            <td>0</td>\n            <td>33486899158028</td>\n        </tr>\n        <tr>\n            <td>Helen Grasshead</td>\n            <td>560</td>\n            <td>33486899158028</td>\n        </tr>\n</table>\nTotal: 2 rows affected.",
         "token": "33486899158028"
       },
       {
@@ -439,7 +439,7 @@
     "solutions": [
       {
         "query": "UPDATE inhabitant\nSET gold = gold - 120\nWHERE personid = 15;\n\n\nSELECT name\n     , gold\nFROM inhabitant\nWHERE personid IN (15, 20)",
-        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>name</th>\n            <th>gold</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Helen Grasshead</td>\n            <td>560</td>\n            <td>12496616506700</td>\n        </tr>\n        <tr>\n            <td>Stranger</td>\n            <td>240</td>\n            <td>12496616506700</td>\n        </tr>\n</table>\nTotal: 2 rows affected.",
+        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>name</th>\n            <th>gold</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Stranger</td>\n            <td>240</td>\n            <td>12496616506700</td>\n        </tr>\n        <tr>\n            <td>Helen Grasshead</td>\n            <td>560</td>\n            <td>12496616506700</td>\n        </tr>\n</table>\nTotal: 2 rows affected.",
         "token": "12496616506700"
       }
     ],

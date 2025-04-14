@@ -400,9 +400,9 @@ INSERT INTO sqlab_info (name, value) VALUES
   ('message_count', '74'),
   ('sqlab_database_language', 'en'),
   ('dbms', 'SQLite'),
-  ('dbms_version', '3.46.0'),
-  ('sqlab_version', '0.6.5'),
-  ('created_at', '2025-03-30T13:23:16.276398')
+  ('dbms_version', '3.39.3'),
+  ('sqlab_version', '0.6.6'),
+  ('created_at', '2025-04-14T19:16:01.410376')
 ;
 
 

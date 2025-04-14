@@ -1,5 +1,9 @@
 config = {
     "dbms": "PostgreSQL",
+    "drivername": "postgresql+psycopg2",
+    "username": "postgres",
+    "host": "localhost",
+    "port": "5432",
     "cnx_path": "./cnx.ini",
     "language": "en",
     "ddl_path": "./ddl.sql",
