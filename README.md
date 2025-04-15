@@ -15,10 +15,25 @@ To play SQLab Island, you just need to download a dump of the self-contained dat
 1. [Download dump.sql](https://raw.githubusercontent.com/laowantong/sqlab_island/main/en/mysql/output/dump.sql) (right-click and "Save link as...").
 2. On the command line, create a new database called `sqlab_island`, populate it and connect to it:
    ```bash
-   mysql -u username -p < dump.sql
-   mysql -u username -p sqlab_island
+   read -p "Username: " USERNAME
+   mysql -u "$USERNAME" -p < dump.sql
+   mysql -u "$USERNAME" -p sqlab_island
    ```
 3. On the MySQL prompt, access the first episode of the adventure:
+   ```sql
+   SELECT decrypt(42)
+   ```
+
+### MariaDB
+
+1. [Download dump.sql](https://raw.githubusercontent.com/laowantong/sqlab_island/main/en/mariadb/output/dump.sql) (right-click and "Save link as...").
+2. On the command line, create a new database called `sqlab_island`, populate it and connect to it:
+   ```bash
+   read -p "Username: " USERNAME
+   mariadb -u "$USERNAME" -p < dump.sql
+   mariadb -u "$USERNAME" -p sqlab_island
+   ```
+3. On the MariaDB prompt, access the first episode of the adventure:
    ```sql
    SELECT decrypt(42)
    ```
@@ -28,8 +43,9 @@ To play SQLab Island, you just need to download a dump of the self-contained dat
 1. [Download dump.sql](https://raw.githubusercontent.com/laowantong/sqlab_island/main/en/postgresql/output/dump.sql) (right-click and "Save link as...").
 2. On the command line, create a new database called `sqlab_island`, populate it and connect to it:
    ```bash
-   psql -U username -f dump.sql
-   psql -U username sqlab_island
+   read -p "Username: " USERNAME
+   psql -U "$USERNAME" -f dump.sql
+   psql -U "$USERNAME" sqlab_island
    ```
 3. On the PostgreSQL prompt, access the first episode of the adventure:
    ```sql
