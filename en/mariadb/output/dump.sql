@@ -388,8 +388,8 @@ INSERT INTO sqlab_info (name, value) VALUES
   ('sqlab_database_language', 'en'),
   ('dbms', 'MariaDB'),
   ('dbms_version', '11.7.2-MariaDB'),
-  ('sqlab_version', '0.6.5'),
-  ('created_at', '2025-04-14T19:38:12.136515')
+  ('sqlab_version', '0.6.7'),
+  ('created_at', '2025-04-15T16:39:43.985606')
 ;
 
 

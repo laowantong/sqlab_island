@@ -60,25 +60,25 @@ It seems there are a few people living in these villages.
     </thead>
     <tbody>
         <tr>
-            <td>6</td>
-            <td>Gerry Slaughterer</td>
             <td>2</td>
+            <td>Ernest Perry</td>
+            <td>3</td>
             <td>m</td>
-            <td>butcher</td>
-            <td>4850</td>
-            <td>evil</td>
-            <td>872618219253</td>
+            <td>weaponsmith</td>
+            <td>280</td>
+            <td>friendly</td>
+            <td>73993229357</td>
             <td>128589543210724</td>
         </tr>
         <tr>
-            <td>5</td>
-            <td>Dirty Dieter</td>
+            <td>18</td>
+            <td>Ryan Horse</td>
             <td>3</td>
             <td>m</td>
-            <td>smith</td>
-            <td>650</td>
-            <td>evil</td>
-            <td>637588674311</td>
+            <td>blacksmith</td>
+            <td>390</td>
+            <td>friendly</td>
+            <td>98143389713</td>
             <td>128589543210724</td>
         </tr>
 </table>
@@ -116,25 +116,25 @@ WHERE job = 'butcher'
     </thead>
     <tbody>
         <tr>
-            <td>19</td>
-            <td>Ann Meaty</td>
-            <td>2</td>
-            <td>f</td>
-            <td>butcher</td>
-            <td>2280</td>
-            <td>friendly</td>
-            <td>889525893587</td>
-            <td>280206676651511</td>
-        </tr>
-        <tr>
-            <td>17</td>
-            <td>Edward Grasshead</td>
+            <td>7</td>
+            <td>Peter Slaughterer</td>
             <td>3</td>
             <td>m</td>
             <td>butcher</td>
-            <td>990</td>
-            <td>friendly</td>
-            <td>296311699507</td>
+            <td>3250</td>
+            <td>evil</td>
+            <td>648197551204</td>
+            <td>280206676651511</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Gerry Slaughterer</td>
+            <td>2</td>
+            <td>m</td>
+            <td>butcher</td>
+            <td>4850</td>
+            <td>evil</td>
+            <td>872618219253</td>
             <td>280206676651511</td>
         </tr>
 </table>
@@ -166,25 +166,25 @@ Total: 4 rows affected.
     </thead>
     <tbody>
         <tr>
-            <td>12</td>
-            <td>Otto Alexander</td>
             <td>2</td>
+            <td>Ernest Perry</td>
+            <td>3</td>
             <td>m</td>
-            <td>dealer</td>
-            <td>680</td>
+            <td>weaponsmith</td>
+            <td>280</td>
             <td>friendly</td>
-            <td>371232179800</td>
+            <td>73993229357</td>
             <td>49081739277115</td>
         </tr>
         <tr>
-            <td>10</td>
-            <td>Peter Drummer</td>
+            <td>1</td>
+            <td>Paul Bakerman</td>
             <td>1</td>
             <td>m</td>
-            <td>smith</td>
-            <td>600</td>
+            <td>baker</td>
+            <td>850</td>
             <td>friendly</td>
-            <td>713565808545</td>
+            <td>667574576304</td>
             <td>49081739277115</td>
         </tr>
 </table>
@@ -255,17 +255,6 @@ _Tip._ Try out: job LIKE '%smith' to find all inhabitants whose job ends with 's
     </thead>
     <tbody>
         <tr>
-            <td>18</td>
-            <td>Ryan Horse</td>
-            <td>3</td>
-            <td>m</td>
-            <td>blacksmith</td>
-            <td>390</td>
-            <td>friendly</td>
-            <td>98143389713</td>
-            <td>71115866585707</td>
-        </tr>
-        <tr>
             <td>10</td>
             <td>Peter Drummer</td>
             <td>1</td>
@@ -274,6 +263,17 @@ _Tip._ Try out: job LIKE '%smith' to find all inhabitants whose job ends with 's
             <td>600</td>
             <td>friendly</td>
             <td>713565808545</td>
+            <td>71115866585707</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ernest Perry</td>
+            <td>3</td>
+            <td>m</td>
+            <td>weaponsmith</td>
+            <td>280</td>
+            <td>friendly</td>
+            <td>73993229357</td>
             <td>71115866585707</td>
         </tr>
 </table>
@@ -358,15 +358,15 @@ _Tip._ You can recognize ownerless items by: WHERE owner IS NULL<br><br>
     </thead>
     <tbody>
         <tr>
-            <td>ring</td>
-            <td>None</td>
-            <td>588958498140</td>
-            <td>253789061748229</td>
-        </tr>
-        <tr>
             <td>teapot</td>
             <td>None</td>
             <td>89763356635</td>
+            <td>253789061748229</td>
+        </tr>
+        <tr>
+            <td>bucket</td>
+            <td>None</td>
+            <td>184436083777</td>
             <td>253789061748229</td>
         </tr>
 </table>
@@ -398,15 +398,15 @@ WHERE item = 'coffee cup'
     </thead>
     <tbody>
         <tr>
-            <td>hammer</td>
-            <td>2</td>
-            <td>471038081064</td>
-            <td>107025105236366</td>
-        </tr>
-        <tr>
             <td>lightbulb</td>
             <td>None</td>
             <td>659598942284</td>
+            <td>107025105236366</td>
+        </tr>
+        <tr>
+            <td>bucket</td>
+            <td>None</td>
+            <td>184436083777</td>
             <td>107025105236366</td>
         </tr>
 </table>
@@ -428,11 +428,11 @@ Total: 9 rows affected.
     </thead>
     <tbody>
         <tr>
-            <td>teapot</td>
+            <td>bucket</td>
             <td>139744599079637</td>
         </tr>
         <tr>
-            <td>bucket</td>
+            <td>carton</td>
             <td>139744599079637</td>
         </tr>
 </table>
@@ -454,11 +454,11 @@ So greedy! You've snapped up all items, even those that already had an owner.
     </thead>
     <tbody>
         <tr>
-            <td>teapot</td>
+            <td>bucket</td>
             <td>206054094742976</td>
         </tr>
         <tr>
-            <td>bucket</td>
+            <td>carton</td>
             <td>206054094742976</td>
         </tr>
 </table>
@@ -487,17 +487,6 @@ Total: 6 rows affected.
     </thead>
     <tbody>
         <tr>
-            <td>15</td>
-            <td>Helen Grasshead</td>
-            <td>2</td>
-            <td>f</td>
-            <td>dealer</td>
-            <td>680</td>
-            <td>friendly</td>
-            <td>618786795696</td>
-            <td>166788243175236</td>
-        </tr>
-        <tr>
             <td>12</td>
             <td>Otto Alexander</td>
             <td>2</td>
@@ -506,6 +495,17 @@ Total: 6 rows affected.
             <td>680</td>
             <td>friendly</td>
             <td>371232179800</td>
+            <td>166788243175236</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Carl Ox</td>
+            <td>1</td>
+            <td>m</td>
+            <td>merchant</td>
+            <td>250</td>
+            <td>friendly</td>
+            <td>843473717421</td>
             <td>166788243175236</td>
         </tr>
 </table>
@@ -1069,25 +1069,25 @@ What will you do next, Leslie Qualls?
     </thead>
     <tbody>
         <tr>
-            <td>18</td>
-            <td>Ryan Horse</td>
-            <td>3</td>
-            <td>m</td>
-            <td>blacksmith</td>
-            <td>390</td>
-            <td>friendly</td>
-            <td>98143389713</td>
-            <td>60167643205863</td>
-        </tr>
-        <tr>
-            <td>17</td>
-            <td>Edward Grasshead</td>
+            <td>7</td>
+            <td>Peter Slaughterer</td>
             <td>3</td>
             <td>m</td>
             <td>butcher</td>
-            <td>990</td>
+            <td>3250</td>
+            <td>evil</td>
+            <td>648197551204</td>
+            <td>60167643205863</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ernest Perry</td>
+            <td>3</td>
+            <td>m</td>
+            <td>weaponsmith</td>
+            <td>280</td>
             <td>friendly</td>
-            <td>296311699507</td>
+            <td>73993229357</td>
             <td>60167643205863</td>
         </tr>
 </table>
@@ -1120,25 +1120,25 @@ Total: 6 rows affected.
     </thead>
     <tbody>
         <tr>
-            <td>7</td>
-            <td>Peter Slaughterer</td>
+            <td>2</td>
+            <td>Ernest Perry</td>
             <td>3</td>
             <td>m</td>
-            <td>butcher</td>
-            <td>3250</td>
-            <td>evil</td>
-            <td>648197551204</td>
+            <td>weaponsmith</td>
+            <td>280</td>
+            <td>friendly</td>
+            <td>73993229357</td>
             <td>214187513069315</td>
         </tr>
         <tr>
-            <td>6</td>
-            <td>Gerry Slaughterer</td>
-            <td>2</td>
-            <td>m</td>
-            <td>butcher</td>
-            <td>4850</td>
-            <td>evil</td>
-            <td>872618219253</td>
+            <td>20</td>
+            <td>Leslie Quals</td>
+            <td>1</td>
+            <td>?</td>
+            <td>?</td>
+            <td>190</td>
+            <td>?</td>
+            <td>402895909526</td>
             <td>214187513069315</td>
         </tr>
 </table>
@@ -1167,25 +1167,25 @@ Total: 18 rows affected.
     </thead>
     <tbody>
         <tr>
-            <td>7</td>
-            <td>Peter Slaughterer</td>
+            <td>2</td>
+            <td>Ernest Perry</td>
             <td>3</td>
             <td>m</td>
-            <td>butcher</td>
-            <td>3250</td>
-            <td>evil</td>
-            <td>648197551204</td>
+            <td>weaponsmith</td>
+            <td>280</td>
+            <td>friendly</td>
+            <td>73993229357</td>
             <td>255276062128450</td>
         </tr>
         <tr>
-            <td>6</td>
-            <td>Gerry Slaughterer</td>
-            <td>2</td>
-            <td>m</td>
-            <td>butcher</td>
-            <td>4850</td>
-            <td>evil</td>
-            <td>872618219253</td>
+            <td>20</td>
+            <td>Leslie Quals</td>
+            <td>1</td>
+            <td>?</td>
+            <td>?</td>
+            <td>190</td>
+            <td>emigrated</td>
+            <td>108373886046</td>
             <td>255276062128450</td>
         </tr>
 </table>
@@ -1214,25 +1214,25 @@ Total: 18 rows affected.
     </thead>
     <tbody>
         <tr>
-            <td>7</td>
-            <td>Peter Slaughterer</td>
+            <td>2</td>
+            <td>Ernest Perry</td>
             <td>3</td>
             <td>m</td>
-            <td>butcher</td>
-            <td>3250</td>
-            <td>evil</td>
-            <td>648197551204</td>
+            <td>weaponsmith</td>
+            <td>280</td>
+            <td>friendly</td>
+            <td>73993229357</td>
             <td>148646393118578</td>
         </tr>
         <tr>
-            <td>6</td>
-            <td>Gerry Slaughterer</td>
-            <td>2</td>
-            <td>m</td>
-            <td>butcher</td>
-            <td>4850</td>
-            <td>evil</td>
-            <td>872618219253</td>
+            <td>20</td>
+            <td>Leslie Quals</td>
+            <td>1</td>
+            <td>?</td>
+            <td>?</td>
+            <td>190</td>
+            <td>emigrated</td>
+            <td>108373886046</td>
             <td>148646393118578</td>
         </tr>
 </table>
