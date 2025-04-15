@@ -401,8 +401,8 @@ INSERT INTO sqlab_info (name, value) VALUES
   ('sqlab_database_language', 'en'),
   ('dbms', 'SQLite'),
   ('dbms_version', '3.39.3'),
-  ('sqlab_version', '0.6.6'),
-  ('created_at', '2025-04-14T19:16:01.410376')
+  ('sqlab_version', '0.6.7'),
+  ('created_at', '2025-04-15T16:39:47.655358')
 ;
 
 
