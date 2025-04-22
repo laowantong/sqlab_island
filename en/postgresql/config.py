@@ -11,6 +11,7 @@ config = {
     "source_path": "./sqlab_island.ipynb",
     "reformat_sql": False,
     "info": {
+        "title": "SQLab Island",
         "description": "An SQLab adaptation of SQL Island for PostgreSQL.",
         "version": "3.1.0",
         "repository": "https://github.com/laowantong/sqlab_island",

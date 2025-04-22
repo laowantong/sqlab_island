@@ -14,6 +14,7 @@ config = {
         "lowercase_user_names": (r"\b(OWNER)\b", lambda m: m[0].lower()),
     },
     "info": {
+        "title": "SQLab Island",
         "description": "An SQLab adaptation of SQL Island for MySQL.",
         "version": "3.1.0",
         "repository": "https://github.com/laowantong/sqlab_island",
