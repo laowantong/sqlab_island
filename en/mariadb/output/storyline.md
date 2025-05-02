@@ -1,5 +1,4 @@
 
-
 Oh dear, what happened? It seems that I am the only survivor of the air crash. Wow, there are some villages on this island.
 
 ```sql
@@ -87,7 +86,6 @@ Total: 19 rows affected.
 </details><br>
 
 
-
 Woah, so many people!
 
 Man! I'm hungry. I will go and find a butcher to ask for some free sausages.
@@ -143,8 +141,6 @@ Total: 4 rows affected.
 </details><br>
 
 
-
-
 – There you are! Enjoy your meal! But take care of yourself. As long as you are unarmed, stay away from villains. Not everyone on this island is friendly.  
 – Thank you, Edward!
 
@@ -193,8 +189,7 @@ Total: 11 rows affected.
 </details><br>
 
 
-
-There is no way around getting a sword for myself. 
+There is no way around getting a sword for myself.
 
 <details><summary>Statement</summary>Now try to find a friendly weaponsmith to forge you one.
 
@@ -230,7 +225,6 @@ _Tip._ You can combine predicates in the `WHERE` clause with `AND`.<br><br>
 Total: 1 row affected.
 
 </details><br>
-
 
 
 Hm, that's very few.
@@ -282,7 +276,6 @@ Total: 3 rows affected.
 </details><br>
 
 
-
 That looks better! I will go and visit those smiths.
 
 – Hi stranger! Where are you going? I'm Paul, I'm the major of Monkeycity. I will go ahead and register you as a citizen.
@@ -315,8 +308,6 @@ Total: 1 row affected.
 </details><br>
 
 
-
-
 – Hi Ernest! How much is a sword?  
 – I can offer to make you a sword for 150 gold. That's the cheapest you will find!
 
@@ -338,7 +329,6 @@ Total: 1 row affected.
 Total: 1 row affected.
 
 </details><br>
-
 
 
 Damn! No mon, no fun. There has to be another option to earn gold other than going to work. Maybe I could collect ownerless items and sell them!
@@ -514,8 +504,6 @@ Total: 3 rows affected.
 </details><br>
 
 
-
-
 – I'd like to get the ring and the teapot. The rest is nothing but scrap. Please give me the two items. My `personid` is 15.
 
 <details><summary>Statement</summary>Afterwards, check the items that she owns.<br><br>
@@ -546,8 +534,6 @@ Total: 3 rows affected.
 Total: 2 rows affected.
 
 </details><br>
-
-
 
 
 — Thank you! Here, some gold!
@@ -754,8 +740,6 @@ Total: 1 row affected.
 </details><br>
 
 
-
-
 – My name is Leslie qualls! Thanks anyway!
 
 <details><summary>Statement</summary>Is there a pilot on this island by any chance? He could fly you home.<br><br>
@@ -823,8 +807,6 @@ Total: 1 row affected.
 </details><br>
 
 
-
-
 – Thanks for the hint!
 
 <details><summary>Statement</summary>Use the join to find out the chief's name of the village Onionville.
@@ -878,8 +860,6 @@ WHERE B.name = 'Onionville'
 Total: 1 row affected.
 
 </details><br>
-
-
 
 
 – Hello Leslie Qualls, the pilot is held captive by Dirty Dieter in his sister's house.
@@ -1094,8 +1074,6 @@ What will you do next, Leslie Qualls?
 Total: 6 rows affected.
 
 </details><br>
-
-
 
 
 – Yeah! Now I release the pilot!<br>

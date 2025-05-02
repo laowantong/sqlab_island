@@ -7,7 +7,7 @@
   "042": {
     "kind": "episode",
     "counter": 1,
-    "context": "\nOh dear, what happened? It seems that I am the only survivor of the air crash. Wow, there are some villages on this island.\n\n```sql\nSELECT *\nFROM village\n```",
+    "context": "Oh dear, what happened? It seems that I am the only survivor of the air crash. Wow, there are some villages on this island.\n\n```sql\nSELECT *\nFROM village\n```",
     "statement": "Copy-paste the previous query. After the star `*`, add a comma and the given formula. Execute the complete query.",
     "salt": "042",
     "formula": "salt_042(sum(nn(hash)) OVER ()) AS token",
@@ -39,7 +39,7 @@
   "130877018053621": {
     "kind": "episode",
     "counter": 3,
-    "context": "\nWoah, so many people!\n\nMan! I'm hungry. I will go and find a butcher to ask for some free sausages.\n\n```sql\nSELECT *\nFROM inhabitant\nWHERE job = 'butcher'\n```",
+    "context": "Woah, so many people!\n\nMan! I'm hungry. I will go and find a butcher to ask for some free sausages.\n\n```sql\nSELECT *\nFROM inhabitant\nWHERE job = 'butcher'\n```",
     "statement": "Copy-paste the previous query, add the given formula, and execute it.",
     "salt": "048",
     "formula": "salt_048(sum(nn(hash)) OVER ()) AS token",
@@ -55,7 +55,7 @@
   "279073832771282": {
     "kind": "episode",
     "counter": 4,
-    "context": "\n\n– There you are! Enjoy your meal! But take care of yourself. As long as you are unarmed, stay away from villains. Not everyone on this island is friendly.  \n– Thank you, Edward!",
+    "context": "– There you are! Enjoy your meal! But take care of yourself. As long as you are unarmed, stay away from villains. Not everyone on this island is friendly.  \n– Thank you, Edward!",
     "statement": "Okay, let's see who is friendly on this island...",
     "salt": "023",
     "formula": "salt_023(sum(nn(hash)) OVER ()) AS token",
@@ -89,7 +89,7 @@
   "50980998180879": {
     "kind": "episode",
     "counter": 5,
-    "context": "\nThere is no way around getting a sword for myself. ",
+    "context": "There is no way around getting a sword for myself.",
     "statement": "Now try to find a friendly weaponsmith to forge you one.\n\n_Tip._ You can combine predicates in the `WHERE` clause with `AND`.",
     "salt": "060",
     "formula": "salt_060(sum(nn(hash)) OVER ()) AS token",
@@ -105,7 +105,7 @@
   "111873735423475": {
     "kind": "episode",
     "counter": 6,
-    "context": "\nHm, that's very few.",
+    "context": "Hm, that's very few.",
     "statement": "Maybe other friendly smiths can help you out, e.g. a blacksmith.\n\n_Tip._ Try out: job LIKE '%smith' to find all inhabitants whose job ends with 'smith' (% is a wildcard for any number of characters).",
     "salt": "069",
     "formula": "salt_069(sum(nn(hash)) OVER ()) AS token",
@@ -139,7 +139,7 @@
   "71849070099607": {
     "kind": "episode",
     "counter": 7,
-    "context": "\nThat looks better! I will go and visit those smiths.\n\n– Hi stranger! Where are you going? I'm Paul, I'm the major of Monkeycity. I will go ahead and register you as a citizen.\n\n```sql\nINSERT INTO inhabitant (name, villageid, gender, job, gold, state) VALUES ('Stranger', 1, '?', '?', 0, '?')\n```\n\n– No need to call me stranger!",
+    "context": "That looks better! I will go and visit those smiths.\n\n– Hi stranger! Where are you going? I'm Paul, I'm the major of Monkeycity. I will go ahead and register you as a citizen.\n\n```sql\nINSERT INTO inhabitant (name, villageid, gender, job, gold, state) VALUES ('Stranger', 1, '?', '?', 0, '?')\n```\n\n– No need to call me stranger!",
     "statement": "First, execute the `INSERT` statement. Then, look for your personid.\n\n_Tip._ In former queries, the * stands for: all columns. Instead of the star, you can also address one or more columns (separated by a comma) and you will only get the columns you need.",
     "salt": "090",
     "formula": "salt_090(sum(nn(hash)) OVER ()) AS token",
@@ -182,7 +182,7 @@
   "30525141563126": {
     "kind": "episode",
     "counter": 8,
-    "context": "\n\n– Hi Ernest! How much is a sword?  \n– I can offer to make you a sword for 150 gold. That's the cheapest you will find!",
+    "context": "– Hi Ernest! How much is a sword?  \n– I can offer to make you a sword for 150 gold. That's the cheapest you will find!",
     "statement": "How much gold do you have?",
     "salt": "099",
     "formula": "salt_099(sum(nn(hash)) OVER ()) AS token",
@@ -204,7 +204,7 @@
   "8733222069916": {
     "kind": "episode",
     "counter": 9,
-    "context": "\nDamn! No mon, no fun. There has to be another option to earn gold other than going to work. Maybe I could collect ownerless items and sell them!",
+    "context": "Damn! No mon, no fun. There has to be another option to earn gold other than going to work. Maybe I could collect ownerless items and sell them!",
     "statement": "Make a list of all items that don't belong to anyone.\n\n_Tip._ You can recognize ownerless items by: WHERE owner IS NULL",
     "salt": "073",
     "formula": "salt_073(sum(nn(hash)) OVER ()) AS token",
@@ -291,13 +291,13 @@
     "formula": "salt_024(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
-        "solution_preamble": "With a logical `OR`.",
+        "intro": "With a logical `OR`.",
         "query": "SELECT *\nFROM inhabitant\nWHERE state = 'friendly'\n    AND (job = 'merchant' OR job = 'dealer')",
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>4</td>\n            <td>Carl Ox</td>\n            <td>1</td>\n            <td>m</td>\n            <td>merchant</td>\n            <td>250</td>\n            <td>friendly</td>\n            <td>435957500169</td>\n            <td>166940006711685</td>\n        </tr>\n        <tr>\n            <td>12</td>\n            <td>Otto Alexander</td>\n            <td>2</td>\n            <td>m</td>\n            <td>dealer</td>\n            <td>680</td>\n            <td>friendly</td>\n            <td>461779699008</td>\n            <td>166940006711685</td>\n        </tr>\n</table>\nTotal: 3 rows affected.",
         "token": "166940006711685"
       },
       {
-        "solution_preamble": "With the `IN` operator (recommended). A cleaner, more scalable way to check a column against multiple values.",
+        "intro": "With the `IN` operator (recommended). A cleaner, more scalable way to check a column against multiple values.",
         "query": "SELECT *\nFROM inhabitant\nWHERE state = 'friendly'\n    AND job in ('merchant', 'dealer')",
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>4</td>\n            <td>Carl Ox</td>\n            <td>1</td>\n            <td>m</td>\n            <td>merchant</td>\n            <td>250</td>\n            <td>friendly</td>\n            <td>435957500169</td>\n            <td>166940006711685</td>\n        </tr>\n        <tr>\n            <td>12</td>\n            <td>Otto Alexander</td>\n            <td>2</td>\n            <td>m</td>\n            <td>dealer</td>\n            <td>680</td>\n            <td>friendly</td>\n            <td>461779699008</td>\n            <td>166940006711685</td>\n        </tr>\n</table>\nTotal: 3 rows affected.",
         "token": "166940006711685"
@@ -314,13 +314,13 @@
     "formula": "salt_024(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
-        "solution_preamble": "With a logical `OR`.",
+        "intro": "With a logical `OR`.",
         "query": "SELECT *\nFROM inhabitant\nWHERE state = 'friendly'\n    AND (job = 'merchant' OR job = 'dealer')",
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>4</td>\n            <td>Carl Ox</td>\n            <td>1</td>\n            <td>m</td>\n            <td>merchant</td>\n            <td>250</td>\n            <td>friendly</td>\n            <td>435957500169</td>\n            <td>166940006711685</td>\n        </tr>\n        <tr>\n            <td>12</td>\n            <td>Otto Alexander</td>\n            <td>2</td>\n            <td>m</td>\n            <td>dealer</td>\n            <td>680</td>\n            <td>friendly</td>\n            <td>461779699008</td>\n            <td>166940006711685</td>\n        </tr>\n</table>\nTotal: 3 rows affected.",
         "token": "166940006711685"
       },
       {
-        "solution_preamble": "With the `IN` operator (recommended). A cleaner, more scalable way to check a column against multiple values.",
+        "intro": "With the `IN` operator (recommended). A cleaner, more scalable way to check a column against multiple values.",
         "query": "SELECT *\nFROM inhabitant\nWHERE state = 'friendly'\n    AND job in ('merchant', 'dealer')",
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>4</td>\n            <td>Carl Ox</td>\n            <td>1</td>\n            <td>m</td>\n            <td>merchant</td>\n            <td>250</td>\n            <td>friendly</td>\n            <td>435957500169</td>\n            <td>166940006711685</td>\n        </tr>\n        <tr>\n            <td>12</td>\n            <td>Otto Alexander</td>\n            <td>2</td>\n            <td>m</td>\n            <td>dealer</td>\n            <td>680</td>\n            <td>friendly</td>\n            <td>461779699008</td>\n            <td>166940006711685</td>\n        </tr>\n</table>\nTotal: 3 rows affected.",
         "token": "166940006711685"
@@ -355,7 +355,7 @@
   "166940006711685": {
     "kind": "episode",
     "counter": 14,
-    "context": "\n\n– I'd like to get the ring and the teapot. The rest is nothing but scrap. Please give me the two items. My `personid` is 15.",
+    "context": "– I'd like to get the ring and the teapot. The rest is nothing but scrap. Please give me the two items. My `personid` is 15.",
     "statement": "Afterwards, check the items that she owns.",
     "salt": "034",
     "formula": "salt_034(sum(nn(hash)) OVER ()) AS token",
@@ -371,7 +371,7 @@
   "261661938333343": {
     "kind": "episode",
     "counter": 15,
-    "context": "\n\n— Thank you! Here, some gold!",
+    "context": "— Thank you! Here, some gold!",
     "statement": "Transfer 120 from Helen's gold to yours, and then check the new amounts of your two rows.\n\n_Tip._ SQL has no “transfer” operation. Use two `UPDATE` statements.",
     "salt": "091",
     "formula": "salt_091(sum(nn(hash)) OVER ()) AS token",
@@ -559,7 +559,7 @@
   "156356238644044": {
     "kind": "episode",
     "counter": 21,
-    "context": "\n\n– My name is Leslie qualls! Thanks anyway!",
+    "context": "– My name is Leslie qualls! Thanks anyway!",
     "statement": "Is there a pilot on this island by any chance? He could fly you home.",
     "salt": "086",
     "formula": "salt_086(sum(nn(hash)) OVER ()) AS token",
@@ -587,7 +587,7 @@
         "token": "256500123076880"
       },
       {
-        "solution_preamble": "Variant. Implicit JOIN. You may encounter a syntax where the join conditions are mixed with the filter conditions. This can make the query harder to understand, especially as the number of tables and conditions increases. While this method is still supported for backward compatibility, it is generally considered outdated. The explicit JOIN syntax is recommended for new SQL code.",
+        "intro": "Variant. Implicit JOIN. You may encounter a syntax where the join conditions are mixed with the filter conditions. This can make the query harder to understand, especially as the number of tables and conditions increases. While this method is still supported for backward compatibility, it is generally considered outdated. The explicit JOIN syntax is recommended for new SQL code.",
         "query": "SELECT A.name\nFROM village A, inhabitant B\nWHERE A.villageid = B.villageid\n  AND B.name = 'Dirty Dieter'",
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>name</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Onionville</td>\n            <td>256500123076880</td>\n        </tr>\n</table>\nTotal: 1 row affected.",
         "token": "256500123076880"
@@ -598,7 +598,7 @@
   "256500123076880": {
     "kind": "episode",
     "counter": 23,
-    "context": "\n\n– Thanks for the hint!",
+    "context": "– Thanks for the hint!",
     "statement": "Use the join to find out the chief's name of the village Onionville.\n\n_Tip._ In the column `chief` in the village table, the `personid` of the chief is stored.",
     "salt": "045",
     "formula": "salt_045(sum(nn(A.hash) + nn(B.hash)) OVER ()) AS token",
@@ -642,7 +642,7 @@
   "229606212629141": {
     "kind": "episode",
     "counter": 25,
-    "context": "\n\n– Hello Leslie Qualls, the pilot is held captive by Dirty Dieter in his sister's house.",
+    "context": "– Hello Leslie Qualls, the pilot is held captive by Dirty Dieter in his sister's house.",
     "statement": "Shall I tell you how many women there are in Onionville? Nah, you can figure it out by yourself!\n\n_Tip._ Women show up as gender = 'f'.",
     "salt": "032",
     "formula": "salt_032((0) + bit_xor(sum(nn(A.hash) + nn(B.hash))) OVER ()) AS token",
@@ -798,7 +798,7 @@
   "59998173561476": {
     "kind": "episode",
     "counter": 32,
-    "context": "\n\n– Yeah! Now I release the pilot!<br>\n– Thank's for releasing me, Leslie Qualls! I will fly you home!<br>\n– I take my sword, some gold and lots of useless items with me as a souvenir.",
+    "context": "– Yeah! Now I release the pilot!<br>\n– Thank's for releasing me, Leslie Qualls! I will fly you home!<br>\n– I take my sword, some gold and lots of useless items with me as a souvenir.",
     "statement": "Change the pilot's status to 'friendly', your own status to 'emigrated', and show the table `inhabitant`.",
     "salt": "051",
     "formula": "salt_051(sum(nn(hash)) OVER ()) AS token",

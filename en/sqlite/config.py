@@ -5,6 +5,7 @@ config = {
     "ddl_path": "./ddl.sql",
     "dataset_dir": "../dataset",
     "source_path": "./sqlab_island.ipynb",
+    "relational_schema_path": "../assets/island_mld.svg",
     "reformat_sql": False,
     "extensions": [
         "~/.sqlpkg/nalgeon/crypto/crypto",
