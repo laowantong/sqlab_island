@@ -1,0 +1,7 @@
+:
+VILLAGE: villageid, name, #chief > INHABITANT > personid
+:::
+INHABITANT: personid, name, #villageid > VILLAGE > villageid, gender, job, gold, state
+:::
+ITEM: item, #owner > INHABITANT > personid
+:
