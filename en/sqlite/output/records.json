@@ -515,7 +515,8 @@
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>646611776879</td>\n            <td>34691307363878</td>\n        </tr>\n        <tr>\n            <td>9</td>\n            <td>Tiffany Drummer</td>\n            <td>1</td>\n            <td>f</td>\n            <td>baker</td>\n            <td>550</td>\n            <td>evil</td>\n            <td>592129557518</td>\n            <td>34691307363878</td>\n        </tr>\n</table>\nTotal: 3 rows affected.",
         "token": "34691307363878"
       }
-    ]
+    ],
+    "tweak_javascript": "result[0][result[0].length - 1]"
   },
   "34691307364334": {
     "kind": "hint",
@@ -649,7 +650,8 @@
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>women</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>41269257906868</td>\n        </tr>\n</table>\nTotal: 1 row affected.",
         "token": "41269257906868"
       }
-    ]
+    ],
+    "tweak_javascript": "result[0][0]"
   },
   "39891969235649": {
     "kind": "hint",
@@ -728,7 +730,8 @@
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>total</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>3910</td>\n            <td>203591029657813</td>\n        </tr>\n</table>\nTotal: 1 row affected.",
         "token": "203591029657813"
       }
-    ]
+    ],
+    "tweak_javascript": "result[0][0]"
   },
   "203589828702201": {
     "kind": "hint",
