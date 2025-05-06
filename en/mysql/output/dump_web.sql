@@ -74,11 +74,7 @@ BEGIN
     SELECT
         COALESCE(
             MAX(CONVERT(UNCOMPRESS(AES_DECRYPT(msg, token)) USING utf8mb4)),
-            CONVERT("🔴 No specific message is planned for this token. Possible reasons:
-1. Copy-paste accident (double-click on the token to facilitate selection).
-2. Formula for calculating the token not updated.
-3. (0) still present, or replaced by the wrong value.
-4. New logical error. Congratulations on your creativity! Now read the statement carefully and, if the symptoms persist, ask your teacher." USING utf8mb4) -- fallback message
+            CONVERT('{"feedback": "<div class=''default hint''><div class=''preamble''>Unknown error.</div><div class=''text''>Congratulations on your creativity! Now read the statement carefully and, if the symptoms persist, ask your teacher.</div></div>"}' USING utf8mb4) -- fallback message
         ) INTO message
     FROM sqlab_msg;
 
@@ -388,9 +384,9 @@ INSERT INTO sqlab_info (name, value) VALUES
   ('message_count', '74'),
   ('sqlab_database_language', 'en'),
   ('dbms', 'MySQL'),
-  ('dbms_version', '8.0.31'),
-  ('sqlab_version', '0.7.2'),
-  ('created_at', '2025-05-06T14:55:05.295267')
+  ('dbms_version', '8.4.4'),
+  ('sqlab_version', '0.7.3'),
+  ('created_at', '2025-05-06T19:37:00.956254')
 ;
 
 

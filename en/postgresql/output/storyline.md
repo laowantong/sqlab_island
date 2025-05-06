@@ -610,13 +610,13 @@ Total: 2 rows affected.
     </thead>
     <tbody>
         <tr>
-            <td>Stranger</td>
-            <td>240</td>
+            <td>Helen Grasshead</td>
+            <td>560</td>
             <td>12496616506700</td>
         </tr>
         <tr>
-            <td>Helen Grasshead</td>
-            <td>560</td>
+            <td>Stranger</td>
+            <td>240</td>
             <td>12496616506700</td>
         </tr>
 </table>

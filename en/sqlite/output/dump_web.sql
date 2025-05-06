@@ -72,11 +72,7 @@ CREATE VIRTUAL TABLE decrypt USING define((
         WHERE substr(msg, 1, 64) = encode(sha256(?1), 'hex')
         UNION ALL
         SELECT 2 AS priority
-             , '🔴 No specific message is planned for this token. Possible reasons:
-1. Copy-paste accident (double-click on the token to facilitate selection).
-2. Formula for calculating the token not updated.
-3. (0) still present, or replaced by the wrong value.
-4. New logical error. Congratulations on your creativity! Now read the statement carefully and, if the symptoms persist, ask your teacher.' AS msg
+             , '{"feedback": "<div class=''default hint''><div class=''preamble''>Unknown error.</div><div class=''text''>Congratulations on your creativity! Now read the statement carefully and, if the symptoms persist, ask your teacher.</div></div>"}' AS msg
     ) AS subquery
     ORDER BY priority
     LIMIT 1
@@ -401,9 +397,9 @@ INSERT INTO sqlab_info (name, value) VALUES
   ('message_count', '74'),
   ('sqlab_database_language', 'en'),
   ('dbms', 'SQLite'),
-  ('dbms_version', '3.39.3'),
-  ('sqlab_version', '0.7.2'),
-  ('created_at', '2025-05-06T14:55:11.637770')
+  ('dbms_version', '3.46.0'),
+  ('sqlab_version', '0.7.3'),
+  ('created_at', '2025-05-06T19:37:08.581430')
 ;
 
 
