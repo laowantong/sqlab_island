@@ -3,8 +3,22 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 1,
+    "section_path": [
+      [
+        "SQLab Island",
+        "This is an adaptation of <a href=\"https://sql-island.informatik.uni-kl.de\">SQL Island</a>, a simple game designed to teach SQL, distributed under the <a href=\"https://opensource.org/licenses/MIT\">MIT License</a> on <a href=\"https://github.com/jschildgen/sql-island\">GitHub</a> by its main author, <a href=\"https://www.johannesschildgen.de\">Johannes Schildgen</a> (Regensburg University of Applied Sciences, Germany).\n\nAfter surviving the plane crash, you will be stuck on SQL Island for the time being. By making progress in the game, you will find a way to escape the island."
+      ],
+      [
+        "Exploring the data",
+        ""
+      ],
+      [
+        "Example",
+        ""
+      ]
+    ],
     "context": "Oh dear, what happened? It seems that I am the only survivor of the air crash. Wow, there are some villages on this island.\n\n```sql\nSELECT *\nFROM village\n```",
-    "statement": "Copy-paste the previous query. After the star `*`, add a comma and the given formula. Execute the complete query.",
+    "statement": "Copy-paste the previous query<mark>, add the given formula after the star `*`</mark>, and execute it to see the result.",
     "salt": "042",
     "formula": "salt_042(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
@@ -15,10 +29,36 @@
       }
     ]
   },
+  "270524817733798": {
+    "kind": "hint",
+    "task_number": 1,
+    "text": "The given query uses the table `village`, not `inhabitant`.",
+    "query": "SELECT *\n     , salt_042(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant"
+  },
+  "278716494646762": {
+    "kind": "hint",
+    "task_number": 1,
+    "text": "The given query uses the table `village`, not `item`.",
+    "query": "SELECT *\n     , salt_042(sum(nn(hash)) OVER ()) AS token\nFROM item"
+  },
   "279731784972193": {
     "part_number": 1,
     "kind": "episode",
     "task_number": 2,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Exploring the data",
+        ""
+      ],
+      [
+        "Your turn",
+        ""
+      ]
+    ],
     "context": "It seems there are a few people living in these villages.",
     "statement": "How can you see a list of all inhabitants?",
     "salt": "002",
@@ -31,12 +71,38 @@
       }
     ]
   },
+  "136974024208867": {
+    "kind": "hint",
+    "task_number": 2,
+    "text": "Use the table `inhabitant`.",
+    "query": "SELECT *\n     , salt_002(sum(nn(hash)) OVER ()) AS token\nFROM village"
+  },
+  "140206456605608": {
+    "kind": "hint",
+    "task_number": 2,
+    "text": "Use the table `inhabitant`.",
+    "query": "SELECT *\n     , salt_002(sum(nn(hash)) OVER ()) AS token\nFROM item"
+  },
   "128589543210724": {
     "part_number": 1,
     "kind": "episode",
     "task_number": 3,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Filtering the data",
+        ""
+      ],
+      [
+        "Example : comparison operator `=`",
+        ""
+      ]
+    ],
     "context": "Woah, so many people!\n\nMan! I'm hungry. I will go and find a butcher to ask for some free sausages.\n\n```sql\nSELECT *\nFROM inhabitant\nWHERE job = 'butcher'\n```",
-    "statement": "Copy-paste the previous query, add the given formula, and execute it.",
+    "statement": "Copy-paste the previous query<mark>, add the given formula</mark>, and execute it.",
     "salt": "048",
     "formula": "salt_048(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
@@ -51,6 +117,20 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 4,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Filtering the data",
+        ""
+      ],
+      [
+        "Your turn",
+        ""
+      ]
+    ],
     "context": "– There you are! Enjoy your meal! But take care of yourself. As long as you are unarmed, stay away from villains. Not everyone on this island is friendly.  \n– Thank you, Edward!",
     "statement": "Okay, let's see who is friendly on this island...",
     "salt": "023",
@@ -85,6 +165,20 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 5,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Filtering the data",
+        ""
+      ],
+      [
+        "Boolean operator `AND`",
+        ""
+      ]
+    ],
     "context": "There is no way around getting a sword for myself.",
     "statement": "Now try to find a friendly weaponsmith to forge you one.\n\n_Tip._ You can combine predicates in the `WHERE` clause with `AND`.",
     "salt": "060",
@@ -101,6 +195,20 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 6,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Filtering the data",
+        ""
+      ],
+      [
+        "Comparison operator `LIKE`",
+        ""
+      ]
+    ],
     "context": "Hm, that's very few.",
     "statement": "Maybe other friendly smiths can help you out, e.g. a blacksmith.\n\n_Tip._ Try out: job LIKE '%smith' to find all inhabitants whose job ends with 'smith' (% is a wildcard for any number of characters).",
     "salt": "069",
@@ -135,49 +243,111 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 7,
-    "context": "That looks better! I will go and visit those smiths.\n\n– Hi stranger! Where are you going? I'm Paul, I'm the major of Monkeycity. I will go ahead and register you as a citizen.\n\n```sql\nINSERT INTO inhabitant (name, villageid, gender, job, gold, state) VALUES ('Stranger', 1, '?', '?', 0, '?')\n```\n\n– No need to call me stranger!",
-    "statement": "First, execute the `INSERT` statement. Then, look for your personid.\n\n_Tip._ In former queries, the * stands for: all columns. Instead of the star, you can also address one or more columns (separated by a comma) and you will only get the columns you need.",
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Adding data",
+        ""
+      ],
+      [
+        "Example : `INSERT`",
+        ""
+      ]
+    ],
+    "context": "That looks better! I will go and visit those smiths.\n\n– Hi stranger! Where are you going? I'm Paul, I'm the major of Monkeycity. I will go ahead and register you as a citizen.\n\n```sql\nINSERT INTO\n    inhabitant (name, villageid, gender, job, gold, state)\nVALUES\n    ('Stranger', 1, '?', '?', 0, '?')\n```",
+    "statement": "Execute the given `INSERT` statement. <mark>Then, list all the rows of the table `inhabitant`, with the given formula as added column.</mark>\n\n_Tip._ In former queries, the `*` stands for: all columns. Instead of the star, you can also address one or more columns (separated by a comma) and you will only get the columns you need.",
     "salt": "090",
     "formula": "salt_090(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
-        "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\n\nSELECT personid\nFROM inhabitant\nWHERE name = 'Stranger';",
-        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>20</td>\n            <td>29896704364823</td>\n        </tr>\n</table>\nTotal: 1 row affected.",
-        "token": "29896704364823"
+        "query": "INSERT INTO\n    inhabitant (name, villageid, gender, job, gold, state)\nVALUES\n    ('Stranger', 1, '?', '?', 0, '?');\n\n\nSELECT *\nFROM inhabitant;",
+        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>19389891798490</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>19389891798490</td>\n        </tr>\n</table>\nTotal: 20 rows affected.",
+        "token": "19389891798490"
       }
     ]
   },
-  "29293607320320": {
+  "18786734952407": {
     "kind": "hint",
     "task_number": 7,
     "text": "Oops, it seems you have executed the `INSERT` statement twice or more. Execute the following queries to cancel all these insertions: DELETE from inhabitant WHERE name = 'Stranger'; ALTER TABLE inhabitant AUTO_INCREMENT=1",
-    "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT personid\n     , salt_090(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';"
+    "query": "INSERT INTO inhabitant\n    (name, villageid, gender, job, gold, state)\nVALUES\n    ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT *\n     , salt_090(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant;"
   },
-  "28697173935421": {
+  "18186036980160": {
     "kind": "hint",
     "task_number": 7,
     "text": "Oops, it seems you have executed the `INSERT` statement twice or more. Execute the following queries to cancel all these insertions: DELETE from inhabitant WHERE name = 'Stranger'; ALTER TABLE inhabitant AUTO_INCREMENT=1",
-    "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT personid\n     , salt_090(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';",
-    "salt": "090"
+    "query": "INSERT INTO\n    inhabitant (name, villageid, gender, job, gold, state)\nVALUES\n    ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT *\n     , salt_090(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant;"
   },
-  "28094084689710": {
+  "18141288821757": {
     "kind": "hint",
     "task_number": 7,
     "text": "Oops, it seems you have executed the `INSERT` statement twice or more. Execute the following queries to cancel all these insertions: DELETE from inhabitant WHERE name = 'Stranger'; ALTER TABLE inhabitant AUTO_INCREMENT=1",
-    "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT personid\n     , salt_090(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';",
+    "query": "INSERT INTO\n    inhabitant (name, villageid, gender, job, gold, state)\nVALUES\n    ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT *\n     , salt_090(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant;",
     "salt": "090"
   },
   "27493202200923": {
     "kind": "hint",
     "task_number": 7,
     "text": "Oops, it seems you have executed the `INSERT` statement twice or more. Execute the following queries to cancel all these insertions: DELETE from inhabitant WHERE name = 'Stranger'; ALTER TABLE inhabitant AUTO_INCREMENT=1",
-    "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT personid\n     , salt_090(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';",
-    "salt": "090"
+    "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT personid\n     , salt_090(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';"
   },
-  "29896704364823": {
+  "19389891798490": {
     "part_number": 1,
     "kind": "episode",
     "task_number": 8,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Adding data",
+        ""
+      ],
+      [
+        "Auto-incrementing colum",
+        ""
+      ]
+    ],
+    "context": "– No need to call me stranger!",
+    "statement": "What is your personid?",
+    "salt": "079",
+    "formula": "salt_079(sum(nn(hash)) OVER ()) AS token",
+    "solutions": [
+      {
+        "query": "SELECT personid\nFROM inhabitant\nWHERE name = 'Stranger';",
+        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>20</td>\n            <td>37445107108825</td>\n        </tr>\n</table>\nTotal: 1 row affected.",
+        "token": "37445107108825"
+      }
+    ]
+  },
+  "44650742398740": {
+    "kind": "hint",
+    "task_number": 8,
+    "text": "Filter out the other persons' rows.",
+    "query": "SELECT personid\n     , salt_079(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant"
+  },
+  "37445107108825": {
+    "part_number": 1,
+    "kind": "episode",
+    "task_number": 9,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Filtering the data (again)",
+        ""
+      ],
+      [
+        "Comparison operator `=`",
+        ""
+      ]
+    ],
     "context": "– Hi Ernest! How much is a sword?  \n– I can offer to make you a sword for 150 gold. That's the cheapest you will find!",
     "statement": "How much gold do you have?",
     "salt": "099",
@@ -192,16 +362,30 @@
   },
   "14915938923952": {
     "kind": "hint",
-    "task_number": 8,
+    "task_number": 9,
     "text": "Restrict the result to the Stranger's row (personid: 20).",
     "query": "SELECT personid, gold\n     , salt_099(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant"
   },
   "7708171354493": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 9,
+    "task_number": 10,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Filtering the data (again)",
+        ""
+      ],
+      [
+        "Example: `IS NULL`",
+        ""
+      ]
+    ],
     "context": "Damn! No mon, no fun. There has to be another option to earn gold other than going to work. Maybe I could collect ownerless items and sell them!",
-    "statement": "Make a list of all items that don't belong to anyone.\n\n_Tip._ You can recognize ownerless items by: WHERE owner IS NULL",
+    "statement": "Make a list of all items that don't belong to anyone.\n\n_Tip._ You can recognize ownerless items by: WHERE owner IS NULL. The special comparison operator `IS` is `NULL`-aware (by contrast with `=`, which would not work here).",
     "salt": "073",
     "formula": "salt_073(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
@@ -215,9 +399,23 @@
   "253789061748229": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 10,
+    "task_number": 11,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Updating the data",
+        ""
+      ],
+      [
+        "Example: `UPDATE` one row",
+        ""
+      ]
+    ],
     "context": "So much cool stuff!\n\nYay, a coffee cup. Let's collect it!\n\n```sql\nUPDATE item\nSET owner = 20\nWHERE item = 'coffee cup'\n```",
-    "statement": "Execute the `UPDATE` statement, and check the `item` table afterwards.",
+    "statement": "Execute the `UPDATE` statement. <mark>Afterwards, show the item table with the formula as added column.</mark>",
     "salt": "093",
     "formula": "salt_093(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
@@ -231,9 +429,23 @@
   "107025105236366": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 11,
-    "context": "",
-    "statement": "Do you know a trick how to collect all the ownerless items? Afterwards, list all of the items you own.",
+    "task_number": 12,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Updating the data",
+        ""
+      ],
+      [
+        "Your turn: `UPDATE` several rows",
+        ""
+      ]
+    ],
+    "context": "Let's reclaim all that's left!",
+    "statement": "Do you know a trick how to collect all the ownerless items? <mark>Afterwards, list all of the items you own.</mark>",
     "salt": "033",
     "formula": "salt_033(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
@@ -251,38 +463,66 @@
   },
   "138282073330312": {
     "kind": "hint",
-    "task_number": 11,
+    "task_number": 12,
     "text": "It seems you have failed to collect any other ownerless item. Remember: comparing to `NULL` with the `=` operator always returns... `NULL`. You need the special operator `IS` instead.",
     "query": "SELECT item\n     , salt_033(sum(nn(hash)) OVER ()) AS token\nFROM item\nWHERE item = 'coffee cup'"
   },
   "138996212731035": {
     "kind": "hint",
-    "task_number": 11,
+    "task_number": 12,
     "text": "Restrict the result to the Stranger's rows (personid: 20).",
     "query": "SELECT item\n     , salt_033(sum(nn(hash)) OVER ()) AS token\nFROM item"
   },
   "140217850902324": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 12,
+    "task_number": 13,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Updating the data",
+        ""
+      ],
+      [
+        "Your turn: `UPDATE` several rows",
+        ""
+      ]
+    ],
     "context": "So greedy! You've snapped up all items, even those that already had an owner.",
-    "statement": "Let's give them back to their rightful owners: the cane to 5, the hammer to 2 and the rope to 17. Afterwards, list all of the items you own.",
+    "statement": "Let's give them back to their rightful owners: the cane to 5, the hammer to 2 and the rope to 17. <mark>Afterwards, list all of the items.</mark>",
     "salt": "025",
     "formula": "salt_025(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
-        "query": "UPDATE item\nSET owner = 5\nWHERE item = 'cane';\n\nUPDATE item\nSET owner = 2\nWHERE item = 'hammer';\n\nUPDATE item\nSET owner = 17\nWHERE item = 'rope';\n\nSELECT item\nFROM item\nWHERE owner = 20",
-        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>item</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>bucket</td>\n            <td>206054094742976</td>\n        </tr>\n        <tr>\n            <td>carton</td>\n            <td>206054094742976</td>\n        </tr>\n</table>\nTotal: 6 rows affected.",
-        "token": "206054094742976"
+        "query": "UPDATE item\nSET owner = 5\nWHERE item = 'cane';\n\nUPDATE item\nSET owner = 2\nWHERE item = 'hammer';\n\nUPDATE item\nSET owner = 17\nWHERE item = 'rope';\n\nSELECT item\nFROM item",
+        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>item</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>bucket</td>\n            <td>204603481281422</td>\n        </tr>\n        <tr>\n            <td>cane</td>\n            <td>204603481281422</td>\n        </tr>\n</table>\nTotal: 9 rows affected.",
+        "token": "204603481281422"
       }
     ]
   },
-  "206054094742976": {
+  "204603481281422": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 13,
-    "context": "",
-    "statement": "Find a friendly inhabitant who is either a merchant or a dealer. Maybe they want to buy some of your items.",
+    "task_number": 14,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Updating the data",
+        ""
+      ],
+      [
+        "Complex condition",
+        ""
+      ]
+    ],
+    "context": "Maybe someone wants to buy some of your items?",
+    "statement": "Find a friendly inhabitant who is either a merchant or a dealer.",
     "salt": "024",
     "formula": "salt_024(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
@@ -303,9 +543,23 @@
   "139744599079637": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 13,
-    "context": "",
-    "statement": "Find a friendly inhabitant who is either a merchant or a dealer. Maybe they want to buy some of your items.",
+    "task_number": 14,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Updating the data",
+        ""
+      ],
+      [
+        "Complex condition",
+        ""
+      ]
+    ],
+    "context": "Maybe someone wants to buy some of your items?",
+    "statement": "Find a friendly inhabitant who is either a merchant or a dealer.",
     "salt": "024",
     "formula": "salt_024(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
@@ -325,185 +579,272 @@
   },
   "167117019028817": {
     "kind": "hint",
-    "task_number": 13,
+    "task_number": 14,
     "text": "Your result include one evil villager. Use both `AND` and `OR`, and don't forget to put the brackets correctly.",
     "query": "SELECT *\n     , salt_024(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE state = 'friendly' AND job = 'merchant'\n    OR job = 'dealer'"
   },
   "161821468565730": {
     "kind": "hint",
-    "task_number": 13,
+    "task_number": 14,
     "text": "You have found inhabitants who are either friendly, or dealers, or merchants, but \"friendly\" is not an option.",
     "query": "SELECT *\n     , salt_024(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE state = 'friendly'\n    OR job = 'dealer'\n    OR job = 'merchant'"
   },
   "166013587439609": {
     "kind": "hint",
-    "task_number": 13,
+    "task_number": 14,
     "text": "Include the friendly merchants too.",
     "query": "SELECT *\n     , salt_024(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE state = 'friendly' AND job = 'dealer'"
   },
   "165888542179420": {
     "kind": "hint",
-    "task_number": 13,
+    "task_number": 14,
     "text": "Include the friendly dealers too.",
     "query": "SELECT *\n     , salt_024(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE state = 'friendly' AND job = 'merchant'"
   },
   "166788243175236": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 14,
-    "context": "– I'd like to get the ring and the teapot. The rest is nothing but scrap. Please give me the two items. My `personid` is 15.",
-    "statement": "Afterwards, check the items that she owns.",
+    "task_number": 15,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Updating the data",
+        ""
+      ],
+      [
+        "`UPDATE` two rows",
+        ""
+      ]
+    ],
+    "context": "Helen Grasshead says:\n\n– I'd like to get the ring and the teapot. The rest is nothing but scrap.",
+    "statement": "Give Helen (`personid` 15) the two items. <mark>Afterwards, show the item table with the formula as added column.</mark>",
     "salt": "034",
     "formula": "salt_034(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
-        "query": "UPDATE item\nSET owner = 15\nWHERE item IN ('ring', 'teapot');\n\n\nSELECT *\nFROM item\nWHERE owner = 15",
-        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>item</th>\n            <th>owner</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>ring</td>\n            <td>15</td>\n            <td>972837695337</td>\n            <td>261661938333343</td>\n        </tr>\n        <tr>\n            <td>teapot</td>\n            <td>15</td>\n            <td>503611185415</td>\n            <td>261661938333343</td>\n        </tr>\n</table>\nTotal: 2 rows affected.",
-        "token": "261661938333343"
+        "query": "UPDATE item\nSET owner = 15\nWHERE item IN ('ring', 'teapot');\n\n\nSELECT *\nFROM item",
+        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>item</th>\n            <th>owner</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>bucket</td>\n            <td>20</td>\n            <td>832641554092</td>\n            <td>255787834193736</td>\n        </tr>\n        <tr>\n            <td>cane</td>\n            <td>5</td>\n            <td>11384476511</td>\n            <td>255787834193736</td>\n        </tr>\n</table>\nTotal: 9 rows affected.",
+        "token": "255787834193736"
       }
     ]
   },
-  "261661938333343": {
+  "255787834193736": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 15,
+    "task_number": 16,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Updating the data",
+        ""
+      ],
+      [
+        "Transfer some gold",
+        ""
+      ]
+    ],
     "context": "— Thank you! Here, some gold!",
-    "statement": "Transfer 120 from Helen's gold to yours, and then check the new amounts of your two rows.\n\n_Tip._ SQL has no “transfer” operation. Use two `UPDATE` statements.",
+    "statement": "Transfer 120 from Helen's gold to yours. <mark>Afterwards, show the inhabitant table with the formula as added column.</mark>\n\n_Tip._ SQL has no “transfer” operation. Use two `UPDATE` statements.",
     "salt": "091",
     "formula": "salt_091(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
-        "query": "UPDATE inhabitant\nSET gold = gold - 120\nWHERE personid = 15;\n\n\nUPDATE inhabitant\nSET gold = gold + 120\nWHERE personid = 20;\n\n\nSELECT name\n     , gold\nFROM inhabitant\nWHERE personid IN (15, 20)",
-        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>name</th>\n            <th>gold</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Helen Grasshead</td>\n            <td>560</td>\n            <td>34807888636366</td>\n        </tr>\n        <tr>\n            <td>Stranger</td>\n            <td>120</td>\n            <td>34807888636366</td>\n        </tr>\n</table>\nTotal: 2 rows affected.",
-        "token": "34807888636366"
+        "query": "UPDATE inhabitant\nSET gold = gold - 120\nWHERE personid = 15;\n\n\nUPDATE inhabitant\nSET gold = gold + 120\nWHERE personid = 20;\n\n\nSELECT *\nFROM inhabitant",
+        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>24919761524173</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>24919761524173</td>\n        </tr>\n</table>\nTotal: 20 rows affected.",
+        "token": "24919761524173"
       },
       {
-        "query": "UPDATE inhabitant\nSET gold = gold - 120\nWHERE personid = 15;\n\n\nSELECT name\n     , gold\nFROM inhabitant\nWHERE personid IN (15, 20)",
-        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>name</th>\n            <th>gold</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Helen Grasshead</td>\n            <td>560</td>\n            <td>34989396526869</td>\n        </tr>\n        <tr>\n            <td>Stranger</td>\n            <td>0</td>\n            <td>34989396526869</td>\n        </tr>\n</table>\nTotal: 2 rows affected.",
-        "token": "34989396526869"
+        "query": "UPDATE inhabitant\nSET gold = gold - 120\nWHERE personid = 15;\n\nSELECT *\nFROM inhabitant",
+        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>25101277790992</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>25101277790992</td>\n        </tr>\n</table>\nTotal: 20 rows affected.",
+        "token": "25101277790992"
       },
       {
-        "query": "UPDATE inhabitant\nSET gold = gold + 120\nWHERE personid = 20;\n\n\nSELECT name\n     , gold\nFROM inhabitant\nWHERE personid IN (15, 20)",
-        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>name</th>\n            <th>gold</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Helen Grasshead</td>\n            <td>680</td>\n            <td>35091420089868</td>\n        </tr>\n        <tr>\n            <td>Stranger</td>\n            <td>120</td>\n            <td>35091420089868</td>\n        </tr>\n</table>\nTotal: 2 rows affected.",
-        "token": "35091420089868"
+        "query": "UPDATE inhabitant\nSET gold = gold + 120\nWHERE personid = 20;\n\n\nSELECT *\nFROM inhabitant",
+        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>25203292965387</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>25203292965387</td>\n        </tr>\n</table>\nTotal: 20 rows affected.",
+        "token": "25203292965387"
       }
     ]
   },
-  "24919761524173": {
-    "kind": "hint",
-    "task_number": 15,
-    "text": "Restrict the result to the row of Helen (15) and yours (20).",
-    "query": "SELECT name\n     , gold\n     , salt_091(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nLIMIT 1"
-  },
   "25101277790992": {
-    "kind": "hint",
-    "task_number": 15,
-    "text": "Restrict the result to the row of Helen (15) and yours (20).",
-    "query": "SELECT name\n     , gold\n     , salt_091(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nlimit 1"
-  },
-  "25203292965387": {
-    "kind": "hint",
-    "task_number": 15,
-    "text": "Restrict the result to the row of Helen (15) and yours (20).",
-    "query": "SELECT name\n     , gold\n     , salt_091(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nlimit 1",
-    "salt": "091"
-  },
-  "34989396526869": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 16,
+    "task_number": 17,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Updating the data",
+        ""
+      ],
+      [
+        "Transfer some gold",
+        ""
+      ]
+    ],
     "context": "",
     "statement": "You have correctly updated Helen's gold. Now update yours.",
     "salt": "075",
     "formula": "salt_075(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
-        "query": "UPDATE inhabitant\nSET gold = gold + 120\nWHERE personid = 20;\n\n\nSELECT name\n     , gold\nFROM inhabitant\nWHERE personid IN (15, 20)",
-        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>name</th>\n            <th>gold</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Helen Grasshead</td>\n            <td>680</td>\n            <td>36876251558115</td>\n        </tr>\n        <tr>\n            <td>Stranger</td>\n            <td>240</td>\n            <td>36876251558115</td>\n        </tr>\n</table>\nTotal: 2 rows affected.",
-        "token": "36876251558115"
+        "query": "UPDATE inhabitant\nSET gold = gold + 120\nWHERE personid = 20;\n\n\nSELECT *\nFROM inhabitant",
+        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>46779335306464</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>46779335306464</td>\n        </tr>\n</table>\nTotal: 20 rows affected.",
+        "token": "46779335306464"
       }
     ]
   },
-  "35091420089868": {
+  "25203292965387": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 17,
+    "task_number": 18,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Updating the data",
+        ""
+      ],
+      [
+        "Transfer some gold",
+        ""
+      ]
+    ],
     "context": "",
     "statement": "You have correctly updated your gold. Now update Helen's.",
     "salt": "076",
     "formula": "salt_076(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
-        "query": "UPDATE inhabitant\nSET gold = gold - 120\nWHERE personid = 15;\n\n\nSELECT name\n     , gold\nFROM inhabitant\nWHERE personid IN (15, 20)",
-        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>name</th>\n            <th>gold</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Helen Grasshead</td>\n            <td>560</td>\n            <td>11246510018033</td>\n        </tr>\n        <tr>\n            <td>Stranger</td>\n            <td>240</td>\n            <td>11246510018033</td>\n        </tr>\n</table>\nTotal: 2 rows affected.",
-        "token": "11246510018033"
+        "query": "UPDATE inhabitant\nSET gold = gold - 120\nWHERE personid = 15;\n\n\nSELECT *\nFROM inhabitant",
+        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>845203505654</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>845203505654</td>\n        </tr>\n</table>\nTotal: 20 rows affected.",
+        "token": "845203505654"
       }
     ]
   },
-  "36876251558115": {
-    "part_number": 1,
-    "kind": "episode",
-    "task_number": 18,
-    "context": "Unfortunately, that's not enough gold to buy a sword. Seems like I do have to work after all. Maybe it's not a bad idea to change my name from Stranger to my real name before I will apply for a job.",
-    "statement": "Update your name to 'Leslie Qualls' and show the updated row.",
-    "salt": "080",
-    "formula": "salt_080(sum(nn(hash)) OVER ()) AS token",
-    "solutions": [
-      {
-        "query": "UPDATE inhabitant\nSET name = 'Leslie Qualls'\nWHERE personid = 20;\n\n\nSELECT *\nFROM inhabitant\nWHERE personid = 20",
-        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>20</td>\n            <td>Leslie Qualls</td>\n            <td>1</td>\n            <td>?</td>\n            <td>?</td>\n            <td>240</td>\n            <td>?</td>\n            <td>168889591841</td>\n            <td>17809976537863</td>\n        </tr>\n</table>\nTotal: 1 row affected.",
-        "token": "17809976537863"
-      }
-    ]
-  },
-  "11246510018033": {
-    "part_number": 1,
-    "kind": "episode",
-    "task_number": 18,
-    "context": "Unfortunately, that's not enough gold to buy a sword. Seems like I do have to work after all. Maybe it's not a bad idea to change my name from Stranger to my real name before I will apply for a job.",
-    "statement": "Update your name to 'Leslie Qualls' and show the updated row.",
-    "salt": "080",
-    "formula": "salt_080(sum(nn(hash)) OVER ()) AS token",
-    "solutions": [
-      {
-        "query": "UPDATE inhabitant\nSET name = 'Leslie Qualls'\nWHERE personid = 20;\n\n\nSELECT *\nFROM inhabitant\nWHERE personid = 20",
-        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>20</td>\n            <td>Leslie Qualls</td>\n            <td>1</td>\n            <td>?</td>\n            <td>?</td>\n            <td>240</td>\n            <td>?</td>\n            <td>168889591841</td>\n            <td>17809976537863</td>\n        </tr>\n</table>\nTotal: 1 row affected.",
-        "token": "17809976537863"
-      }
-    ]
-  },
-  "34807888636366": {
-    "part_number": 1,
-    "kind": "episode",
-    "task_number": 18,
-    "context": "Unfortunately, that's not enough gold to buy a sword. Seems like I do have to work after all. Maybe it's not a bad idea to change my name from Stranger to my real name before I will apply for a job.",
-    "statement": "Update your name to 'Leslie Qualls' and show the updated row.",
-    "salt": "080",
-    "formula": "salt_080(sum(nn(hash)) OVER ()) AS token",
-    "solutions": [
-      {
-        "query": "UPDATE inhabitant\nSET name = 'Leslie Qualls'\nWHERE personid = 20;\n\n\nSELECT *\nFROM inhabitant\nWHERE personid = 20",
-        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>20</td>\n            <td>Leslie Qualls</td>\n            <td>1</td>\n            <td>?</td>\n            <td>?</td>\n            <td>240</td>\n            <td>?</td>\n            <td>168889591841</td>\n            <td>17809976537863</td>\n        </tr>\n</table>\nTotal: 1 row affected.",
-        "token": "17809976537863"
-      }
-    ]
-  },
-  "27912063284788": {
-    "kind": "hint",
-    "task_number": 18,
-    "text": "Restrict the result to your row (20).",
-    "query": "SELECT *\n     , salt_080(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nlimit 1"
-  },
-  "18257904005745": {
-    "kind": "hint",
-    "task_number": 18,
-    "text": "The name Qualls contains two 'l's.",
-    "query": "UPDATE inhabitant\nSET name = 'Leslie Quals'\nWHERE personid = 20;\n\n\nSELECT *\n     , salt_080(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE personid = 20"
-  },
-  "17809976537863": {
+  "46779335306464": {
     "part_number": 1,
     "kind": "episode",
     "task_number": 19,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Updating the data",
+        ""
+      ],
+      [
+        "`UPDATE` the name of the stranger",
+        ""
+      ]
+    ],
+    "context": "Unfortunately, that's not enough gold to buy a sword. Seems like I do have to work after all. Maybe it's not a bad idea to change my name from Stranger to my real name before I will apply for a job.",
+    "statement": "Update your name to 'Leslie Qualls'. <mark>Afterwards, show the inhabitant table with the formula as added column.</mark>",
+    "salt": "080",
+    "formula": "salt_080(sum(nn(hash)) OVER ()) AS token",
+    "solutions": [
+      {
+        "query": "UPDATE inhabitant\nSET name = 'Leslie Qualls'\nWHERE personid = 20;\n\n\nSELECT *\nFROM inhabitant",
+        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>27912063284788</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>27912063284788</td>\n        </tr>\n</table>\nTotal: 20 rows affected.",
+        "token": "27912063284788"
+      }
+    ]
+  },
+  "845203505654": {
+    "part_number": 1,
+    "kind": "episode",
+    "task_number": 19,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Updating the data",
+        ""
+      ],
+      [
+        "`UPDATE` the name of the stranger",
+        ""
+      ]
+    ],
+    "context": "Unfortunately, that's not enough gold to buy a sword. Seems like I do have to work after all. Maybe it's not a bad idea to change my name from Stranger to my real name before I will apply for a job.",
+    "statement": "Update your name to 'Leslie Qualls'. <mark>Afterwards, show the inhabitant table with the formula as added column.</mark>",
+    "salt": "080",
+    "formula": "salt_080(sum(nn(hash)) OVER ()) AS token",
+    "solutions": [
+      {
+        "query": "UPDATE inhabitant\nSET name = 'Leslie Qualls'\nWHERE personid = 20;\n\n\nSELECT *\nFROM inhabitant",
+        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>27912063284788</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>27912063284788</td>\n        </tr>\n</table>\nTotal: 20 rows affected.",
+        "token": "27912063284788"
+      }
+    ]
+  },
+  "24919761524173": {
+    "part_number": 1,
+    "kind": "episode",
+    "task_number": 19,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Updating the data",
+        ""
+      ],
+      [
+        "`UPDATE` the name of the stranger",
+        ""
+      ]
+    ],
+    "context": "Unfortunately, that's not enough gold to buy a sword. Seems like I do have to work after all. Maybe it's not a bad idea to change my name from Stranger to my real name before I will apply for a job.",
+    "statement": "Update your name to 'Leslie Qualls'. <mark>Afterwards, show the inhabitant table with the formula as added column.</mark>",
+    "salt": "080",
+    "formula": "salt_080(sum(nn(hash)) OVER ()) AS token",
+    "solutions": [
+      {
+        "query": "UPDATE inhabitant\nSET name = 'Leslie Qualls'\nWHERE personid = 20;\n\n\nSELECT *\nFROM inhabitant",
+        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>27912063284788</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>27912063284788</td>\n        </tr>\n</table>\nTotal: 20 rows affected.",
+        "token": "27912063284788"
+      }
+    ]
+  },
+  "28359990687086": {
+    "kind": "hint",
+    "task_number": 19,
+    "text": "The name Qualls contains two 'l's.",
+    "query": "UPDATE inhabitant\nSET name = 'Leslie Quals'\nWHERE personid = 20;\n\n\nSELECT *\n     , salt_080(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant"
+  },
+  "27912063284788": {
+    "part_number": 1,
+    "kind": "episode",
+    "task_number": 20,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Updating the data",
+        ""
+      ],
+      [
+        "`ORDER BY`",
+        ""
+      ]
+    ],
     "context": "",
     "statement": "Since baking is one of your hobbies, why not find a baker who you can work for?\n\n_Tip._ List all bakers and use `ORDER BY` gold to sort the results. `ORDER BY` gold `DESC` is even better because then the richest baker is on top.",
     "salt": "078",
@@ -520,42 +861,70 @@
   },
   "34285849060722": {
     "kind": "hint",
-    "task_number": 19,
+    "task_number": 20,
     "text": "Don't forget to sort the result by decreasing gold.",
     "query": "SELECT *\n     , salt_078({{x}} + sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE job = 'baker'"
   },
   "34285849059910": {
     "kind": "hint",
-    "task_number": 19,
+    "task_number": 20,
     "text": "The gold must be sorted by decreasing order.",
     "query": "SELECT *\n     , salt_078({{x}} + sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE job = 'baker'\nORDER BY gold"
   },
   "34285849061160": {
     "kind": "hint",
-    "task_number": 19,
+    "task_number": 20,
     "text": "Don't forget to update the token formula.",
     "query": "SELECT *\n     , salt_078(0 + sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE job = 'baker'"
   },
   "34285849060426": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 20,
+    "task_number": 21,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Updating the data",
+        ""
+      ],
+      [
+        "`ORDER BY`",
+        ""
+      ]
+    ],
     "context": "Aha, Paul! I know him!\n\n– Hi, you again! I saw you want to work as a baker? Okay! You will be paid 1 gold for 100 bread rolls.\n\n(8 hours later...)\n\n– Here, I made ten thousand bread rolls! I quit! This should be enough money to buy a sword. Let's see what happens with my gold balance.\n\nHere's your new sword, Losloo Qoolls! Now you can go everywhere.",
-    "statement": "Transfer your salary (100) from Paul's gold to yours, and substract the price of the sword (150). Then, display your gold balance.",
+    "statement": "Transfer your salary (100) from Paul's gold to yours, and substract the price of the sword (150). <mark>Afterwards, show the inhabitant table with the formula as added column.</mark>",
     "salt": "010",
     "formula": "salt_010(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
-        "query": "UPDATE inhabitant\nSET gold = gold - 100\nWHERE personid = 1;\n\n\nUPDATE inhabitant\nSET gold = gold + 100 - 150\nWHERE personid = 20;\n\n\nSELECT gold\nFROM inhabitant\nWHERE personid = 20",
-        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>gold</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>190</td>\n            <td>156346887286586</td>\n        </tr>\n</table>\nTotal: 1 row affected.",
-        "token": "156346887286586"
+        "query": "UPDATE inhabitant\nSET gold = gold - 100\nWHERE personid = 1;\n\n\nUPDATE inhabitant\nSET gold = gold + 100 - 150\nWHERE personid = 20;\n\n\nSELECT gold\nFROM inhabitant",
+        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>gold</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>750</td>\n            <td>148615726566579</td>\n        </tr>\n        <tr>\n            <td>280</td>\n            <td>148615726566579</td>\n        </tr>\n</table>\nTotal: 20 rows affected.",
+        "token": "148615726566579"
       }
     ]
   },
-  "156346887286586": {
+  "148615726566579": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 21,
+    "task_number": 22,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Updating the data",
+        ""
+      ],
+      [
+        "`ORDER BY`",
+        ""
+      ]
+    ],
     "context": "– My name is Leslie qualls! Thanks anyway!",
     "statement": "Is there a pilot on this island by any chance? He could fly you home.",
     "salt": "086",
@@ -571,9 +940,23 @@
   "229615318980909": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 22,
+    "task_number": 23,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Combining the data from several tables",
+        ""
+      ],
+      [
+        "Example",
+        ""
+      ]
+    ],
     "context": "Oh no, his state is 'kidnapped'.\n\nHorrible, the pilot is held captive by Dirty Dieter! I will show you a trick how to find out the name of the village where Dirty Dieter lives.\n\n```sql\nSELECT A.name\nFROM village A\nJOIN inhabitant B ON A.villageid = B.villageid\nWHERE B.name = 'Dirty Dieter'\n```",
-    "statement": "Copy-paste the previous query, add the given formula, and execute it.",
+    "statement": "Copy-paste the previous query<mark>, add the given formula</mark>, and execute it.",
     "salt": "029",
     "formula": "salt_029(sum(nn(A.hash) + nn(B.hash)) OVER ()) AS token",
     "solutions": [
@@ -594,7 +977,21 @@
   "256975312978711": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 23,
+    "task_number": 24,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Combining the data from several tables",
+        ""
+      ],
+      [
+        "Your turn",
+        ""
+      ]
+    ],
     "context": "– Thanks for the hint!",
     "statement": "Use the join to find out the chief's name of the village Onionville.\n\n_Tip._ In the column `chief` in the village table, the `personid` of the chief is stored.",
     "salt": "045",
@@ -609,22 +1006,36 @@
   },
   "238466580765852": {
     "kind": "hint",
-    "task_number": 23,
+    "task_number": 24,
     "text": "We are only interested in the chief of Onionville.",
     "query": "SELECT B.name\n     , salt_045(sum(nn(A.hash) + nn(B.hash)) OVER ()) AS token\nFROM village A\nJOIN inhabitant B ON A.chief = B.personid"
   },
   "218198158603602": {
     "kind": "hint",
-    "task_number": 23,
+    "task_number": 24,
     "text": "Don't forget the join condition (`ON ...`). Without it, you make a cartesian product.",
     "query": "SELECT B.name\n     , salt_045(sum(nn(A.hash) + nn(B.hash)) OVER ()) AS token\nFROM village A, inhabitant B\nWHERE A.name = 'Onionville'"
   },
   "240365303417698": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 24,
+    "task_number": 25,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Aggregating data",
+        ""
+      ],
+      [
+        "Example: `COUNT(*)`",
+        ""
+      ]
+    ],
     "context": "I've got it! I will visit Fred and ask him about Dirty Dieter and the pilot.\n\nUm, how many inhabitants does Onionville have?\n\n```sql\nSELECT COUNT(*) as population\nFROM inhabitant A\nJOIN village B ON A.villageid = B.villageid\nWHERE B.name = 'Onionville'\n```",
-    "statement": "Copy-paste the previous query, add the given formula, and execute it.",
+    "statement": "Copy-paste the previous query<mark>, add the given formula</mark>, and execute it.",
     "salt": "012",
     "formula": "salt_012(bit_xor(sum(nn(A.hash) + nn(B.hash))) OVER ()) AS token",
     "solutions": [
@@ -638,7 +1049,21 @@
   "233051995253998": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 25,
+    "task_number": 26,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Aggregating data",
+        ""
+      ],
+      [
+        "Your turn",
+        ""
+      ]
+    ],
     "context": "– Hello Leslie Qualls, the pilot is held captive by Dirty Dieter in his sister's house.",
     "statement": "Shall I tell you how many women there are in Onionville? Nah, you can figure it out by yourself!\n\n_Tip._ Women show up as gender = 'f'.",
     "salt": "032",
@@ -655,26 +1080,40 @@
   },
   "51796000688695": {
     "kind": "hint",
-    "task_number": 25,
+    "task_number": 26,
     "text": "This is the population of Onionville. We are only interested in its women.",
     "query": "SELECT count(*) AS women\n     , salt_032({{x}} + bit_xor(sum(nn(A.hash) + nn(B.hash))) OVER ()) AS token\nFROM inhabitant A, village B\nWHERE A.villageid = B.villageid\n    AND B.name = 'Onionville'"
   },
   "37373906110135": {
     "kind": "hint",
-    "task_number": 25,
+    "task_number": 26,
     "text": "This is the total number of women. We are only interested in those of Onionville.",
     "query": "SELECT count(*) AS women\n     , salt_032({{x}} + bit_xor(sum(nn(A.hash) + nn(B.hash))) OVER ()) AS token\nFROM inhabitant A, village B\nWHERE A.villageid = B.villageid\n    AND gender = 'f'"
   },
   "48955627140666": {
     "kind": "hint",
-    "task_number": 25,
+    "task_number": 26,
     "text": "Don't forget the join condition (`ON ...`).",
     "query": "SELECT count(*) AS women\n     , salt_032({{x}} + bit_xor(sum(nn(A.hash) + nn(B.hash))) OVER ()) AS token\nFROM inhabitant A, village B\nWHERE gender = 'f'\n    AND B.name = 'Onionville'"
   },
   "41535988500868": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 26,
+    "task_number": 27,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Aggregating data",
+        ""
+      ],
+      [
+        "`JOIN`",
+        ""
+      ]
+    ],
     "context": "Oh, only one woman.",
     "statement": "What's her name?",
     "salt": "036",
@@ -689,22 +1128,36 @@
   },
   "128655226577199": {
     "kind": "hint",
-    "task_number": 26,
+    "task_number": 27,
     "text": "Restrict the result to Onionville.",
     "query": "SELECT A.name\n     , salt_036(sum(nn(A.hash) + nn(B.hash)) OVER ()) AS token\nFROM inhabitant A\nJOIN village B ON A.villageid = B.villageid\nWHERE gender = 'f'"
   },
   "136221754469805": {
     "kind": "hint",
-    "task_number": 26,
+    "task_number": 27,
     "text": "Restrict the result to the women.",
     "query": "SELECT A.name\n     , salt_036(sum(nn(A.hash) + nn(B.hash)) OVER ()) AS token\nFROM inhabitant A\nJOIN village B ON A.villageid = B.villageid\nWHERE B.name = 'Onionville'"
   },
   "124493698100759": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 27,
+    "task_number": 28,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Aggregating data",
+        ""
+      ],
+      [
+        "Example: `SUM()`",
+        ""
+      ]
+    ],
     "context": "Let's go!\n\n– Leslie Qualls, if you hand me over the entire property of our nearby village Cucumbertown, I will release the pilot. I will show you now what this property consists of.\n\n```sql\nSELECT SUM(A.gold) as total\nFROM inhabitant A\nJOIN village B ON A.villageid = B.villageid\nWHERE B.name = 'Cucumbertown'\n```",
-    "statement": "Copy-paste the previous query, add the given formula, and execute it.",
+    "statement": "Copy-paste the previous query<mark>, add the given formula</mark>, and execute it.",
     "salt": "035",
     "formula": "salt_035(bit_xor(sum(nn(A.hash) + nn(B.hash))) OVER ()) AS token",
     "solutions": [
@@ -718,7 +1171,21 @@
   "157771240628108": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 28,
+    "task_number": 29,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Aggregating data",
+        ""
+      ],
+      [
+        "Your turn",
+        ""
+      ]
+    ],
     "context": "Oh no, baking bread alone can't solve my problems. If I continue working and selling items though, I could earn more gold than the worth of gold inventories of all bakers, dealers and merchants together.",
     "statement": "Sum the gold of all these people.",
     "salt": "046",
@@ -735,14 +1202,28 @@
   },
   "193594500728372": {
     "kind": "hint",
-    "task_number": 28,
+    "task_number": 29,
     "text": "Restrict your queries to the bakers, dealers and merchants together.",
     "query": "SELECT sum(inhabitant.gold) AS total\n     , salt_046({{x}} + bit_xor(sum(nn(hash))) OVER ()) AS token\nFROM inhabitant"
   },
   "205678511338701": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 29,
+    "task_number": 30,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Aggregating data",
+        ""
+      ],
+      [
+        "Example: `AVG()`",
+        ""
+      ]
+    ],
     "context": "That's not enough.\n\nLet's have a look at how much average gold people own, depending on their job.\n\n```sql\nSELECT job, avg(gold)\nFROM inhabitant\nGROUP BY job\nORDER BY avg(gold)\n```",
     "statement": "Copy-paste the previous query, add the given formula, and execute it.",
     "salt": "071",
@@ -758,47 +1239,79 @@
   "227531204698033": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 30,
+    "task_number": 31,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Suppressing data",
+        ""
+      ],
+      [
+        "Example",
+        ""
+      ]
+    ],
     "context": "Ok, so the only way is to mug the villains. Or I might as well go ahead and just kill Dirty Dieter with my sword!\n\n```sql\nDELETE\nFROM inhabitant\nWHERE name = 'Dirty Dieter'\n```",
-    "statement": "Execute the previous statement. Which item is now ownerless?",
+    "statement": "Execute the previous statement. <mark>Afterwards, show the item table with the formula as added column.</mark> There should be now one ownerless item.",
     "salt": "018",
     "formula": "salt_018(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
-        "query": "DELETE\nFROM inhabitant\nWHERE name = 'Dirty Dieter';\n\n\nSELECT item\nFROM item\nWHERE owner IS NULL",
-        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>item</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>cane</td>\n            <td>193619246200652</td>\n        </tr>\n</table>\nTotal: 1 row affected.",
-        "token": "193619246200652"
+        "query": "DELETE\nFROM inhabitant\nWHERE name = 'Dirty Dieter';\n\n\nSELECT *\nFROM item",
+        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>item</th>\n            <th>owner</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>bucket</td>\n            <td>20</td>\n            <td>832641554092</td>\n            <td>198001479871924</td>\n        </tr>\n        <tr>\n            <td>cane</td>\n            <td>None</td>\n            <td>11384476511</td>\n            <td>198001479871924</td>\n        </tr>\n</table>\nTotal: 9 rows affected.",
+        "token": "198001479871924"
       }
     ]
   },
-  "193619246200652": {
+  "198001479871924": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 31,
+    "task_number": 32,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Suppressing data",
+        ""
+      ],
+      [
+        "Your turn",
+        ""
+      ]
+    ],
     "context": "Dirty Diane: Heeeey! Now I'm very angry!\n\nWhat will you do next, Leslie Qualls?",
-    "statement": "Delete Dirty Diane, and show the remaining inhabitants of Onionville (villageid 3).",
+    "statement": "Delete Dirty Diane. <mark>Afterwards, show the inhabitant table with the formula as added column.</mark>",
     "salt": "004",
     "formula": "salt_004(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
       {
-        "query": "DELETE\nFROM inhabitant\nWHERE name = 'Dirty Diane';\n\n\nSELECT *\nFROM inhabitant\nWHERE villageid = 3",
-        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>60167643205863</td>\n        </tr>\n        <tr>\n            <td>7</td>\n            <td>Peter Slaughterer</td>\n            <td>3</td>\n            <td>m</td>\n            <td>butcher</td>\n            <td>3250</td>\n            <td>evil</td>\n            <td>648197551204</td>\n            <td>60167643205863</td>\n        </tr>\n</table>\nTotal: 6 rows affected.",
-        "token": "60167643205863"
+        "query": "DELETE\nFROM inhabitant\nWHERE name = 'Dirty Diane';\n\n\nSELECT *\nFROM inhabitant",
+        "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>750</td>\n            <td>friendly</td>\n            <td>221738647112</td>\n            <td>66098661366712</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>66098661366712</td>\n        </tr>\n</table>\nTotal: 18 rows affected.",
+        "token": "66098661366712"
       }
     ]
   },
   "66098661366712": {
-    "kind": "hint",
-    "task_number": 31,
-    "text": "Restrict the result to the village of Onionville.",
-    "query": "SELECT *\n     , salt_004(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant"
-  },
-  "60167643205863": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 32,
+    "task_number": 33,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Epilog",
+        ""
+      ]
+    ],
     "context": "– Yeah! Now I release the pilot!<br>\n– Thank's for releasing me, Leslie Qualls! I will fly you home!<br>\n– I take my sword, some gold and lots of useless items with me as a souvenir.",
-    "statement": "Change the pilot's status to 'friendly', your own status to 'emigrated', and show the table `inhabitant`.",
+    "statement": "Change the pilot's status to 'friendly', your own status to 'emigrated'. <mark>Afterwards, show the inhabitant table with the formula as added column.</mark>",
     "salt": "051",
     "formula": "salt_051(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
@@ -822,9 +1335,19 @@
   "214187513069315": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 33,
+    "task_number": 34,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Epilog",
+        ""
+      ]
+    ],
     "context": "",
-    "statement": "You have correctly updated the pilot's status. Now update yours to 'emigrated', and show the table `inhabitant`.",
+    "statement": "You have correctly updated the pilot's status. Now update yours to 'emigrated'. <mark>Afterwards, show the inhabitant table with the formula as added column.</mark>",
     "salt": "052",
     "formula": "salt_052(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
@@ -838,9 +1361,19 @@
   "225550015813321": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 34,
+    "task_number": 35,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Epilog",
+        ""
+      ]
+    ],
     "context": "",
-    "statement": "You have correctly updated your status. Now update the pilot's state to 'friendly', and show the table `inhabitant`.",
+    "statement": "You have correctly updated your status. Now update the pilot's state to 'friendly'. <mark>Afterwards, show the inhabitant table with the formula as added column.</mark>",
     "salt": "053",
     "formula": "salt_053(sum(nn(hash)) OVER ()) AS token",
     "solutions": [
@@ -854,7 +1387,17 @@
   "255276062128450": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 35,
+    "task_number": 36,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Epilog",
+        ""
+      ]
+    ],
     "context": "You have completed SQLab Island. What a big adventure!",
     "statement": "",
     "salt": "049",
@@ -863,7 +1406,17 @@
   "148646393118578": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 35,
+    "task_number": 36,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Epilog",
+        ""
+      ]
+    ],
     "context": "You have completed SQLab Island. What a big adventure!",
     "statement": "",
     "salt": "049",
@@ -872,7 +1425,17 @@
   "213893536427211": {
     "part_number": 1,
     "kind": "episode",
-    "task_number": 35,
+    "task_number": 36,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Epilog",
+        ""
+      ]
+    ],
     "context": "You have completed SQLab Island. What a big adventure!",
     "statement": "",
     "salt": "049",

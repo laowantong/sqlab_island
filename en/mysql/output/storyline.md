@@ -6,7 +6,7 @@ SELECT *
 FROM village
 ```
 
-<details><summary>Statement</summary>Copy-paste the previous query. After the star `*`, add a comma and the given formula. Execute the complete query.<br><br>
+<details><summary>Statement</summary>Copy-paste the previous query<mark>, add the given formula after the star `*`</mark>, and execute it to see the result.<br><br>
 
 <table>
     <thead>
@@ -96,7 +96,7 @@ FROM inhabitant
 WHERE job = 'butcher'
 ```
 
-<details><summary>Statement</summary>Copy-paste the previous query, add the given formula, and execute it.<br><br>
+<details><summary>Statement</summary>Copy-paste the previous query<mark>, add the given formula</mark>, and execute it.<br><br>
 
 <table>
     <thead>
@@ -281,14 +281,62 @@ That looks better! I will go and visit those smiths.
 – Hi stranger! Where are you going? I'm Paul, I'm the major of Monkeycity. I will go ahead and register you as a citizen.
 
 ```sql
-INSERT INTO inhabitant (name, villageid, gender, job, gold, state) VALUES ('Stranger', 1, '?', '?', 0, '?')
+INSERT INTO
+    inhabitant (name, villageid, gender, job, gold, state)
+VALUES
+    ('Stranger', 1, '?', '?', 0, '?')
 ```
+
+<details><summary>Statement</summary>Execute the given `INSERT` statement. <mark>Then, list all the rows of the table `inhabitant`, with the given formula as added column.</mark>
+
+_Tip._ In former queries, the `*` stands for: all columns. Instead of the star, you can also address one or more columns (separated by a comma) and you will only get the columns you need.<br><br>
+
+<table>
+    <thead>
+        <tr>
+            <th>personid</th>
+            <th>name</th>
+            <th>villageid</th>
+            <th>gender</th>
+            <th>job</th>
+            <th>gold</th>
+            <th>state</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Paul Bakerman</td>
+            <td>1</td>
+            <td>m</td>
+            <td>baker</td>
+            <td>850</td>
+            <td>friendly</td>
+            <td>667574576304</td>
+            <td>19389891798490</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ernest Perry</td>
+            <td>3</td>
+            <td>m</td>
+            <td>weaponsmith</td>
+            <td>280</td>
+            <td>friendly</td>
+            <td>73993229357</td>
+            <td>19389891798490</td>
+        </tr>
+</table>
+Total: 20 rows affected.
+
+</details><br>
+
 
 – No need to call me stranger!
 
-<details><summary>Statement</summary>First, execute the `INSERT` statement. Then, look for your personid.
-
-_Tip._ In former queries, the * stands for: all columns. Instead of the star, you can also address one or more columns (separated by a comma) and you will only get the columns you need.<br><br>
+<details><summary>Statement</summary>What is your personid?<br><br>
 
 <table>
     <thead>
@@ -300,7 +348,7 @@ _Tip._ In former queries, the * stands for: all columns. Instead of the star, yo
     <tbody>
         <tr>
             <td>20</td>
-            <td>29896704364823</td>
+            <td>37445107108825</td>
         </tr>
 </table>
 Total: 1 row affected.
@@ -335,7 +383,7 @@ Damn! No mon, no fun. There has to be another option to earn gold other than goi
 
 <details><summary>Statement</summary>Make a list of all items that don't belong to anyone.
 
-_Tip._ You can recognize ownerless items by: WHERE owner IS NULL<br><br>
+_Tip._ You can recognize ownerless items by: WHERE owner IS NULL. The special comparison operator `IS` is `NULL`-aware (by contrast with `=`, which would not work here).<br><br>
 
 <table>
     <thead>
@@ -375,7 +423,7 @@ SET owner = 20
 WHERE item = 'coffee cup'
 ```
 
-<details><summary>Statement</summary>Execute the `UPDATE` statement, and check the `item` table afterwards.<br><br>
+<details><summary>Statement</summary>Execute the `UPDATE` statement. <mark>Afterwards, show the item table with the formula as added column.</mark><br><br>
 
 <table>
     <thead>
@@ -405,9 +453,9 @@ Total: 9 rows affected.
 </details><br>
 
 
+Let's reclaim all that's left!
 
-
-<details><summary>Statement</summary>Do you know a trick how to collect all the ownerless items? Afterwards, list all of the items you own.<br><br>
+<details><summary>Statement</summary>Do you know a trick how to collect all the ownerless items? <mark>Afterwards, list all of the items you own.</mark><br><br>
 
 <table>
     <thead>
@@ -433,7 +481,7 @@ Total: 6 rows affected.
 
 So greedy! You've snapped up all items, even those that already had an owner.
 
-<details><summary>Statement</summary>Let's give them back to their rightful owners: the cane to 5, the hammer to 2 and the rope to 17. Afterwards, list all of the items you own.<br><br>
+<details><summary>Statement</summary>Let's give them back to their rightful owners: the cane to 5, the hammer to 2 and the rope to 17. <mark>Afterwards, list all of the items.</mark><br><br>
 
 <table>
     <thead>
@@ -445,21 +493,21 @@ So greedy! You've snapped up all items, even those that already had an owner.
     <tbody>
         <tr>
             <td>bucket</td>
-            <td>206054094742976</td>
+            <td>204603481281422</td>
         </tr>
         <tr>
-            <td>carton</td>
-            <td>206054094742976</td>
+            <td>cane</td>
+            <td>204603481281422</td>
         </tr>
 </table>
-Total: 6 rows affected.
+Total: 9 rows affected.
 
 </details><br>
 
 
+Maybe someone wants to buy some of your items?
 
-
-<details><summary>Statement</summary>Find a friendly inhabitant who is either a merchant or a dealer. Maybe they want to buy some of your items.<br><br>
+<details><summary>Statement</summary>Find a friendly inhabitant who is either a merchant or a dealer.<br><br>
 
 <table>
     <thead>
@@ -504,9 +552,11 @@ Total: 3 rows affected.
 </details><br>
 
 
-– I'd like to get the ring and the teapot. The rest is nothing but scrap. Please give me the two items. My `personid` is 15.
+Helen Grasshead says:
 
-<details><summary>Statement</summary>Afterwards, check the items that she owns.<br><br>
+– I'd like to get the ring and the teapot. The rest is nothing but scrap.
+
+<details><summary>Statement</summary>Give Helen (`personid` 15) the two items. <mark>Afterwards, show the item table with the formula as added column.</mark><br><br>
 
 <table>
     <thead>
@@ -519,115 +569,28 @@ Total: 3 rows affected.
     </thead>
     <tbody>
         <tr>
-            <td>ring</td>
-            <td>15</td>
-            <td>972837695337</td>
-            <td>261661938333343</td>
+            <td>bucket</td>
+            <td>20</td>
+            <td>832641554092</td>
+            <td>255787834193736</td>
         </tr>
         <tr>
-            <td>teapot</td>
-            <td>15</td>
-            <td>503611185415</td>
-            <td>261661938333343</td>
+            <td>cane</td>
+            <td>5</td>
+            <td>11384476511</td>
+            <td>255787834193736</td>
         </tr>
 </table>
-Total: 2 rows affected.
+Total: 9 rows affected.
 
 </details><br>
 
 
 — Thank you! Here, some gold!
 
-<details><summary>Statement</summary>Transfer 120 from Helen's gold to yours, and then check the new amounts of your two rows.
+<details><summary>Statement</summary>Transfer 120 from Helen's gold to yours. <mark>Afterwards, show the inhabitant table with the formula as added column.</mark>
 
 _Tip._ SQL has no “transfer” operation. Use two `UPDATE` statements.<br><br>
-
-<table>
-    <thead>
-        <tr>
-            <th>name</th>
-            <th>gold</th>
-            <th>token</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Helen Grasshead</td>
-            <td>560</td>
-            <td>34807888636366</td>
-        </tr>
-        <tr>
-            <td>Stranger</td>
-            <td>120</td>
-            <td>34807888636366</td>
-        </tr>
-</table>
-Total: 2 rows affected.
-
-</details><br>
-
-
-
-
-<details><summary>Statement</summary>You have correctly updated Helen's gold. Now update yours.<br><br>
-
-<table>
-    <thead>
-        <tr>
-            <th>name</th>
-            <th>gold</th>
-            <th>token</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Helen Grasshead</td>
-            <td>680</td>
-            <td>36876251558115</td>
-        </tr>
-        <tr>
-            <td>Stranger</td>
-            <td>240</td>
-            <td>36876251558115</td>
-        </tr>
-</table>
-Total: 2 rows affected.
-
-</details><br>
-
-
-
-
-<details><summary>Statement</summary>You have correctly updated your gold. Now update Helen's.<br><br>
-
-<table>
-    <thead>
-        <tr>
-            <th>name</th>
-            <th>gold</th>
-            <th>token</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Helen Grasshead</td>
-            <td>560</td>
-            <td>11246510018033</td>
-        </tr>
-        <tr>
-            <td>Stranger</td>
-            <td>240</td>
-            <td>11246510018033</td>
-        </tr>
-</table>
-Total: 2 rows affected.
-
-</details><br>
-
-
-Unfortunately, that's not enough gold to buy a sword. Seems like I do have to work after all. Maybe it's not a bad idea to change my name from Stranger to my real name before I will apply for a job.
-
-<details><summary>Statement</summary>Update your name to 'Leslie Qualls' and show the updated row.<br><br>
 
 <table>
     <thead>
@@ -645,18 +608,170 @@ Unfortunately, that's not enough gold to buy a sword. Seems like I do have to wo
     </thead>
     <tbody>
         <tr>
-            <td>20</td>
-            <td>Leslie Qualls</td>
             <td>1</td>
-            <td>?</td>
-            <td>?</td>
-            <td>240</td>
-            <td>?</td>
-            <td>168889591841</td>
-            <td>17809976537863</td>
+            <td>Paul Bakerman</td>
+            <td>1</td>
+            <td>m</td>
+            <td>baker</td>
+            <td>850</td>
+            <td>friendly</td>
+            <td>667574576304</td>
+            <td>24919761524173</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ernest Perry</td>
+            <td>3</td>
+            <td>m</td>
+            <td>weaponsmith</td>
+            <td>280</td>
+            <td>friendly</td>
+            <td>73993229357</td>
+            <td>24919761524173</td>
         </tr>
 </table>
-Total: 1 row affected.
+Total: 20 rows affected.
+
+</details><br>
+
+
+
+
+<details><summary>Statement</summary>You have correctly updated Helen's gold. Now update yours.<br><br>
+
+<table>
+    <thead>
+        <tr>
+            <th>personid</th>
+            <th>name</th>
+            <th>villageid</th>
+            <th>gender</th>
+            <th>job</th>
+            <th>gold</th>
+            <th>state</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Paul Bakerman</td>
+            <td>1</td>
+            <td>m</td>
+            <td>baker</td>
+            <td>850</td>
+            <td>friendly</td>
+            <td>667574576304</td>
+            <td>46779335306464</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ernest Perry</td>
+            <td>3</td>
+            <td>m</td>
+            <td>weaponsmith</td>
+            <td>280</td>
+            <td>friendly</td>
+            <td>73993229357</td>
+            <td>46779335306464</td>
+        </tr>
+</table>
+Total: 20 rows affected.
+
+</details><br>
+
+
+
+
+<details><summary>Statement</summary>You have correctly updated your gold. Now update Helen's.<br><br>
+
+<table>
+    <thead>
+        <tr>
+            <th>personid</th>
+            <th>name</th>
+            <th>villageid</th>
+            <th>gender</th>
+            <th>job</th>
+            <th>gold</th>
+            <th>state</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Paul Bakerman</td>
+            <td>1</td>
+            <td>m</td>
+            <td>baker</td>
+            <td>850</td>
+            <td>friendly</td>
+            <td>667574576304</td>
+            <td>845203505654</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ernest Perry</td>
+            <td>3</td>
+            <td>m</td>
+            <td>weaponsmith</td>
+            <td>280</td>
+            <td>friendly</td>
+            <td>73993229357</td>
+            <td>845203505654</td>
+        </tr>
+</table>
+Total: 20 rows affected.
+
+</details><br>
+
+
+Unfortunately, that's not enough gold to buy a sword. Seems like I do have to work after all. Maybe it's not a bad idea to change my name from Stranger to my real name before I will apply for a job.
+
+<details><summary>Statement</summary>Update your name to 'Leslie Qualls'. <mark>Afterwards, show the inhabitant table with the formula as added column.</mark><br><br>
+
+<table>
+    <thead>
+        <tr>
+            <th>personid</th>
+            <th>name</th>
+            <th>villageid</th>
+            <th>gender</th>
+            <th>job</th>
+            <th>gold</th>
+            <th>state</th>
+            <th>hash</th>
+            <th>token</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Paul Bakerman</td>
+            <td>1</td>
+            <td>m</td>
+            <td>baker</td>
+            <td>850</td>
+            <td>friendly</td>
+            <td>667574576304</td>
+            <td>27912063284788</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ernest Perry</td>
+            <td>3</td>
+            <td>m</td>
+            <td>weaponsmith</td>
+            <td>280</td>
+            <td>friendly</td>
+            <td>73993229357</td>
+            <td>27912063284788</td>
+        </tr>
+</table>
+Total: 20 rows affected.
 
 </details><br>
 
@@ -720,7 +835,7 @@ Aha, Paul! I know him!
 
 Here's your new sword, Losloo Qoolls! Now you can go everywhere.
 
-<details><summary>Statement</summary>Transfer your salary (100) from Paul's gold to yours, and substract the price of the sword (150). Then, display your gold balance.<br><br>
+<details><summary>Statement</summary>Transfer your salary (100) from Paul's gold to yours, and substract the price of the sword (150). <mark>Afterwards, show the inhabitant table with the formula as added column.</mark><br><br>
 
 <table>
     <thead>
@@ -731,11 +846,15 @@ Here's your new sword, Losloo Qoolls! Now you can go everywhere.
     </thead>
     <tbody>
         <tr>
-            <td>190</td>
-            <td>156346887286586</td>
+            <td>750</td>
+            <td>148615726566579</td>
+        </tr>
+        <tr>
+            <td>280</td>
+            <td>148615726566579</td>
         </tr>
 </table>
-Total: 1 row affected.
+Total: 20 rows affected.
 
 </details><br>
 
@@ -787,7 +906,7 @@ JOIN inhabitant B ON A.villageid = B.villageid
 WHERE B.name = 'Dirty Dieter'
 ```
 
-<details><summary>Statement</summary>Copy-paste the previous query, add the given formula, and execute it.<br><br>
+<details><summary>Statement</summary>Copy-paste the previous query<mark>, add the given formula</mark>, and execute it.<br><br>
 
 <table>
     <thead>
@@ -842,7 +961,7 @@ JOIN village B ON A.villageid = B.villageid
 WHERE B.name = 'Onionville'
 ```
 
-<details><summary>Statement</summary>Copy-paste the previous query, add the given formula, and execute it.<br><br>
+<details><summary>Statement</summary>Copy-paste the previous query<mark>, add the given formula</mark>, and execute it.<br><br>
 
 <table>
     <thead>
@@ -919,7 +1038,7 @@ JOIN village B ON A.villageid = B.villageid
 WHERE B.name = 'Cucumbertown'
 ```
 
-<details><summary>Statement</summary>Copy-paste the previous query, add the given formula, and execute it.<br><br>
+<details><summary>Statement</summary>Copy-paste the previous query<mark>, add the given formula</mark>, and execute it.<br><br>
 
 <table>
     <thead>
@@ -1007,22 +1126,32 @@ FROM inhabitant
 WHERE name = 'Dirty Dieter'
 ```
 
-<details><summary>Statement</summary>Execute the previous statement. Which item is now ownerless?<br><br>
+<details><summary>Statement</summary>Execute the previous statement. <mark>Afterwards, show the item table with the formula as added column.</mark> There should be now one ownerless item.<br><br>
 
 <table>
     <thead>
         <tr>
             <th>item</th>
+            <th>owner</th>
+            <th>hash</th>
             <th>token</th>
         </tr>
     </thead>
     <tbody>
         <tr>
+            <td>bucket</td>
+            <td>20</td>
+            <td>832641554092</td>
+            <td>198001479871924</td>
+        </tr>
+        <tr>
             <td>cane</td>
-            <td>193619246200652</td>
+            <td>None</td>
+            <td>11384476511</td>
+            <td>198001479871924</td>
         </tr>
 </table>
-Total: 1 row affected.
+Total: 9 rows affected.
 
 </details><br>
 
@@ -1031,7 +1160,7 @@ Dirty Diane: Heeeey! Now I'm very angry!
 
 What will you do next, Leslie Qualls?
 
-<details><summary>Statement</summary>Delete Dirty Diane, and show the remaining inhabitants of Onionville (villageid 3).<br><br>
+<details><summary>Statement</summary>Delete Dirty Diane. <mark>Afterwards, show the inhabitant table with the formula as added column.</mark><br><br>
 
 <table>
     <thead>
@@ -1049,6 +1178,17 @@ What will you do next, Leslie Qualls?
     </thead>
     <tbody>
         <tr>
+            <td>1</td>
+            <td>Paul Bakerman</td>
+            <td>1</td>
+            <td>m</td>
+            <td>baker</td>
+            <td>750</td>
+            <td>friendly</td>
+            <td>221738647112</td>
+            <td>66098661366712</td>
+        </tr>
+        <tr>
             <td>2</td>
             <td>Ernest Perry</td>
             <td>3</td>
@@ -1057,21 +1197,10 @@ What will you do next, Leslie Qualls?
             <td>280</td>
             <td>friendly</td>
             <td>73993229357</td>
-            <td>60167643205863</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>Peter Slaughterer</td>
-            <td>3</td>
-            <td>m</td>
-            <td>butcher</td>
-            <td>3250</td>
-            <td>evil</td>
-            <td>648197551204</td>
-            <td>60167643205863</td>
+            <td>66098661366712</td>
         </tr>
 </table>
-Total: 6 rows affected.
+Total: 18 rows affected.
 
 </details><br>
 
@@ -1080,7 +1209,7 @@ Total: 6 rows affected.
 – Thank's for releasing me, Leslie Qualls! I will fly you home!<br>
 – I take my sword, some gold and lots of useless items with me as a souvenir.
 
-<details><summary>Statement</summary>Change the pilot's status to 'friendly', your own status to 'emigrated', and show the table `inhabitant`.<br><br>
+<details><summary>Statement</summary>Change the pilot's status to 'friendly', your own status to 'emigrated'. <mark>Afterwards, show the inhabitant table with the formula as added column.</mark><br><br>
 
 <table>
     <thead>
@@ -1127,7 +1256,7 @@ Total: 18 rows affected.
 
 
 
-<details><summary>Statement</summary>You have correctly updated the pilot's status. Now update yours to 'emigrated', and show the table `inhabitant`.<br><br>
+<details><summary>Statement</summary>You have correctly updated the pilot's status. Now update yours to 'emigrated'. <mark>Afterwards, show the inhabitant table with the formula as added column.</mark><br><br>
 
 <table>
     <thead>
@@ -1174,7 +1303,7 @@ Total: 18 rows affected.
 
 
 
-<details><summary>Statement</summary>You have correctly updated your status. Now update the pilot's state to 'friendly', and show the table `inhabitant`.<br><br>
+<details><summary>Statement</summary>You have correctly updated your status. Now update the pilot's state to 'friendly'. <mark>Afterwards, show the inhabitant table with the formula as added column.</mark><br><br>
 
 <table>
     <thead>

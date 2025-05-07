@@ -6,7 +6,7 @@
 
 **Token.** 042.
 
-Copy-paste the previous query. After the star `*`, add a comma and the given formula. Execute the complete query.
+Copy-paste the previous query<mark>, add the given formula after the star `*`</mark>, and execute it to see the result.
 
 **Formula**. `salt_042(sum(nn(hash)) OVER ()) AS token`
 
@@ -32,7 +32,7 @@ FROM inhabitant
 
 **Token.** 128589543210724.
 
-Copy-paste the previous query, add the given formula, and execute it.
+Copy-paste the previous query<mark>, add the given formula</mark>, and execute it.
 
 **Formula**. `salt_048(sum(nn(hash)) OVER ()) AS token`
 
@@ -94,25 +94,40 @@ WHERE state = 'friendly'
 
 **Token.** 71115866585707.
 
-First, execute the `INSERT` statement. Then, look for your personid.
+Execute the given `INSERT` statement. <mark>Then, list all the rows of the table `inhabitant`, with the given formula as added column.</mark>
 
-_Tip._ In former queries, the * stands for: all columns. Instead of the star, you can also address one or more columns (separated by a comma) and you will only get the columns you need.
+_Tip._ In former queries, the `*` stands for: all columns. Instead of the star, you can also address one or more columns (separated by a comma) and you will only get the columns you need.
 
 **Formula**. `salt_090(sum(nn(hash)) OVER ()) AS token`
 
 ```sql
-INSERT INTO inhabitant (name, villageid, gender, job, gold, state)
-VALUES ('Stranger', 1, '?', '?', 0, '?');
+INSERT INTO
+    inhabitant (name, villageid, gender, job, gold, state)
+VALUES
+    ('Stranger', 1, '?', '?', 0, '?');
 
 
+SELECT *
+FROM inhabitant;
+```
+
+### Episode 8
+
+**Token.** 19389891798490.
+
+What is your personid?
+
+**Formula**. `salt_079(sum(nn(hash)) OVER ()) AS token`
+
+```sql
 SELECT personid
 FROM inhabitant
 WHERE name = 'Stranger';
 ```
 
-### Episode 8
+### Episode 9
 
-**Token.** 29896704364823.
+**Token.** 37445107108825.
 
 How much gold do you have?
 
@@ -124,13 +139,13 @@ FROM inhabitant
 WHERE personid = 20
 ```
 
-### Episode 9
+### Episode 10
 
 **Token.** 7708171354493.
 
 Make a list of all items that don't belong to anyone.
 
-_Tip._ You can recognize ownerless items by: WHERE owner IS NULL
+_Tip._ You can recognize ownerless items by: WHERE owner IS NULL. The special comparison operator `IS` is `NULL`-aware (by contrast with `=`, which would not work here).
 
 **Formula**. `salt_073(sum(nn(hash)) OVER ()) AS token`
 
@@ -140,11 +155,11 @@ FROM item
 WHERE owner IS NULL
 ```
 
-### Episode 10
+### Episode 11
 
 **Token.** 253789061748229.
 
-Execute the `UPDATE` statement, and check the `item` table afterwards.
+Execute the `UPDATE` statement. <mark>Afterwards, show the item table with the formula as added column.</mark>
 
 **Formula**. `salt_093(sum(nn(hash)) OVER ()) AS token`
 
@@ -158,11 +173,11 @@ SELECT *
 FROM item
 ```
 
-### Episode 11
+### Episode 12
 
 **Token.** 107025105236366.
 
-Do you know a trick how to collect all the ownerless items? Afterwards, list all of the items you own.
+Do you know a trick how to collect all the ownerless items? <mark>Afterwards, list all of the items you own.</mark>
 
 **Formula**. `salt_033(sum(nn(hash)) OVER ()) AS token`
 
@@ -186,11 +201,11 @@ SELECT item
 FROM item
 ```
 
-### Episode 12
+### Episode 13
 
 **Token.** 140217850902324.
 
-Let's give them back to their rightful owners: the cane to 5, the hammer to 2 and the rope to 17. Afterwards, list all of the items you own.
+Let's give them back to their rightful owners: the cane to 5, the hammer to 2 and the rope to 17. <mark>Afterwards, list all of the items.</mark>
 
 **Formula**. `salt_025(sum(nn(hash)) OVER ()) AS token`
 
@@ -209,14 +224,13 @@ WHERE item = 'rope';
 
 SELECT item
 FROM item
-WHERE owner = 20
 ```
 
-### Episode 13
+### Episode 14
 
-**Token.** 206054094742976.
+**Token.** 204603481281422.
 
-Find a friendly inhabitant who is either a merchant or a dealer. Maybe they want to buy some of your items.
+Find a friendly inhabitant who is either a merchant or a dealer.
 
 **Formula**. `salt_024(sum(nn(hash)) OVER ()) AS token`
 
@@ -238,11 +252,11 @@ WHERE state = 'friendly'
     AND job in ('merchant', 'dealer')
 ```
 
-### Episode 14
+### Episode 15
 
 **Token.** 166788243175236.
 
-Afterwards, check the items that she owns.
+Give Helen (`personid` 15) the two items. <mark>Afterwards, show the item table with the formula as added column.</mark>
 
 **Formula**. `salt_034(sum(nn(hash)) OVER ()) AS token`
 
@@ -254,14 +268,13 @@ WHERE item IN ('ring', 'teapot');
 
 SELECT *
 FROM item
-WHERE owner = 15
 ```
 
-### Episode 15
+### Episode 16
 
-**Token.** 261661938333343.
+**Token.** 255787834193736.
 
-Transfer 120 from Helen's gold to yours, and then check the new amounts of your two rows.
+Transfer 120 from Helen's gold to yours. <mark>Afterwards, show the inhabitant table with the formula as added column.</mark>
 
 _Tip._ SQL has no “transfer” operation. Use two `UPDATE` statements.
 
@@ -278,10 +291,8 @@ SET gold = gold + 120
 WHERE personid = 20;
 
 
-SELECT name
-     , gold
+SELECT *
 FROM inhabitant
-WHERE personid IN (15, 20)
 ```
 
 ```sql
@@ -289,11 +300,8 @@ UPDATE inhabitant
 SET gold = gold - 120
 WHERE personid = 15;
 
-
-SELECT name
-     , gold
+SELECT *
 FROM inhabitant
-WHERE personid IN (15, 20)
 ```
 
 ```sql
@@ -302,15 +310,13 @@ SET gold = gold + 120
 WHERE personid = 20;
 
 
-SELECT name
-     , gold
+SELECT *
 FROM inhabitant
-WHERE personid IN (15, 20)
 ```
 
-### Episode 16
+### Episode 17
 
-**Token.** 34989396526869.
+**Token.** 25101277790992.
 
 You have correctly updated Helen's gold. Now update yours.
 
@@ -322,15 +328,13 @@ SET gold = gold + 120
 WHERE personid = 20;
 
 
-SELECT name
-     , gold
+SELECT *
 FROM inhabitant
-WHERE personid IN (15, 20)
 ```
 
-### Episode 17
+### Episode 18
 
-**Token.** 35091420089868.
+**Token.** 25203292965387.
 
 You have correctly updated your gold. Now update Helen's.
 
@@ -342,17 +346,15 @@ SET gold = gold - 120
 WHERE personid = 15;
 
 
-SELECT name
-     , gold
+SELECT *
 FROM inhabitant
-WHERE personid IN (15, 20)
 ```
 
-### Episode 18
+### Episode 19
 
-**Token.** 36876251558115.
+**Token.** 46779335306464.
 
-Update your name to 'Leslie Qualls' and show the updated row.
+Update your name to 'Leslie Qualls'. <mark>Afterwards, show the inhabitant table with the formula as added column.</mark>
 
 **Formula**. `salt_080(sum(nn(hash)) OVER ()) AS token`
 
@@ -364,12 +366,11 @@ WHERE personid = 20;
 
 SELECT *
 FROM inhabitant
-WHERE personid = 20
 ```
 
-### Episode 19
+### Episode 20
 
-**Token.** 17809976537863.
+**Token.** 27912063284788.
 
 Since baking is one of your hobbies, why not find a baker who you can work for?
 
@@ -384,11 +385,11 @@ WHERE job = 'baker'
 ORDER BY gold DESC
 ```
 
-### Episode 20
+### Episode 21
 
 **Token.** 34285849060426.
 
-Transfer your salary (100) from Paul's gold to yours, and substract the price of the sword (150). Then, display your gold balance.
+Transfer your salary (100) from Paul's gold to yours, and substract the price of the sword (150). <mark>Afterwards, show the inhabitant table with the formula as added column.</mark>
 
 **Formula**. `salt_010(sum(nn(hash)) OVER ()) AS token`
 
@@ -405,12 +406,11 @@ WHERE personid = 20;
 
 SELECT gold
 FROM inhabitant
-WHERE personid = 20
 ```
 
-### Episode 21
+### Episode 22
 
-**Token.** 156346887286586.
+**Token.** 148615726566579.
 
 Is there a pilot on this island by any chance? He could fly you home.
 
@@ -422,11 +422,11 @@ FROM inhabitant
 WHERE job = 'pilot'
 ```
 
-### Episode 22
+### Episode 23
 
 **Token.** 229615318980909.
 
-Copy-paste the previous query, add the given formula, and execute it.
+Copy-paste the previous query<mark>, add the given formula</mark>, and execute it.
 
 **Formula**. `salt_029(sum(nn(A.hash) + nn(B.hash)) OVER ()) AS token`
 
@@ -449,7 +449,7 @@ WHERE A.villageid = B.villageid
   AND B.name = 'Dirty Dieter'
 ```
 
-### Episode 23
+### Episode 24
 
 **Token.** 256975312978711.
 
@@ -466,11 +466,11 @@ JOIN inhabitant B ON A.chief = B.personid
 WHERE A.name = 'Onionville'
 ```
 
-### Episode 24
+### Episode 25
 
 **Token.** 240365303417698.
 
-Copy-paste the previous query, add the given formula, and execute it.
+Copy-paste the previous query<mark>, add the given formula</mark>, and execute it.
 
 **Formula**. `salt_012(bit_xor(sum(nn(A.hash) + nn(B.hash))) OVER ()) AS token`
 
@@ -481,7 +481,7 @@ JOIN village B ON A.villageid = B.villageid
 WHERE B.name = 'Onionville'
 ```
 
-### Episode 25
+### Episode 26
 
 **Token.** 233051995253998.
 
@@ -499,7 +499,7 @@ JOIN village B ON A.villageid = B.villageid
     AND gender = 'f'
 ```
 
-### Episode 26
+### Episode 27
 
 **Token.** 41535988500868.
 
@@ -515,11 +515,11 @@ WHERE B.name = 'Onionville'
     AND gender = 'f'
 ```
 
-### Episode 27
+### Episode 28
 
 **Token.** 124493698100759.
 
-Copy-paste the previous query, add the given formula, and execute it.
+Copy-paste the previous query<mark>, add the given formula</mark>, and execute it.
 
 **Formula**. `salt_035(bit_xor(sum(nn(A.hash) + nn(B.hash))) OVER ()) AS token`
 
@@ -530,7 +530,7 @@ JOIN village B ON A.villageid = B.villageid
 WHERE B.name = 'Cucumbertown'
 ```
 
-### Episode 28
+### Episode 29
 
 **Token.** 157771240628108.
 
@@ -544,7 +544,7 @@ FROM inhabitant
 WHERE job IN ('baker', 'dealer', 'merchant')
 ```
 
-### Episode 29
+### Episode 30
 
 **Token.** 205678511338701.
 
@@ -560,11 +560,11 @@ GROUP BY job
 ORDER BY average
 ```
 
-### Episode 30
+### Episode 31
 
 **Token.** 227531204698033.
 
-Execute the previous statement. Which item is now ownerless?
+Execute the previous statement. <mark>Afterwards, show the item table with the formula as added column.</mark> There should be now one ownerless item.
 
 **Formula**. `salt_018(sum(nn(hash)) OVER ()) AS token`
 
@@ -574,16 +574,15 @@ FROM inhabitant
 WHERE name = 'Dirty Dieter';
 
 
-SELECT item
+SELECT *
 FROM item
-WHERE owner IS NULL
 ```
 
-### Episode 31
+### Episode 32
 
-**Token.** 193619246200652.
+**Token.** 198001479871924.
 
-Delete Dirty Diane, and show the remaining inhabitants of Onionville (villageid 3).
+Delete Dirty Diane. <mark>Afterwards, show the inhabitant table with the formula as added column.</mark>
 
 **Formula**. `salt_004(sum(nn(hash)) OVER ()) AS token`
 
@@ -595,14 +594,13 @@ WHERE name = 'Dirty Diane';
 
 SELECT *
 FROM inhabitant
-WHERE villageid = 3
 ```
 
-### Episode 32
+### Episode 33
 
-**Token.** 60167643205863.
+**Token.** 66098661366712.
 
-Change the pilot's status to 'friendly', your own status to 'emigrated', and show the table `inhabitant`.
+Change the pilot's status to 'friendly', your own status to 'emigrated'. <mark>Afterwards, show the inhabitant table with the formula as added column.</mark>
 
 **Formula**. `salt_051(sum(nn(hash)) OVER ()) AS token`
 
@@ -639,11 +637,11 @@ SELECT *
 FROM inhabitant;
 ```
 
-### Episode 33
+### Episode 34
 
 **Token.** 214187513069315.
 
-You have correctly updated the pilot's status. Now update yours to 'emigrated', and show the table `inhabitant`.
+You have correctly updated the pilot's status. Now update yours to 'emigrated'. <mark>Afterwards, show the inhabitant table with the formula as added column.</mark>
 
 **Formula**. `salt_052(sum(nn(hash)) OVER ()) AS token`
 
@@ -656,11 +654,11 @@ SELECT *
 FROM inhabitant;
 ```
 
-### Episode 34
+### Episode 35
 
 **Token.** 225550015813321.
 
-You have correctly updated your status. Now update the pilot's state to 'friendly', and show the table `inhabitant`.
+You have correctly updated your status. Now update the pilot's state to 'friendly'. <mark>Afterwards, show the inhabitant table with the formula as added column.</mark>
 
 **Formula**. `salt_053(sum(nn(hash)) OVER ()) AS token`
 
@@ -673,7 +671,7 @@ SELECT *
 FROM inhabitant;
 ```
 
-### Episode 35
+### Episode 36
 
 **Token.** 255276062128450.
 
