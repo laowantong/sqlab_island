@@ -3,6 +3,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 1,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`SELECT *`",
+        ""
+      ]
+    ],
     "context": "Oh dear, what happened? It seems that I am the only survivor of the air crash. Wow, there are some villages on this island.\n\n```sql\nSELECT *\nFROM village\n```",
     "statement": "Copy-paste the previous query. After the star `*`, add a comma and the given formula. Execute the complete query.",
     "salt": "042",
@@ -19,6 +29,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 2,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`SELECT *`",
+        ""
+      ]
+    ],
     "context": "It seems there are a few people living in these villages.",
     "statement": "How can you see a list of all inhabitants?",
     "salt": "002",
@@ -35,6 +55,20 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 3,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`WHERE`",
+        ""
+      ],
+      [
+        "Comparison operator `=`",
+        ""
+      ]
+    ],
     "context": "Woah, so many people!\n\nMan! I'm hungry. I will go and find a butcher to ask for some free sausages.\n\n```sql\nSELECT *\nFROM inhabitant\nWHERE job = 'butcher'\n```",
     "statement": "Copy-paste the previous query, add the given formula, and execute it.",
     "salt": "048",
@@ -51,6 +85,20 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 4,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`WHERE`",
+        ""
+      ],
+      [
+        "Comparison operator `=`",
+        ""
+      ]
+    ],
     "context": "– There you are! Enjoy your meal! But take care of yourself. As long as you are unarmed, stay away from villains. Not everyone on this island is friendly.  \n– Thank you, Edward!",
     "statement": "Okay, let's see who is friendly on this island...",
     "salt": "023",
@@ -85,6 +133,20 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 5,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`WHERE`",
+        ""
+      ],
+      [
+        "Boolean operator `AND`",
+        ""
+      ]
+    ],
     "context": "There is no way around getting a sword for myself.",
     "statement": "Now try to find a friendly weaponsmith to forge you one.\n\n_Tip._ You can combine predicates in the `WHERE` clause with `AND`.",
     "salt": "060",
@@ -101,6 +163,20 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 6,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`WHERE`",
+        ""
+      ],
+      [
+        "Comparison operator `LIKE`",
+        ""
+      ]
+    ],
     "context": "Hm, that's very few.",
     "statement": "Maybe other friendly smiths can help you out, e.g. a blacksmith.\n\n_Tip._ Try out: job LIKE '%smith' to find all inhabitants whose job ends with 'smith' (% is a wildcard for any number of characters).",
     "salt": "069",
@@ -135,6 +211,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 7,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`INSERT`",
+        ""
+      ]
+    ],
     "context": "That looks better! I will go and visit those smiths.\n\n– Hi stranger! Where are you going? I'm Paul, I'm the major of Monkeycity. I will go ahead and register you as a citizen.\n\n```sql\nINSERT INTO inhabitant (name, villageid, gender, job, gold, state) VALUES ('Stranger', 1, '?', '?', 0, '?')\n```\n\n– No need to call me stranger!",
     "statement": "First, execute the `INSERT` statement. Then, look for your personid.\n\n_Tip._ In former queries, the * stands for: all columns. Instead of the star, you can also address one or more columns (separated by a comma) and you will only get the columns you need.",
     "salt": "090",
@@ -178,6 +264,20 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 8,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`WHERE` (again)",
+        ""
+      ],
+      [
+        "Comparison operator `=`",
+        ""
+      ]
+    ],
     "context": "– Hi Ernest! How much is a sword?  \n– I can offer to make you a sword for 150 gold. That's the cheapest you will find!",
     "statement": "How much gold do you have?",
     "salt": "099",
@@ -200,6 +300,20 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 9,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`WHERE` (again)",
+        ""
+      ],
+      [
+        "`IS NULL`",
+        ""
+      ]
+    ],
     "context": "Damn! No mon, no fun. There has to be another option to earn gold other than going to work. Maybe I could collect ownerless items and sell them!",
     "statement": "Make a list of all items that don't belong to anyone.\n\n_Tip._ You can recognize ownerless items by: WHERE owner IS NULL",
     "salt": "073",
@@ -216,6 +330,20 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 10,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`UPDATE`",
+        ""
+      ],
+      [
+        "`UPDATE` one row",
+        ""
+      ]
+    ],
     "context": "So much cool stuff!\n\nYay, a coffee cup. Let's collect it!\n\n```sql\nUPDATE item\nSET owner = 20\nWHERE item = 'coffee cup'\n```",
     "statement": "Execute the `UPDATE` statement, and check the `item` table afterwards.",
     "salt": "093",
@@ -232,6 +360,20 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 11,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`UPDATE`",
+        ""
+      ],
+      [
+        "`UPDATE` several rows",
+        ""
+      ]
+    ],
     "context": "",
     "statement": "Do you know a trick how to collect all the ownerless items? Afterwards, list all of the items you own.",
     "salt": "033",
@@ -265,6 +407,20 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 12,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`UPDATE`",
+        ""
+      ],
+      [
+        "`UPDATE` several rows",
+        ""
+      ]
+    ],
     "context": "So greedy! You've snapped up all items, even those that already had an owner.",
     "statement": "Let's give them back to their rightful owners: the cane to 5, the hammer to 2 and the rope to 17. Afterwards, list all of the items you own.",
     "salt": "025",
@@ -281,6 +437,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 13,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Complex condition",
+        ""
+      ]
+    ],
     "context": "",
     "statement": "Find a friendly inhabitant who is either a merchant or a dealer. Maybe they want to buy some of your items.",
     "salt": "024",
@@ -304,6 +470,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 13,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Complex condition",
+        ""
+      ]
+    ],
     "context": "",
     "statement": "Find a friendly inhabitant who is either a merchant or a dealer. Maybe they want to buy some of your items.",
     "salt": "024",
@@ -351,6 +527,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 14,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`UPDATE` two rows",
+        ""
+      ]
+    ],
     "context": "– I'd like to get the ring and the teapot. The rest is nothing but scrap. Please give me the two items. My `personid` is 15.",
     "statement": "Afterwards, check the items that she owns.",
     "salt": "034",
@@ -367,6 +553,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 15,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Transfer some gold",
+        ""
+      ]
+    ],
     "context": "— Thank you! Here, some gold!",
     "statement": "Transfer 120 from Helen's gold to yours, and then check the new amounts of your two rows.\n\n_Tip._ SQL has no “transfer” operation. Use two `UPDATE` statements.",
     "salt": "091",
@@ -412,6 +608,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 16,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Transfer some gold",
+        ""
+      ]
+    ],
     "context": "",
     "statement": "You have correctly updated Helen's gold. Now update yours.",
     "salt": "075",
@@ -428,6 +634,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 17,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Transfer some gold",
+        ""
+      ]
+    ],
     "context": "",
     "statement": "You have correctly updated your gold. Now update Helen's.",
     "salt": "076",
@@ -444,6 +660,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 18,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`UPDATE` the name of the stranger",
+        ""
+      ]
+    ],
     "context": "Unfortunately, that's not enough gold to buy a sword. Seems like I do have to work after all. Maybe it's not a bad idea to change my name from Stranger to my real name before I will apply for a job.",
     "statement": "Update your name to 'Leslie Qualls' and show the updated row.",
     "salt": "080",
@@ -460,6 +686,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 18,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`UPDATE` the name of the stranger",
+        ""
+      ]
+    ],
     "context": "Unfortunately, that's not enough gold to buy a sword. Seems like I do have to work after all. Maybe it's not a bad idea to change my name from Stranger to my real name before I will apply for a job.",
     "statement": "Update your name to 'Leslie Qualls' and show the updated row.",
     "salt": "080",
@@ -476,6 +712,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 18,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`UPDATE` the name of the stranger",
+        ""
+      ]
+    ],
     "context": "Unfortunately, that's not enough gold to buy a sword. Seems like I do have to work after all. Maybe it's not a bad idea to change my name from Stranger to my real name before I will apply for a job.",
     "statement": "Update your name to 'Leslie Qualls' and show the updated row.",
     "salt": "080",
@@ -504,6 +750,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 19,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`ORDER BY`",
+        ""
+      ]
+    ],
     "context": "",
     "statement": "Since baking is one of your hobbies, why not find a baker who you can work for?\n\n_Tip._ List all bakers and use `ORDER BY` gold to sort the results. `ORDER BY` gold `DESC` is even better because then the richest baker is on top.",
     "salt": "078",
@@ -540,6 +796,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 20,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`ORDER BY`",
+        ""
+      ]
+    ],
     "context": "Aha, Paul! I know him!\n\n– Hi, you again! I saw you want to work as a baker? Okay! You will be paid 1 gold for 100 bread rolls.\n\n(8 hours later...)\n\n– Here, I made ten thousand bread rolls! I quit! This should be enough money to buy a sword. Let's see what happens with my gold balance.\n\nHere's your new sword, Losloo Qoolls! Now you can go everywhere.",
     "statement": "Transfer your salary (100) from Paul's gold to yours, and substract the price of the sword (150). Then, display your gold balance.",
     "salt": "010",
@@ -556,6 +822,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 21,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`ORDER BY`",
+        ""
+      ]
+    ],
     "context": "– My name is Leslie qualls! Thanks anyway!",
     "statement": "Is there a pilot on this island by any chance? He could fly you home.",
     "salt": "086",
@@ -572,6 +848,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 22,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Joins",
+        ""
+      ]
+    ],
     "context": "Oh no, his state is 'kidnapped'.\n\nHorrible, the pilot is held captive by Dirty Dieter! I will show you a trick how to find out the name of the village where Dirty Dieter lives.\n\n```sql\nSELECT A.name\nFROM village A\nJOIN inhabitant B ON A.villageid = B.villageid\nWHERE B.name = 'Dirty Dieter'\n```",
     "statement": "Copy-paste the previous query, add the given formula, and execute it.",
     "salt": "029",
@@ -595,6 +881,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 23,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Joins",
+        ""
+      ]
+    ],
     "context": "– Thanks for the hint!",
     "statement": "Use the join to find out the chief's name of the village Onionville.\n\n_Tip._ In the column `chief` in the village table, the `personid` of the chief is stored.",
     "salt": "045",
@@ -623,6 +919,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 24,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`COUNT(*)`",
+        ""
+      ]
+    ],
     "context": "I've got it! I will visit Fred and ask him about Dirty Dieter and the pilot.\n\nUm, how many inhabitants does Onionville have?\n\n```sql\nSELECT COUNT(*) as population\nFROM inhabitant A\nJOIN village B ON A.villageid = B.villageid\nWHERE B.name = 'Onionville'\n```",
     "statement": "Copy-paste the previous query, add the given formula, and execute it.",
     "salt": "012",
@@ -639,6 +945,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 25,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`COUNT(*)`",
+        ""
+      ]
+    ],
     "context": "– Hello Leslie Qualls, the pilot is held captive by Dirty Dieter in his sister's house.",
     "statement": "Shall I tell you how many women there are in Onionville? Nah, you can figure it out by yourself!\n\n_Tip._ Women show up as gender = 'f'.",
     "salt": "032",
@@ -675,6 +991,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 26,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`COUNT(*)`",
+        ""
+      ]
+    ],
     "context": "Oh, only one woman.",
     "statement": "What's her name?",
     "salt": "036",
@@ -703,6 +1029,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 27,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`SUM()`",
+        ""
+      ]
+    ],
     "context": "Let's go!\n\n– Leslie Qualls, if you hand me over the entire property of our nearby village Cucumbertown, I will release the pilot. I will show you now what this property consists of.\n\n```sql\nSELECT SUM(A.gold) as total\nFROM inhabitant A\nJOIN village B ON A.villageid = B.villageid\nWHERE B.name = 'Cucumbertown'\n```",
     "statement": "Copy-paste the previous query, add the given formula, and execute it.",
     "salt": "035",
@@ -719,6 +1055,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 28,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`SUM()`",
+        ""
+      ]
+    ],
     "context": "Oh no, baking bread alone can't solve my problems. If I continue working and selling items though, I could earn more gold than the worth of gold inventories of all bakers, dealers and merchants together.",
     "statement": "Sum the gold of all these people.",
     "salt": "046",
@@ -743,6 +1089,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 29,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`AVG()`",
+        ""
+      ]
+    ],
     "context": "That's not enough.\n\nLet's have a look at how much average gold people own, depending on their job.\n\n```sql\nSELECT job, avg(gold)\nFROM inhabitant\nGROUP BY job\nORDER BY avg(gold)\n```",
     "statement": "Copy-paste the previous query, add the given formula, and execute it.",
     "salt": "071",
@@ -759,6 +1115,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 30,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`DELETE`",
+        ""
+      ]
+    ],
     "context": "Ok, so the only way is to mug the villains. Or I might as well go ahead and just kill Dirty Dieter with my sword!\n\n```sql\nDELETE\nFROM inhabitant\nWHERE name = 'Dirty Dieter'\n```",
     "statement": "Execute the previous statement. Which item is now ownerless?",
     "salt": "018",
@@ -775,6 +1141,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 31,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "`DELETE`",
+        ""
+      ]
+    ],
     "context": "Dirty Diane: Heeeey! Now I'm very angry!\n\nWhat will you do next, Leslie Qualls?",
     "statement": "Delete Dirty Diane, and show the remaining inhabitants of Onionville (villageid 3).",
     "salt": "004",
@@ -797,6 +1173,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 32,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Epilog",
+        ""
+      ]
+    ],
     "context": "– Yeah! Now I release the pilot!<br>\n– Thank's for releasing me, Leslie Qualls! I will fly you home!<br>\n– I take my sword, some gold and lots of useless items with me as a souvenir.",
     "statement": "Change the pilot's status to 'friendly', your own status to 'emigrated', and show the table `inhabitant`.",
     "salt": "051",
@@ -823,6 +1209,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 33,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Epilog",
+        ""
+      ]
+    ],
     "context": "",
     "statement": "You have correctly updated the pilot's status. Now update yours to 'emigrated', and show the table `inhabitant`.",
     "salt": "052",
@@ -839,6 +1235,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 34,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Epilog",
+        ""
+      ]
+    ],
     "context": "",
     "statement": "You have correctly updated your status. Now update the pilot's state to 'friendly', and show the table `inhabitant`.",
     "salt": "053",
@@ -855,6 +1261,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 35,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Epilog",
+        ""
+      ]
+    ],
     "context": "You have completed SQLab Island. What a big adventure!",
     "statement": "",
     "salt": "049",
@@ -864,6 +1280,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 35,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Epilog",
+        ""
+      ]
+    ],
     "context": "You have completed SQLab Island. What a big adventure!",
     "statement": "",
     "salt": "049",
@@ -873,6 +1299,16 @@
     "part_number": 1,
     "kind": "episode",
     "task_number": 35,
+    "section_path": [
+      [
+        "SQLab Island",
+        ""
+      ],
+      [
+        "Epilog",
+        ""
+      ]
+    ],
     "context": "You have completed SQLab Island. What a big adventure!",
     "statement": "",
     "salt": "049",

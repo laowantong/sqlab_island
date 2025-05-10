@@ -9,7 +9,7 @@ config = {
     "ddl_path": "./ddl.sql",
     "dataset_dir": "../dataset",
     "source_path": "./sqlab_island.ipynb",
-    "relational_schema_path": "../assets/island_mld.svg",
+    "relational_schema_dir": "../assets/",
     "reformat_sql": False,
     "sqlparse_subs": {
         "lowercase_user_names": (r"\b(OWNER)\b", lambda m: m[0].lower()),
