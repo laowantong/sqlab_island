@@ -364,7 +364,7 @@ INSERT INTO sqlab_info (name, value) VALUES
   ('author_contact', '"first_name.last_name at univ-lorraine.fr"'),
   ('author_name', '"Aristide Grange"'),
   ('author_role', '"Adaptation for SQLab"'),
-  ('created_at', '"2025-05-10T12:15:46.152798"'),
+  ('created_at', '"2025-05-10T22:53:45.201328"'),
   ('dbms', '"MariaDB"'),
   ('dbms_version', '"11.7.2-MariaDB"'),
   ('description', '"An SQLab adaptation of SQL Island for MariaDB."'),
@@ -385,10 +385,10 @@ INSERT INTO sqlab_info (name, value) VALUES
   ('repository', '"https://github.com/laowantong/sqlab_island"'),
   ('row_count', '31'),
   ('sqlab_database_language', '"en"'),
-  ('sqlab_version', '"0.7.5"'),
+  ('sqlab_version', '"0.7.6"'),
   ('table_count', '3'),
-  ('table_names', '["inhabitant", "item", "village"]'),
-  ('title', '"SQL Island"'),
+  ('table_structures', '{"inhabitant": ["personid", "name", "villageid", "gender", "job", "gold", "state"], "item": ["item", "owner"], "village": ["villageid", "name", "chief"]}'),
+  ('title', '"SQLab Island"'),
   ('version', '"3.1.0"'),
   ('web_toc', '["<div class=''part''><h2>Adventure: SQLab Island</h2><div class=''section''><h3>`SELECT *`</h3><ul><li><div class=''task-number''>1</div></li></ul>\\n</div></div>"]')
 ;
