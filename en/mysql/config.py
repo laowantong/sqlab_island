@@ -14,7 +14,7 @@ config = {
     "sqlparse_subs": {
         "lowercase_user_names": (r"\b(OWNER)\b", lambda m: m[0].lower()),
     },
-    "info": {
+    "metadata": {
         "title": "SQLab Island",
         "description": "An SQLab adaptation of SQL Island for MySQL.",
         "version": "3.2.0",

@@ -13,7 +13,7 @@ config = {
         "~/.sqlpkg/nalgeon/regexp/regexp",
         "~/.sqlpkg/nyurik/compressions/libsqlite_compressions",
     ],
-    "info": {
+    "metadata": {
         "title": "SQLab Island",
         "description": "An SQLab adaptation of SQL Island for SQLite.",
         "version": "3.1.0",

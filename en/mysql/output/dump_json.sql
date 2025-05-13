@@ -44,8 +44,8 @@ CREATE TABLE sqlab_msg (
   msg blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-DROP TABLE IF EXISTS sqlab_info;
-CREATE TABLE sqlab_info (
+DROP TABLE IF EXISTS sqlab_metadata;
+CREATE TABLE sqlab_metadata (
   name varchar(64) NOT NULL,
   value text NOT NULL,
   PRIMARY KEY (name)
@@ -363,7 +363,7 @@ INSERT INTO sqlab_msg (msg) VALUES
 ;
 
 
-INSERT INTO sqlab_info (name, value) VALUES
+INSERT INTO sqlab_metadata (name, value) VALUES
   ('title', 'SQLab Island'),
   ('description', 'An SQLab adaptation of SQL Island for MySQL.'),
   ('version', '3.1.0'),

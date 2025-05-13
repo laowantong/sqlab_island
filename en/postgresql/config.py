@@ -11,7 +11,7 @@ config = {
     "source_path": "./sqlab_island.ipynb",
     "relational_schema_dir": "../assets/",
     "reformat_sql": False,
-    "info": {
+    "metadata": {
         "title": "SQLab Island",
         "description": "An SQLab adaptation of SQL Island for PostgreSQL.",
         "version": "3.1.0",
