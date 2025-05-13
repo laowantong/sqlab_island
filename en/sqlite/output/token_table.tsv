@@ -1,4 +1,4 @@
-token	part	source	target	action	salt
+token	activity	source	target	action	salt
 042	1	0	1	enter	N/A
 280010183117016	1	1	2	move	042
 127572182569252	1	2	3	move	002

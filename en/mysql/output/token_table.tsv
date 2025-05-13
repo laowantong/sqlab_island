@@ -1,4 +1,4 @@
-token	part	source	target	action	salt
+token	activity	source	target	action	salt
 042	1	0	1	enter	N/A
 270524817733798	1	1	1	hint	042
 278716494646762	1	1	1	hint	042

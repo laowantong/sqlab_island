@@ -1,6 +1,6 @@
 {
   "042": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 1,
     "section_path": [
@@ -42,7 +42,7 @@
     "query": "SELECT *\n     , salt_042(sum(nn(hash)) OVER ()) AS token\nFROM item"
   },
   "279731784972193": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 2,
     "section_path": [
@@ -84,7 +84,7 @@
     "query": "SELECT *\n     , salt_002(sum(nn(hash)) OVER ()) AS token\nFROM item"
   },
   "128589543210724": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 3,
     "section_path": [
@@ -114,7 +114,7 @@
     ]
   },
   "280206676651511": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 4,
     "section_path": [
@@ -162,7 +162,7 @@
     "query": "SELECT *\n     , salt_023(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant"
   },
   "49081739277115": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 5,
     "section_path": [
@@ -192,7 +192,7 @@
     ]
   },
   "111903790755050": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 6,
     "section_path": [
@@ -240,7 +240,7 @@
     "query": "SELECT *\n     , salt_069(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE job LIKE '%smith'"
   },
   "71115866585707": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 7,
     "section_path": [
@@ -295,7 +295,7 @@
     "query": "INSERT INTO inhabitant (name, villageid, gender, job, gold, state)\nVALUES ('Stranger', 1, '?', '?', 0, '?');\n\nSELECT personid\n     , salt_090(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE name = 'Stranger';"
   },
   "19389891798490": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 8,
     "section_path": [
@@ -331,7 +331,7 @@
     "query": "SELECT personid\n     , salt_079(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant"
   },
   "37445107108825": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 9,
     "section_path": [
@@ -367,7 +367,7 @@
     "query": "SELECT personid, gold\n     , salt_099(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant"
   },
   "7708171354493": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 10,
     "section_path": [
@@ -397,7 +397,7 @@
     ]
   },
   "253789061748229": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 11,
     "section_path": [
@@ -427,7 +427,7 @@
     ]
   },
   "107025105236366": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 12,
     "section_path": [
@@ -474,7 +474,7 @@
     "query": "SELECT item\n     , salt_033(sum(nn(hash)) OVER ()) AS token\nFROM item"
   },
   "140217850902324": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 13,
     "section_path": [
@@ -504,7 +504,7 @@
     ]
   },
   "204603481281422": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 14,
     "section_path": [
@@ -541,7 +541,7 @@
     ]
   },
   "139744599079637": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 14,
     "section_path": [
@@ -602,7 +602,7 @@
     "query": "SELECT *\n     , salt_024(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE state = 'friendly' AND job = 'merchant'"
   },
   "166788243175236": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 15,
     "section_path": [
@@ -632,7 +632,7 @@
     ]
   },
   "255787834193736": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 16,
     "section_path": [
@@ -672,7 +672,7 @@
     ]
   },
   "25101277790992": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 17,
     "section_path": [
@@ -702,7 +702,7 @@
     ]
   },
   "25203292965387": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 18,
     "section_path": [
@@ -732,7 +732,7 @@
     ]
   },
   "46779335306464": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 19,
     "section_path": [
@@ -762,7 +762,7 @@
     ]
   },
   "845203505654": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 19,
     "section_path": [
@@ -792,7 +792,7 @@
     ]
   },
   "24919761524173": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 19,
     "section_path": [
@@ -828,7 +828,7 @@
     "query": "UPDATE inhabitant\nSET name = 'Leslie Quals'\nWHERE personid = 20;\n\n\nSELECT *\n     , salt_080(sum(nn(hash)) OVER ()) AS token\nFROM inhabitant"
   },
   "27912063284788": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 20,
     "section_path": [
@@ -878,7 +878,7 @@
     "query": "SELECT *\n     , salt_078(0 + sum(nn(hash)) OVER ()) AS token\nFROM inhabitant\nWHERE job = 'baker'"
   },
   "34285849060426": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 21,
     "section_path": [
@@ -908,7 +908,7 @@
     ]
   },
   "148615726566579": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 22,
     "section_path": [
@@ -938,7 +938,7 @@
     ]
   },
   "229615318980909": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 23,
     "section_path": [
@@ -975,7 +975,7 @@
     ]
   },
   "256975312978711": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 24,
     "section_path": [
@@ -1017,7 +1017,7 @@
     "query": "SELECT B.name\n     , salt_045(sum(nn(A.hash) + nn(B.hash)) OVER ()) AS token\nFROM village A, inhabitant B\nWHERE A.name = 'Onionville'"
   },
   "240365303417698": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 25,
     "section_path": [
@@ -1047,7 +1047,7 @@
     ]
   },
   "233051995253998": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 26,
     "section_path": [
@@ -1097,7 +1097,7 @@
     "query": "SELECT count(*) AS women\n     , salt_032({{x}} + bit_xor(sum(nn(A.hash) + nn(B.hash))) OVER ()) AS token\nFROM inhabitant A, village B\nWHERE gender = 'f'\n    AND B.name = 'Onionville'"
   },
   "41535988500868": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 27,
     "section_path": [
@@ -1139,7 +1139,7 @@
     "query": "SELECT A.name\n     , salt_036(sum(nn(A.hash) + nn(B.hash)) OVER ()) AS token\nFROM inhabitant A\nJOIN village B ON A.villageid = B.villageid\nWHERE B.name = 'Onionville'"
   },
   "124493698100759": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 28,
     "section_path": [
@@ -1169,7 +1169,7 @@
     ]
   },
   "157771240628108": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 29,
     "section_path": [
@@ -1207,7 +1207,7 @@
     "query": "SELECT sum(inhabitant.gold) AS total\n     , salt_046({{x}} + bit_xor(sum(nn(hash))) OVER ()) AS token\nFROM inhabitant"
   },
   "205678511338701": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 30,
     "section_path": [
@@ -1237,7 +1237,7 @@
     ]
   },
   "227531204698033": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 31,
     "section_path": [
@@ -1267,7 +1267,7 @@
     ]
   },
   "198001479871924": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 32,
     "section_path": [
@@ -1297,7 +1297,7 @@
     ]
   },
   "66098661366712": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 33,
     "section_path": [
@@ -1333,7 +1333,7 @@
     ]
   },
   "214187513069315": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 34,
     "section_path": [
@@ -1359,7 +1359,7 @@
     ]
   },
   "225550015813321": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 35,
     "section_path": [
@@ -1385,7 +1385,7 @@
     ]
   },
   "255276062128450": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 36,
     "section_path": [
@@ -1404,7 +1404,7 @@
     "solutions": []
   },
   "148646393118578": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 36,
     "section_path": [
@@ -1423,7 +1423,7 @@
     "solutions": []
   },
   "213893536427211": {
-    "part_number": 1,
+    "activity_number": 1,
     "kind": "episode",
     "task_number": 36,
     "section_path": [
