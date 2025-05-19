@@ -26,10 +26,7 @@
       {
         "query": "SELECT *\nFROM village",
         "columns": [
-          "villageid",
-          "name",
-          "chief",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>villageid</th>\n            <th>name</th>\n            <th>chief</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Monkeycity</td>\n            <td>1</td>\n            <td>537616450612</td>\n            <td>279731784972193</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Cucumbertown</td>\n            <td>6</td>\n            <td>506002862681</td>\n            <td>279731784972193</td>\n        </tr>\n</table>\nTotal: 3 rows affected.",
         "token": "279731784972193"
@@ -75,14 +72,7 @@
       {
         "query": "SELECT *\nFROM inhabitant",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>128589543210724</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>128589543210724</td>\n        </tr>\n</table>\nTotal: 19 rows affected.",
         "token": "128589543210724"
@@ -128,14 +118,7 @@
       {
         "query": "SELECT *\nFROM inhabitant A\nWHERE job = 'butcher'",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>6</td>\n            <td>Gerry Slaughterer</td>\n            <td>2</td>\n            <td>m</td>\n            <td>butcher</td>\n            <td>4850</td>\n            <td>evil</td>\n            <td>872618219253</td>\n            <td>280206676651511</td>\n        </tr>\n        <tr>\n            <td>7</td>\n            <td>Peter Slaughterer</td>\n            <td>3</td>\n            <td>m</td>\n            <td>butcher</td>\n            <td>3250</td>\n            <td>evil</td>\n            <td>648197551204</td>\n            <td>280206676651511</td>\n        </tr>\n</table>\nTotal: 4 rows affected.",
         "token": "280206676651511"
@@ -169,14 +152,7 @@
       {
         "query": "SELECT *\nFROM inhabitant\nWHERE state = 'friendly'",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>49081739277115</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>49081739277115</td>\n        </tr>\n</table>\nTotal: 11 rows affected.",
         "token": "49081739277115"
@@ -228,14 +204,7 @@
       {
         "query": "SELECT *\nFROM inhabitant\nWHERE state = 'friendly'\n    AND job = 'weaponsmith'",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>111903790755050</td>\n        </tr>\n</table>\nTotal: 1 row affected.",
         "token": "111903790755050"
@@ -269,14 +238,7 @@
       {
         "query": "SELECT *\nFROM inhabitant\nWHERE state = 'friendly'\n    AND job LIKE '%smith'",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>71115866585707</td>\n        </tr>\n        <tr>\n            <td>10</td>\n            <td>Peter Drummer</td>\n            <td>1</td>\n            <td>m</td>\n            <td>smith</td>\n            <td>600</td>\n            <td>friendly</td>\n            <td>713565808545</td>\n            <td>71115866585707</td>\n        </tr>\n</table>\nTotal: 3 rows affected.",
         "token": "71115866585707"
@@ -328,14 +290,7 @@
       {
         "query": "INSERT INTO\n    inhabitant (name, villageid, gender, job, gold, state)\nVALUES\n    ('Stranger', 1, '?', '?', 0, '?');\n\n\nSELECT *\nFROM inhabitant;",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>19389891798490</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>19389891798490</td>\n        </tr>\n</table>\nTotal: 20 rows affected.",
         "token": "19389891798490"
@@ -474,9 +429,7 @@
       {
         "query": "SELECT *\nFROM item\nWHERE owner IS NULL",
         "columns": [
-          "item",
-          "owner",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>item</th>\n            <th>owner</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>bucket</td>\n            <td>None</td>\n            <td>184436083777</td>\n            <td>253789061748229</td>\n        </tr>\n        <tr>\n            <td>carton</td>\n            <td>None</td>\n            <td>456410402076</td>\n            <td>253789061748229</td>\n        </tr>\n</table>\nTotal: 6 rows affected.",
         "token": "253789061748229"
@@ -510,9 +463,7 @@
       {
         "query": "UPDATE item\nSET owner = 20\nWHERE item = 'coffee cup';\n\n\nSELECT *\nFROM item",
         "columns": [
-          "item",
-          "owner",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>item</th>\n            <th>owner</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>bucket</td>\n            <td>None</td>\n            <td>184436083777</td>\n            <td>107025105236366</td>\n        </tr>\n        <tr>\n            <td>cane</td>\n            <td>5</td>\n            <td>11384476511</td>\n            <td>107025105236366</td>\n        </tr>\n</table>\nTotal: 9 rows affected.",
         "token": "107025105236366"
@@ -635,14 +586,7 @@
         "intro": "With a logical `OR`.",
         "query": "SELECT *\nFROM inhabitant\nWHERE state = 'friendly'\n    AND (job = 'merchant' OR job = 'dealer')",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>4</td>\n            <td>Carl Ox</td>\n            <td>1</td>\n            <td>m</td>\n            <td>merchant</td>\n            <td>250</td>\n            <td>friendly</td>\n            <td>843473717421</td>\n            <td>166788243175236</td>\n        </tr>\n        <tr>\n            <td>12</td>\n            <td>Otto Alexander</td>\n            <td>2</td>\n            <td>m</td>\n            <td>dealer</td>\n            <td>680</td>\n            <td>friendly</td>\n            <td>371232179800</td>\n            <td>166788243175236</td>\n        </tr>\n</table>\nTotal: 3 rows affected.",
         "token": "166788243175236"
@@ -651,14 +595,7 @@
         "intro": "With the `IN` operator (recommended). A cleaner, more scalable way to check a column against multiple values.",
         "query": "SELECT *\nFROM inhabitant\nWHERE state = 'friendly'\n    AND job in ('merchant', 'dealer')",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>4</td>\n            <td>Carl Ox</td>\n            <td>1</td>\n            <td>m</td>\n            <td>merchant</td>\n            <td>250</td>\n            <td>friendly</td>\n            <td>843473717421</td>\n            <td>166788243175236</td>\n        </tr>\n        <tr>\n            <td>12</td>\n            <td>Otto Alexander</td>\n            <td>2</td>\n            <td>m</td>\n            <td>dealer</td>\n            <td>680</td>\n            <td>friendly</td>\n            <td>371232179800</td>\n            <td>166788243175236</td>\n        </tr>\n</table>\nTotal: 3 rows affected.",
         "token": "166788243175236"
@@ -693,14 +630,7 @@
         "intro": "With a logical `OR`.",
         "query": "SELECT *\nFROM inhabitant\nWHERE state = 'friendly'\n    AND (job = 'merchant' OR job = 'dealer')",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>4</td>\n            <td>Carl Ox</td>\n            <td>1</td>\n            <td>m</td>\n            <td>merchant</td>\n            <td>250</td>\n            <td>friendly</td>\n            <td>843473717421</td>\n            <td>166788243175236</td>\n        </tr>\n        <tr>\n            <td>12</td>\n            <td>Otto Alexander</td>\n            <td>2</td>\n            <td>m</td>\n            <td>dealer</td>\n            <td>680</td>\n            <td>friendly</td>\n            <td>371232179800</td>\n            <td>166788243175236</td>\n        </tr>\n</table>\nTotal: 3 rows affected.",
         "token": "166788243175236"
@@ -709,14 +639,7 @@
         "intro": "With the `IN` operator (recommended). A cleaner, more scalable way to check a column against multiple values.",
         "query": "SELECT *\nFROM inhabitant\nWHERE state = 'friendly'\n    AND job in ('merchant', 'dealer')",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>4</td>\n            <td>Carl Ox</td>\n            <td>1</td>\n            <td>m</td>\n            <td>merchant</td>\n            <td>250</td>\n            <td>friendly</td>\n            <td>843473717421</td>\n            <td>166788243175236</td>\n        </tr>\n        <tr>\n            <td>12</td>\n            <td>Otto Alexander</td>\n            <td>2</td>\n            <td>m</td>\n            <td>dealer</td>\n            <td>680</td>\n            <td>friendly</td>\n            <td>371232179800</td>\n            <td>166788243175236</td>\n        </tr>\n</table>\nTotal: 3 rows affected.",
         "token": "166788243175236"
@@ -774,9 +697,7 @@
       {
         "query": "UPDATE item\nSET owner = 15\nWHERE item IN ('ring', 'teapot');\n\n\nSELECT *\nFROM item",
         "columns": [
-          "item",
-          "owner",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>item</th>\n            <th>owner</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>bucket</td>\n            <td>20</td>\n            <td>832641554092</td>\n            <td>255787834193736</td>\n        </tr>\n        <tr>\n            <td>cane</td>\n            <td>5</td>\n            <td>11384476511</td>\n            <td>255787834193736</td>\n        </tr>\n</table>\nTotal: 9 rows affected.",
         "token": "255787834193736"
@@ -810,14 +731,7 @@
       {
         "query": "UPDATE inhabitant\nSET gold = gold - 120\nWHERE personid = 15;\n\n\nUPDATE inhabitant\nSET gold = gold + 120\nWHERE personid = 20;\n\n\nSELECT *\nFROM inhabitant",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>24919761524173</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>24919761524173</td>\n        </tr>\n</table>\nTotal: 20 rows affected.",
         "token": "24919761524173"
@@ -825,14 +739,7 @@
       {
         "query": "UPDATE inhabitant\nSET gold = gold - 120\nWHERE personid = 15;\n\nSELECT *\nFROM inhabitant",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>25101277790992</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>25101277790992</td>\n        </tr>\n</table>\nTotal: 20 rows affected.",
         "token": "25101277790992"
@@ -840,14 +747,7 @@
       {
         "query": "UPDATE inhabitant\nSET gold = gold + 120\nWHERE personid = 20;\n\n\nSELECT *\nFROM inhabitant",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>25203292965387</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>25203292965387</td>\n        </tr>\n</table>\nTotal: 20 rows affected.",
         "token": "25203292965387"
@@ -881,14 +781,7 @@
       {
         "query": "UPDATE inhabitant\nSET gold = gold + 120\nWHERE personid = 20;\n\n\nSELECT *\nFROM inhabitant",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>46779335306464</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>46779335306464</td>\n        </tr>\n</table>\nTotal: 20 rows affected.",
         "token": "46779335306464"
@@ -922,14 +815,7 @@
       {
         "query": "UPDATE inhabitant\nSET gold = gold - 120\nWHERE personid = 15;\n\n\nSELECT *\nFROM inhabitant",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>845203505654</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>845203505654</td>\n        </tr>\n</table>\nTotal: 20 rows affected.",
         "token": "845203505654"
@@ -963,14 +849,7 @@
       {
         "query": "UPDATE inhabitant\nSET name = 'Leslie Qualls'\nWHERE personid = 20;\n\n\nSELECT *\nFROM inhabitant",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>27912063284788</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>27912063284788</td>\n        </tr>\n</table>\nTotal: 20 rows affected.",
         "token": "27912063284788"
@@ -1004,14 +883,7 @@
       {
         "query": "UPDATE inhabitant\nSET name = 'Leslie Qualls'\nWHERE personid = 20;\n\n\nSELECT *\nFROM inhabitant",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>27912063284788</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>27912063284788</td>\n        </tr>\n</table>\nTotal: 20 rows affected.",
         "token": "27912063284788"
@@ -1045,14 +917,7 @@
       {
         "query": "UPDATE inhabitant\nSET name = 'Leslie Qualls'\nWHERE personid = 20;\n\n\nSELECT *\nFROM inhabitant",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>27912063284788</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>27912063284788</td>\n        </tr>\n</table>\nTotal: 20 rows affected.",
         "token": "27912063284788"
@@ -1093,14 +958,7 @@
       {
         "query": "SELECT *\nFROM inhabitant\nWHERE job = 'baker'\nORDER BY gold DESC",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>850</td>\n            <td>friendly</td>\n            <td>667574576304</td>\n            <td>34285849060426</td>\n        </tr>\n        <tr>\n            <td>9</td>\n            <td>Tiffany Drummer</td>\n            <td>1</td>\n            <td>f</td>\n            <td>baker</td>\n            <td>550</td>\n            <td>evil</td>\n            <td>434738589188</td>\n            <td>34285849060426</td>\n        </tr>\n</table>\nTotal: 3 rows affected.",
         "token": "34285849060426"
@@ -1187,14 +1045,7 @@
       {
         "query": "SELECT *\nFROM inhabitant\nWHERE job = 'pilot'",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>8</td>\n            <td>Arthur Tailor</td>\n            <td>2</td>\n            <td>m</td>\n            <td>pilot</td>\n            <td>490</td>\n            <td>kidnapped</td>\n            <td>823379478192</td>\n            <td>229615318980909</td>\n        </tr>\n</table>\nTotal: 1 row affected.",
         "token": "229615318980909"
@@ -1563,9 +1414,7 @@
       {
         "query": "DELETE\nFROM inhabitant\nWHERE name = 'Dirty Dieter';\n\n\nSELECT *\nFROM item",
         "columns": [
-          "item",
-          "owner",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>item</th>\n            <th>owner</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>bucket</td>\n            <td>20</td>\n            <td>832641554092</td>\n            <td>198001479871924</td>\n        </tr>\n        <tr>\n            <td>cane</td>\n            <td>None</td>\n            <td>11384476511</td>\n            <td>198001479871924</td>\n        </tr>\n</table>\nTotal: 9 rows affected.",
         "token": "198001479871924"
@@ -1599,14 +1448,7 @@
       {
         "query": "DELETE\nFROM inhabitant\nWHERE name = 'Dirty Diane';\n\n\nSELECT *\nFROM inhabitant",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>750</td>\n            <td>friendly</td>\n            <td>221738647112</td>\n            <td>66098661366712</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>66098661366712</td>\n        </tr>\n</table>\nTotal: 18 rows affected.",
         "token": "66098661366712"
@@ -1636,14 +1478,7 @@
       {
         "query": "UPDATE inhabitant\nSET state = 'friendly'\nWHERE job = 'pilot';\n\nSELECT *\nFROM inhabitant;",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>750</td>\n            <td>friendly</td>\n            <td>221738647112</td>\n            <td>214187513069315</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>214187513069315</td>\n        </tr>\n</table>\nTotal: 18 rows affected.",
         "token": "214187513069315"
@@ -1651,14 +1486,7 @@
       {
         "query": "UPDATE inhabitant\nSET state = 'emigrated'\nWHERE personid = 20;\n\nSELECT *\nFROM inhabitant;",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>750</td>\n            <td>friendly</td>\n            <td>221738647112</td>\n            <td>225550015813321</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>225550015813321</td>\n        </tr>\n</table>\nTotal: 18 rows affected.",
         "token": "225550015813321"
@@ -1666,14 +1494,7 @@
       {
         "query": "UPDATE inhabitant\nSET state = 'emigrated'\nWHERE personid = 20;\n\n\nUPDATE inhabitant\nSET state = 'friendly'\nWHERE job = 'pilot';\n\n\nSELECT *\nFROM inhabitant;",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>750</td>\n            <td>friendly</td>\n            <td>221738647112</td>\n            <td>213893536427211</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>213893536427211</td>\n        </tr>\n</table>\nTotal: 18 rows affected.",
         "token": "213893536427211"
@@ -1703,14 +1524,7 @@
       {
         "query": "UPDATE inhabitant\nSET state = 'emigrated'\nWHERE personid = 20;\n\nSELECT *\nFROM inhabitant;",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>750</td>\n            <td>friendly</td>\n            <td>221738647112</td>\n            <td>255276062128450</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>255276062128450</td>\n        </tr>\n</table>\nTotal: 18 rows affected.",
         "token": "255276062128450"
@@ -1740,14 +1554,7 @@
       {
         "query": "UPDATE inhabitant\nSET state = 'friendly'\nWHERE job = 'pilot';\n\nSELECT *\nFROM inhabitant;",
         "columns": [
-          "personid",
-          "name",
-          "villageid",
-          "gender",
-          "job",
-          "gold",
-          "state",
-          "hash"
+          "*"
         ],
         "result_head": "<table>\n    <thead>\n        <tr>\n            <th>personid</th>\n            <th>name</th>\n            <th>villageid</th>\n            <th>gender</th>\n            <th>job</th>\n            <th>gold</th>\n            <th>state</th>\n            <th>hash</th>\n            <th>token</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td>Paul Bakerman</td>\n            <td>1</td>\n            <td>m</td>\n            <td>baker</td>\n            <td>750</td>\n            <td>friendly</td>\n            <td>221738647112</td>\n            <td>148646393118578</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td>Ernest Perry</td>\n            <td>3</td>\n            <td>m</td>\n            <td>weaponsmith</td>\n            <td>280</td>\n            <td>friendly</td>\n            <td>73993229357</td>\n            <td>148646393118578</td>\n        </tr>\n</table>\nTotal: 18 rows affected.",
         "token": "148646393118578"
