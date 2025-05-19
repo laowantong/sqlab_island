@@ -772,7 +772,7 @@
         "token": "30928237956525"
       }
     ],
-    "tweak_javascript": "result[0][result[0].length - 1]"
+    "tweak_javascript": "result[0][result[0].length - 2]"
   },
   "30928237956437": {
     "kind": "hint",
